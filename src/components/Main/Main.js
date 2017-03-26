@@ -3,9 +3,11 @@ import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
 import './Main.css';
 
-const Main = () => (
+import { resortsDb } from '../SideNav/SideNav';
+
+const Main = props => (
   <main className="Main-wrapper">
-    <ResortInfoCard />
+    <ResortInfoCard resort={resortsDb[props.match.params.resortId]} />
     <Map />
   </main>
 );

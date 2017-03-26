@@ -15,6 +15,8 @@
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
+    margin-left: 6px;
+    margin-top: 6px;
   }
 }
 

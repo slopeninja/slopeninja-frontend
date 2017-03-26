@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5 {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .Index-fixedWrapper {
 }
 
@@ -50,7 +55,6 @@ h1, h2, h3, h4, h5 {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    overflow: scroll;
   }
 }
 

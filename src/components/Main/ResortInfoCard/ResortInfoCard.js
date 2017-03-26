@@ -1,7 +1,7 @@
 import React from 'react';
 import './ResortInfoCard.css';
 
-const ResortInfoHeader = () => (
+const ResortInfoHeader = (props) => (
   <header className="ResortInfoHeader-header">
     <div className="ResortInfoHeader-branding">
       <figure className="ResortInfoHeader-logo">
@@ -11,7 +11,7 @@ const ResortInfoHeader = () => (
         />
       </figure>
       <div>
-        <h1 className="ResortInfoHeader-header-title">Sierra at Tahoe</h1>
+        <h1 className="ResortInfoHeader-header-title">{props.resort.name}</h1>
         <h3 className="ResortInfoHeader-header-subtitle">
           {'Today\'s Forcast'}
         </h3>
@@ -194,9 +194,9 @@ const ResortInfoBody = () => (
   </div>
 );
 
-const ResortInfoCard = () => (
+const ResortInfoCard = (props) => (
   <section className="ResortInfoCard">
-    <ResortInfoHeader />
+    <ResortInfoHeader resort={props.resort} />
     <ResortInfoBody />
   </section>
 );

@@ -13,15 +13,14 @@
 @media only screen and (min-width: 768px) {
   .SideNav-wrapper {
     margin-left: 1pc;
+    margin-top: 6px;
+    padding-right: 6px;
     flex: none;
   }
-
 }
-@media only screen and (min-width: 1024px) {
 
+@media only screen and (min-width: 1024px) {
 }
 
 @media only screen and (min-width: 1200px) {
-
-
 }

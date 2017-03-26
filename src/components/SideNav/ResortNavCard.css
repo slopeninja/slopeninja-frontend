@@ -7,6 +7,10 @@
   border-color: #EDEDED;
 }
 
+.ResortNavCard:hover {
+  background-color: #EDEDED;
+}
+
 .ResortNavCard-logo {
   width: 104px;
   display: flex;

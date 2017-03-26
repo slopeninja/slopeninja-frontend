@@ -1,6 +1,6 @@
 .ResortInfoBox {
-    padding: 5px;
-    min-height: 150px;
+  padding: 6px;
+  min-height: 150px;
 }
 
 /*
@@ -12,7 +12,6 @@
   .ResortInfoCard {
     border: 1px solid;
     border-color: #EDEDED;
-    margin: 5px 0 0 5px;
   }
 
   .ResortInfoHeader-header {

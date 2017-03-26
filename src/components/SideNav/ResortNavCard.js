@@ -1,37 +1,43 @@
 import React from 'react';
+import {
+  Link,
+} from 'react-router-dom';
+
 import './ResortNavCard.css';
 
-const ResortNavCard = () => (
-  <div className="ResortNavCard">
-    <figure className="ResortNavCard-logo">
-      <img
-        alt="logo"
-        src="http://placehold.it/64x64"
-      />
-    </figure>
-    <div className="ResortNavCard-info">
-      <div className="ResortNavCard-title">
-        <h3>Squaw Valley</h3>
-        <h5>Olympic Valley, CA 96146</h5>
-      </div>
-      <div className="ResortNavCard-status">
-        <div className="ResortNavCard-status-section">
-          <h5>Open Lifts</h5>
-          <img
-            alt="logo"
-            src="http://placehold.it/78x14"
-          />
+const ResortNavCard = (props) => (
+  <Link to={`/resorts/${props.resort.id}`}>
+    <div className="ResortNavCard">
+      <figure className="ResortNavCard-logo">
+        <img
+          alt="logo"
+          src="http://placehold.it/64x64"
+        />
+      </figure>
+      <div className="ResortNavCard-info">
+        <div className="ResortNavCard-title">
+          <h3>{props.resort.name}</h3>
+          <h5>{props.resort.location}</h5>
         </div>
-        <div className="ResortNavCard-status-section">
-          <h5>Open Trails</h5>
-          <img
-            alt="logo"
-            src="http://placehold.it/78x14"
-          />
+        <div className="ResortNavCard-status">
+          <div className="ResortNavCard-status-section">
+            <h5>Open Lifts</h5>
+            <img
+              alt="logo"
+              src="http://placehold.it/78x14"
+            />
+          </div>
+          <div className="ResortNavCard-status-section">
+            <h5>Open Trails</h5>
+            <img
+              alt="logo"
+              src="http://placehold.it/78x14"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 export default ResortNavCard;
