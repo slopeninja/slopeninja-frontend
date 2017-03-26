@@ -1,0 +1,152 @@
+.ResortInfoBox {
+    padding: 5px;
+    min-height: 150px;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/
+@media only screen and (min-width: 768px) {
+  .ResortInfoCard {
+    border: 1px solid;
+    border-color: #EDEDED;
+    margin: 5px 0 0 5px;
+  }
+
+  .ResortInfoHeader-header {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: 'center';
+    max-height: 200px;
+    min-height: 120px;
+    background-color: #FAFAFA;
+  }
+
+  .ResortInfoHeader-branding {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    margin-left: 25px;
+  }
+
+  .ResortInfoHeader-header-title {
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0;
+  }
+
+  .ResortInfoHeader-header-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ResortInfoHeader-weatherinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 25px;
+    margin-bottom: 1pc;
+  }
+
+  .ResortInfoHeader-weatherinfo h3  {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 0.5pc
+  }
+
+  .ResortInfoHeader-logo {
+    padding-right: 1pc;
+  }
+
+  .ResortInfoBody {
+    margin: 6px;
+    padding: 1pc;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ResortInfoBody-title {
+    font-size: 20px;
+  }
+
+  .ResortInfoBody-content {
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1pc;
+  }
+
+  .ResortInfoBody-content img {
+    margin-top: 1pc;
+    width: 122px;
+    height: 22px;
+  }
+
+  .ResortInfoBody-content-openroutes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ResortInfoBody-content-openroutes img {
+    margin-left: 1pc;
+    margin-top: 1pc;
+  }
+
+  .ResortInfoBody-content-chains {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ResortInfoBody-content-chains-row {
+    margin-top: 1pc;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .ResortInfoBody-content-chains-img {
+    margin-left: 1pc;
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .ResortInfoHeader-header {
+  }
+
+  .ResortInfoHeader-weatherinfo {
+  }
+
+  .ResortInfoHeader-header-title {
+    font-size: 36px;
+  }
+
+  .ResortInfoHeader-header-subtitle {
+    font-size: 24px;
+  }
+
+  .ResortInfoHeader-weatherinfo h3  {
+    font-size: 24px;
+  }
+
+  .ResortInfoBody-title {
+    font-size: 24px;
+  }
+
+  .ResortInfoBody-content {
+    font-size: 24px;
+  }
+
+}

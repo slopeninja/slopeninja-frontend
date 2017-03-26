@@ -1,0 +1,78 @@
+.ResortNavCard {
+  margin-bottom: 1pc;
+  height: 140px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  border-color: #EDEDED;
+}
+
+.ResortNavCard-logo {
+  width: 104px;
+  display: flex;
+  justify-content: center;
+  margin: 1pc;
+}
+
+.ResortNavCard-logo img {
+  width: 64px;
+  height: 64px;
+}
+
+.ResortNavCard-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ResortNavCard-title {
+  flex: 1;
+}
+
+.ResortNavCard-title h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 0.5pc;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.ResortNavCard-title h5 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0.5pc;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+
+.ResortNavCard-status {
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+}
+
+.ResortNavCard-status-section {
+  flex: 1;
+  display: flex;;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ResortNavCard-status-section img {
+  margin-top: 1pc;
+  width: 78px;
+  height: 14px;
+}
+
+.ResortNavCard-status-section h5 {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/

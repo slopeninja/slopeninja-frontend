@@ -1,0 +1,14 @@
+.Footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  flex-direction: column;
+  border-top: 1px solid;
+  border-color: #EDEDED;
+}
+
+.Footer-text {
+  color: #9B9B9B;
+  font-size: 16px;
+}

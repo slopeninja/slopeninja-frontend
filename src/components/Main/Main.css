@@ -1,0 +1,24 @@
+.Main-wrapper {
+  display: none;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/
+@media only screen and (min-width: 768px) {
+  .Main-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Main-wrapper {
+  }
+}

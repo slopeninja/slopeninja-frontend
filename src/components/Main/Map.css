@@ -1,0 +1,27 @@
+.Map {
+  margin: 5px 0 0 5px;
+  border: 1px solid;
+  border-color: #EDEDED;
+  flex: 1;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/
+@media only screen and (min-width: 768px) {
+  .Map {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Map {
+    display: flex;
+    min-height: 520px;
+  }
+  .Map-content {
+    width: 100%;
+  }
+}

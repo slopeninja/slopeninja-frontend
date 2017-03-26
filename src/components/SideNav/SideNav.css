@@ -1,0 +1,27 @@
+.SideNav-wrapper {
+  width: 366px;
+  overflow-y: scroll;
+  height: calc(100%);
+  flex: 1;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/
+@media only screen and (min-width: 768px) {
+  .SideNav-wrapper {
+    margin-left: 1pc;
+    flex: none;
+  }
+
+}
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+
+}
