@@ -1,8 +1,14 @@
 import React from 'react';
+import snowboarders from './snowboarders.png';
 
 const FourOhFour = () => (
   <div style={{ flex: 1 }}>
-    404
+    <figure>
+      <img
+        alt="404"
+        src={snowboarders}
+      />
+    </figure>
   </div>
 );
 
