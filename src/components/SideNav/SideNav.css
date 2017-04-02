@@ -1,8 +1,10 @@
 .SideNav-wrapper {
   width: 366px;
   overflow-y: scroll;
-  height: calc(100%);
   flex: 1;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
 }
 
 /*

@@ -13,24 +13,25 @@ figure {
 h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
+  color: #4A4A4A;
 }
 
-a {
+a, span, p {
   text-decoration: none;
-  color: #000;
-}
-
-.Index-fixedWrapper {
+  color: #4A4A4A;
 }
 
 .Index-wrapper {
-
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .Index-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 /*
@@ -39,39 +40,19 @@ a {
 @custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
 */
 @media only screen and (min-width: 768px) {
-  .Index-fixedWrapper {
-    display: fixed;
-    height: calc(100vh);
-  }
   .Index-wrapper {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
   }
 
   .Index-content {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .Index-fixedWrapper {
-    display: fixed;
-  }
-
   .Index-wrapper {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
   }
 
   .Index-content {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
   }
 }

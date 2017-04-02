@@ -1,0 +1,45 @@
+.FourOhFour {
+  display: none;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: column;
+  overflow-x: hidden;
+  border: 1px solid #EDEDED;
+  margin-left: 6px;
+  margin-top: 6px;
+
+
+  background-image:
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f8f8f8), color-stop(.25, transparent)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #f8f8f8), color-stop(.25, transparent)),
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #f8f8f8)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #f8f8f8));
+
+  background-size:100px 100px;
+
+  background-position:0 0, 50px 0, 50px -50px, 0px 50px;
+}
+.FourOhFour-imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FourOhFour-img {
+  width: 90%;
+}
+
+.FourOhFour-text {
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: 1pc;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .FourOhFour {
+    display: flex;
+  }
+}

@@ -19,18 +19,16 @@ import FourOhFour from './components/FourOhFour/FourOhFour';
 
 ReactDOM.render(
   <Router>
-    <div className="Index-fixedWrapper">
-      <div className="Index-wrapper">
-        <div className="Index-content">
-          <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/resorts/:resortId" component={Main} />
-            <Route component={FourOhFour} />
-          </Switch>
-          <SideNav />
-        </div>
-        <Footer />
+    <div className="Index-wrapper">
+      <div className="Index-content">
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/resorts/:resortId" component={Main} />
+          <Route component={FourOhFour} />
+        </Switch>
+        <SideNav />
       </div>
+      <Footer />
     </div>
   </Router>,
   document.getElementById('🏂'),

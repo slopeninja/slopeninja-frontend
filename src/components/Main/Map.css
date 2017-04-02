@@ -3,6 +3,7 @@
   border: 1px solid;
   border-color: #EDEDED;
   flex: 1;
+  min-height: 320px;
 }
 
 /*
@@ -19,7 +20,6 @@
 @media only screen and (min-width: 1200px) {
   .Map {
     display: flex;
-    min-height: 520px;
   }
   .Map-content {
     width: 100%;
