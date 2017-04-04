@@ -17,10 +17,10 @@ const ResortNavCard = ({ resort, selected }) => {
   );
 
   let selectedSytle;
-  if(selected) {
+  if (selected) {
     selectedSytle = {
       backgroundColor: '#EDEDED',
-    }
+    };
   }
 
   return (

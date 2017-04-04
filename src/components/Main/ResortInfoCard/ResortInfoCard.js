@@ -3,27 +3,27 @@ import React from 'react';
 import ProgressBar from './ProgressBar';
 import './ResortInfoCard.css';
 
-import hw50 from './hw50.svg';
-import hw80 from './hw80.svg';
-import hw88 from './hw88.svg';
+import hw50 from './images/hw50.svg';
+import hw80 from './images/hw80.svg';
+import hw88 from './images/hw88.svg';
 
-import sunny from './sunny.svg';
-import cloudy from './cloudy.svg';
-import thunderstorm from './thunderstorm.svg';
-import rain from './rain.svg';
-import snow from './snow.svg';
+import sunny from './images/sunny.svg';
+import cloudy from './images/cloudy.svg';
+import thunderstorm from './images/thunderstorm.svg';
+import rain from './images/rain.svg';
+import snow from './images/snow.svg';
 
-import Boreal from './Boreal.svg';
-import Sierra from './Sierra.svg';
-import Squaw from './Squaw.svg';
-import Sugerbowl from './Sugarbowl.svg';
-import Kirkwood from './Kirkwood.svg';
-import Northstar from './Northstar.svg';
-import Hevenly from './Hevenly.svg';
-import MtRose from './MtRose.svg';
-import Donner from './Donner.svg';
-import Diamond from './Diamond.svg';
-import Homewood from './Homewood.svg';
+import Boreal from './images/Boreal.svg';
+import Sierra from './images/Sierra.svg';
+import Squaw from './images/Squaw.svg';
+import Sugerbowl from './images/Sugarbowl.svg';
+import Kirkwood from './images/Kirkwood.svg';
+import Northstar from './images/Northstar.svg';
+import Hevenly from './images/Hevenly.svg';
+import MtRose from './images/MtRose.svg';
+import Donner from './images/Donner.svg';
+import Diamond from './images/Diamond.svg';
+import Homewood from './images/Homewood.svg';
 
 const HIGHWAY_ICONS = {
   hw80,
