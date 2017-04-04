@@ -1,0 +1,14 @@
+.ProgressBar-box {
+  width: 122px;
+  height: 22px;
+  border: 1px solid #4A4A4A;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.ProgressBar-progress {
+  display: block;
+  height: 100%;
+  transition: width 0.5s;
+  background-color: #4A4A4A;
+}

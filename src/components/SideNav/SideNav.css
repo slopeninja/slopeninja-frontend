@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.SideNav-hideOnMobile {
+  display: none;
+}
+
 /*
 @custom-media --sm-viewport only screen and (min-width: 48em); // 768px
 @custom-media --md-viewport only screen and (min-width: 64em); // 1024px
@@ -14,10 +18,15 @@
 */
 @media only screen and (min-width: 768px) {
   .SideNav-wrapper {
+    display: flex;
     margin-left: 1pc;
     margin-top: 6px;
     padding-right: 6px;
     flex: none;
+  }
+
+  .SideNav-hideOnMobile {
+    display: flex;
   }
 }
 

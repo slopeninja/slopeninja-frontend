@@ -11,13 +11,19 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "flexboxgrid": "^6.3.1",
     "google-map-react": "^0.23.0",
+    "history": "^4.6.1",
     "normalize.css": "^5.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
     "react-router": "^4.0.0",
-    "react-router-dom": "^4.0.0"
+    "react-router-dom": "^4.0.0",
+    "react-router-redux": "next",
+    "redux": "^3.6.0",
+    "uuid": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

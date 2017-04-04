@@ -1,4 +1,5 @@
 .Map {
+  display: none;
   margin-top: 5px;
   border: 1px solid;
   border-color: #EDEDED;
@@ -13,7 +14,6 @@
 */
 @media only screen and (min-width: 768px) {
   .Map {
-    display: none;
   }
 }
 

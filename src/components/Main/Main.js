@@ -1,15 +1,41 @@
+import { connect } from 'react-redux';
 import React from 'react';
 import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
+import FourOhFour from '../FourOhFour/FourOhFour';
 import './Main.css';
 
-import { resortsDb } from '../SideNav/SideNav';
+const Main = (props) => {
+  const resortId = props.match.params.resortId;
 
-const Main = props => (
-  <main className="Main-wrapper">
-    <ResortInfoCard resort={resortsDb[props.match.params.resortId]} />
-    <Map />
-  </main>
-);
+  const resort = props.resorts.find(
+    r => r.id === resortId,
+  );
 
-export default Main;
+  if (!resortId) {
+    return null;
+  }
+
+  if (!resort) {
+    return <FourOhFour />;
+  }
+
+  return (
+    <main className="Main-wrapper">
+      <ResortInfoCard resort={resort} />
+      <Map />
+    </main>
+  );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    resorts: state.app.resorts,
+  };
+};
+
+const ConnectedMain = connect(
+  mapStateToProps,
+)(Main);
+
+export default ConnectedMain;

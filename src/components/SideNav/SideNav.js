@@ -1,43 +1,26 @@
 import React from 'react';
-import './SideNav.css';
+import classNames from 'classnames';
+import { connect } from 'react-redux';
 import ResortNavCard from './ResortNavCard';
 
-export const resortsDb = [
-  {
-    id: 0,
-    name: 'Squaw Valley',
-    location: 'Olympic Valley, CA 96146',
-    lifts: {
-      total: 10,
-      open: 5,
-    },
-    trails: {
-      total: 23,
-      open: 18,
-    },
-  },
-  {
-    id: 1,
-    name: 'Sierra-at-Tahoe',
-    location: 'Olympic Valley, CA 96146',
-    lifts: {
-      total: 10,
-      open: 5,
-    },
-    trails: {
-      total: 23,
-      open: 18,
-    },
-  },
-];
+import './SideNav.css';
 
-const SideNav = () => {
-  const resortNavCards = resortsDb.map(resort => (
-    <ResortNavCard key={resort.id} resort={resort} />
+const SideNav = ({ resorts, match }) => {
+  const resortId = match.params.resortId;
+
+  let hideSideNavOnMobileClassName;
+  if (resortId) {
+    hideSideNavOnMobileClassName = 'SideNav-hideOnMobile';
+  }
+
+  const resortNavCards = resorts.map(resort => (
+    <ResortNavCard key={resort.id} selected={resortId === resort.id} resort={resort} />
   ));
 
+  const className = classNames(['SideNav-wrapper', hideSideNavOnMobileClassName]);
+
   return (
-    <nav className="SideNav-wrapper">
+    <nav className={className}>
       {
         resortNavCards
       }
@@ -45,4 +28,14 @@ const SideNav = () => {
   );
 };
 
-export default SideNav;
+const mapStateToProps = (state) => {
+  return {
+    resorts: state.app.resorts,
+  };
+};
+
+const ConnectedSideNav = connect(
+  mapStateToProps,
+)(SideNav);
+
+export default ConnectedSideNav;

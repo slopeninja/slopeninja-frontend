@@ -1,6 +1,126 @@
 .ResortInfoBox {
-  padding: 6px;
-  min-height: 150px;
+  min-height: 100px;
+  border: 1px solid #EDEDED;
+  padding: 1pc;
+}
+
+.ResortInfoCard {
+  border: 1px solid #EDEDED;
+}
+
+.ResortInfoHeader-header {
+  flex: 1;
+  margin: 5px;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: 'center';*/
+  min-height: 120px;
+}
+
+.ResortInfoHeader-branding {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+
+.ResortInfoHeader-header-title {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 0;
+}
+
+.ResortInfoHeader-header-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.ResortInfoHeader-condition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.ResortInfoHeader-condition img {
+  width: 48px;
+  height: 48px;
+}
+
+.ResortInfoHeader-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.ResortInfoHeader-status h3  {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.ResortInfoHeader-logo {
+  margin: 0.5pc;
+}
+
+.ResortInfoHeader-logo img {
+  width: 64px;
+}
+
+.ResortInfoBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.ResortInfoBody-title {
+  font-size: 24px;
+}
+
+.ResortInfoBody-content {
+  font-weight: 300;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1pc;
+}
+
+.ResortInfoBody-content-openroutes {
+  display: flex;
+  flex-direction: row;
+}
+
+.ResortInfoBody-content-openroutes img {
+  width: 48px;
+  margin-right: 1pc;
+  margin-top: 1pc;
+}
+
+.ResortInfoBody-content-chains {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ResortInfoBody-content-chains-row {
+  margin-top: 1pc;
+  display: flex;
+  flex-direction: row;
+  min-height: 36px;
+}
+
+.ResortInfoBody-content-chains-text {
+  padding-right: 1pc;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.ResortInfoBody-content-chains img {
+  margin-left: 1pc;
+  width: 36px;
+  height: 36px;
 }
 
 /*
@@ -9,123 +129,25 @@
 @custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
 */
 @media only screen and (min-width: 768px) {
-  .ResortInfoCard {
-    border: 1px solid;
-    border-color: #EDEDED;
-  }
 
-  .ResortInfoHeader-header {
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: 'center';
-    max-height: 200px;
-    min-height: 120px;
-    background-color: #FAFAFA;
-  }
 
-  .ResortInfoHeader-branding {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    align-items: center;
-    margin-left: 25px;
-  }
+}
 
-  .ResortInfoHeader-header-title {
-    font-size: 26px;
-    font-weight: 400;
-    padding: 0;
-  }
+@media only screen and (min-width: 1200px) {
 
-  .ResortInfoHeader-header-subtitle {
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-  }
-
-  .ResortInfoHeader-weatherinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    margin-right: 25px;
-    margin-bottom: 1pc;
-  }
-
-  .ResortInfoHeader-weatherinfo h3  {
-    font-size: 20px;
-    font-weight: 100;
-    margin-bottom: 0.5pc
-  }
-
-  .ResortInfoHeader-logo {
-    padding-right: 1pc;
+  .ResortInfoBox {
+    min-height: 150px;
+    padding: 6px;
+    border: none;
   }
 
   .ResortInfoBody {
     margin: 6px;
     padding: 1pc;
-    display: flex;
-    flex-direction: column;
   }
 
-  .ResortInfoBody-title {
-    font-size: 20px;
-  }
-
-  .ResortInfoBody-content {
-    font-size: 20px;
-    font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    margin-top: 1pc;
-  }
-
-  .ResortInfoBody-content img {
-    margin-top: 1pc;
-    width: 122px;
-    height: 22px;
-  }
-
-  .ResortInfoBody-content-openroutes {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .ResortInfoBody-content-openroutes img {
-    margin-left: 1pc;
-    margin-top: 1pc;
-  }
-
-  .ResortInfoBody-content-chains {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .ResortInfoBody-content-chains-row {
-    margin-top: 1pc;
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    font-weight: 300;
-  }
-
-  .ResortInfoBody-content-chains-img {
-    margin-left: 1pc;
-    width: 34px;
-    height: 34px;
-  }
-
-}
-
-@media only screen and (min-width: 1200px) {
   .ResortInfoHeader-header {
-  }
-
-  .ResortInfoHeader-weatherinfo {
+    background-color: #FAFAFA;
   }
 
   .ResortInfoHeader-header-title {
@@ -136,16 +158,34 @@
     font-size: 24px;
   }
 
-  .ResortInfoHeader-weatherinfo h3  {
-    font-size: 24px;
-  }
-
   .ResortInfoBody-title {
     font-size: 24px;
   }
 
   .ResortInfoBody-content {
+  }
+  .ResortInfoBody-content-chains-text{
     font-size: 24px;
   }
 
+  .ResortInfoHeader-condition {
+    min-height: 60px; /* header height / 2 */
+  }
+
+  .ResortInfoHeader-status {
+    min-height: 60px; /* header height / 2 */
+  }
+
+  .ResortInfoHeader-logo {
+    margin: 1pc;
+  }
+
+}
+
+/* This is the only way to remove gutter from flex box grid atm */
+@media only screen and (max-width: 1200px) {
+  .ResortInfoBox-no-gutter {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

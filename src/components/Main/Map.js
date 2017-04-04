@@ -11,6 +11,8 @@ const MapPin = ({ text }) => (
   </div>
 );
 
+import mapTheme from './mapTheme';
+
 const GOOGLE_MAP_KEY = 'AIzaSyCceGlAwHncILM7vq047eJJXQBgZN5JVe8';
 
 const SIERRA_AT_TAHOE_COORDS = {
@@ -40,6 +42,21 @@ class Map extends Component {
   }
 
   render() {
+    const createMapOptions = (maps) => {
+      return {
+        // mapTypeControl: true,
+        // mapTypeControlOptions: {
+        //   position: maps.ControlPosition.TOP_RIGHT,
+        // },
+        zoomControlOptions: {
+          position: maps.ControlPosition.TOP_RIGHT,
+          style: maps.ZoomControlStyle.SMALL,
+        },
+        scrollwheel: true,
+        styles: mapTheme,
+      };
+    };
+
     return (
       <div className="Map">
         <GoogleMap
@@ -49,6 +66,7 @@ class Map extends Component {
           defaultCenter={this.state.center}
           defaultZoom={this.state.zoom}
           onChange={this.handleMapChange}
+          options={createMapOptions}
         >
         </GoogleMap>
       </div>
