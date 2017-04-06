@@ -11,6 +11,7 @@ import {
 } from 'react-router-redux';
 import {
   Route,
+  Redirect,
   Switch,
 } from 'react-router-dom';
 
@@ -46,13 +47,17 @@ const store = createStore(
   ),
 );
 
+const RedirectToResorts = () => (
+  <Redirect to="/resorts" />
+);
+
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div className="Index-wrapper">
         <div className="Index-content">
           <Switch>
-            <Route exact path="/" component={Main} />
+            <Route exact path="/" component={RedirectToResorts} />
             <Route exact path="/resorts/:resortId?" component={Main} />
             <Route component={FourOhFour} />
           </Switch>
