@@ -1,11 +1,12 @@
+.ResortInfoCard {
+  flex: 1;
+  border: 1px solid #EDEDED;
+}
+
 .ResortInfoBox {
   min-height: 100px;
   border: 1px solid #EDEDED;
   padding: 1pc;
-}
-
-.ResortInfoCard {
-  border: 1px solid #EDEDED;
 }
 
 .ResortInfoHeader-header {

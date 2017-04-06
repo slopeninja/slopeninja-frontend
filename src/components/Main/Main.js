@@ -3,6 +3,7 @@ import React from 'react';
 import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
 import FourOhFour from '../FourOhFour/FourOhFour';
+import BackButton from '../BackButton/BackButton';
 import './Main.css';
 
 const Main = (props) => {
@@ -22,17 +23,21 @@ const Main = (props) => {
 
   return (
     <main className="Main-wrapper">
+      <BackButton />
       <ResortInfoCard resort={resort} />
-      <Map />
     </main>
   );
 };
+
+// <Map />
+
 
 const mapStateToProps = (state) => {
   return {
     resorts: state.app.resorts,
   };
 };
+
 
 const ConnectedMain = connect(
   mapStateToProps,

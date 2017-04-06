@@ -1,6 +1,7 @@
 // import uuid from 'uuid';
 
 const initialState = {
+
   resorts: [
     {
       id: '81e32949-79e7-43ff-a677-38c1c27c1fe6',
