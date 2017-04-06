@@ -25,12 +25,10 @@ const Main = (props) => {
     <main className="Main-wrapper">
       <BackButton />
       <ResortInfoCard resort={resort} />
+      <Map />
     </main>
   );
 };
-
-// <Map />
-
 
 const mapStateToProps = (state) => {
   return {
