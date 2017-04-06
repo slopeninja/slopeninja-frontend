@@ -25,14 +25,17 @@ const initialState = {
       },
       routes: {
         hw50: {
+          label: '50',
           status: 'Closed',
           chains: 'R1',
         },
         hw80: {
+          label: '80',
           status: 'Open',
           chains: 'R2',
         },
         hw88: {
+          label: '88',
           status: 'Closed',
           chains: 'R1',
         },
@@ -60,14 +63,17 @@ const initialState = {
       },
       routes: {
         hw50: {
+          label: '50',
           status: 'Open',
           // chains: 'R1',
         },
         hw80: {
+          label: '80',
           status: 'Closed',
           // chains: 'R1',
         },
         hw88: {
+          label: '88',
           status: 'Closed',
           // chains: 'R1',
         },

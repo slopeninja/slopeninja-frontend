@@ -28,7 +28,7 @@
 
 .ResortInfoHeader-header-title {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0;
 }
 
@@ -46,11 +46,6 @@
   min-height: 100px;
 }
 
-.ResortInfoHeader-condition img {
-  width: 48px;
-  height: 48px;
-}
-
 .ResortInfoHeader-status {
   display: flex;
   justify-content: center;
@@ -60,7 +55,7 @@
 
 .ResortInfoHeader-status h3  {
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .ResortInfoHeader-logo {
@@ -93,9 +88,8 @@
   flex-direction: row;
 }
 
-.ResortInfoBody-content-openroutes img {
-  width: 48px;
-  margin-right: 1pc;
+.ResortInfoBox-content-openroute-icon {
+  margin-left: 1pc;
   margin-top: 1pc;
 }
 
@@ -116,12 +110,6 @@
   padding-right: 1pc;
   font-size: 24px;
   font-weight: 300;
-}
-
-.ResortInfoBody-content-chains img {
-  margin-left: 1pc;
-  width: 36px;
-  height: 36px;
 }
 
 /*

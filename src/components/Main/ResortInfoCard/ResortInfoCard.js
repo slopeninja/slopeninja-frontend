@@ -1,11 +1,8 @@
 import React from 'react';
 // import { connect } from 'react-redux';
 import ProgressBar from './ProgressBar';
+import HighwayIcon from '../../HighwayIcon/HighwayIcon';
 import './ResortInfoCard.css';
-
-import hw50 from './images/hw50.svg';
-import hw80 from './images/hw80.svg';
-import hw88 from './images/hw88.svg';
 
 import sunny from './images/sunny.svg';
 import cloudy from './images/cloudy.svg';
@@ -24,12 +21,6 @@ import MtRose from './images/MtRose.svg';
 import Donner from './images/Donner.svg';
 import Diamond from './images/Diamond.svg';
 import Homewood from './images/Homewood.svg';
-
-const HIGHWAY_ICONS = {
-  hw80,
-  hw88,
-  hw50,
-};
 
 const WEATHER_ICONS = {
   sunny,
@@ -128,15 +119,17 @@ const Box4 = ({ snowDepth }) => (
 );
 
 const Box5 = ({ routes }) => {
-  const resortKeys = Object.keys(routes);
+  const routesKeys = Object.keys(routes);
 
-  const highwayIcons = resortKeys.map((key) => {
+  const highwayIcons = routesKeys.map((key) => {
     const iconStyle = {
       opacity: routes[key].status === 'Open' ? 1 : 0.1,
     };
 
     return (
-      <img key={key} style={iconStyle} alt={key} src={HIGHWAY_ICONS[key]} />
+      <span key={key} className="ResortInfoBox-content-openroute-icon" style={iconStyle}>
+        <HighwayIcon width={48} height={48} highwayNumber={routes[key].label} />
+      </span>
     );
   });
 
@@ -151,15 +144,23 @@ const Box5 = ({ routes }) => {
 };
 
 const Box6 = ({ routes }) => {
-  const resortKeys = Object.keys(routes);
-  const R1Highways = resortKeys.filter(key => routes[key].chains === 'R1');
-  const R2Highways = resortKeys.filter(key => routes[key].chains === 'R2');
+  const routesKeys = Object.keys(routes);
+  const R1Highways = routesKeys.filter(key => routes[key].chains === 'R1');
+  const R2Highways = routesKeys.filter(key => routes[key].chains === 'R2');
 
   const r1HighwayIcons = R1Highways.map(
-    key => <img key={key} alt={key} src={HIGHWAY_ICONS[key]} />,
+    key => (
+      <span key={key} style={{ marginLeft: '1pc' }}>
+        <HighwayIcon width={36} height={36} highwayNumber={routes[key].label} />
+      </span>
+    ),
   );
   const r2HighwayIcons = R2Highways.map(
-    key => <img key={key} alt={key} src={HIGHWAY_ICONS[key]} />,
+    key => (
+      <span key={key} style={{ marginLeft: '1pc' }}>
+        <HighwayIcon width={36} height={36} highwayNumber={routes[key].label} />
+      </span>
+    ),
   );
 
   let r1Row;
