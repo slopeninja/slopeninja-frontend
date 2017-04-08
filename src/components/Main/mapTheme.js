@@ -223,7 +223,7 @@ const mapTheme = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#fffffa"
+                "color": "#ffffff"
             }
         ]
     },
