@@ -3365,6 +3365,12 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
+lodash.debounce@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-3.1.1.tgz#812211c378a94cc29d5aa4e3346cf0bfce3a7df5"
+  dependencies:
+    lodash._getnative "^3.0.0"
+
 lodash.isarguments@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
@@ -4415,6 +4421,12 @@ react-scripts@0.9.5:
     whatwg-fetch "2.0.2"
   optionalDependencies:
     fsevents "1.0.17"
+
+react-window-resize-listener@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-window-resize-listener/-/react-window-resize-listener-1.1.0.tgz#1aff0059e8f1f58f8d865f9ce17b1b1f9c5b277f"
+  dependencies:
+    lodash.debounce "^3.1.1"
 
 react@^15.4.2:
   version "15.4.2"

@@ -21,13 +21,15 @@ const Main = (props) => {
     return <FourOhFour />;
   }
 
+
   return (
     <main className="Main-wrapper">
       <BackButton />
       <ResortInfoCard resort={resort} />
-      <Map />
+      <Map coords={resort.coords}/>
     </main>
   );
+
 };
 
 const mapStateToProps = (state) => {

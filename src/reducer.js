@@ -1,5 +1,15 @@
 // import uuid from 'uuid';
 
+const SIERRA_AT_TAHOE_COORDS = {
+  lat: 38.795716,
+  lng: -120.0796698,
+};
+
+const SQUAW_ALPINE_COORDS = {
+  lat: 39.1730841,
+  lng: -120.2483866,
+};
+
 const initialState = {
 
   resorts: [
@@ -8,6 +18,7 @@ const initialState = {
       name: 'Squaw Valley',
       location: 'Olympic Valley, CA 96146',
       status: 'Open',
+      coords: SQUAW_ALPINE_COORDS,
       weather: {
         condition: 'snow',
         temprature: 28,
@@ -46,6 +57,7 @@ const initialState = {
       name: 'Sierra-at-Tahoe',
       location: 'Twin Bridges, CA 96146',
       status: 'Closed',
+      coords: SIERRA_AT_TAHOE_COORDS,
       weather: {
         condition: 'thunderstorm',
         temprature: 40,
