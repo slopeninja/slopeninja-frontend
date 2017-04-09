@@ -1,13 +1,24 @@
 import React from 'react';
 import './Footer.css';
 import logo from './logo.svg';
+import heart from './heart.svg';
 
 const Footer = () => (
   <div className="Footer-wrapper">
     <div className="Footer-logo" />
     <div className="Footer-textBox">
       <span className="Footer-text">
-        Made with <span style={{ color: '#FF4891' }}>♥</span> in San Francisco.
+        Made with
+        <img
+          alt="heart"
+          style={{
+            width: '16px',
+            marginLeft: '5px',
+            marginRight: '5px',
+          }}
+          src={heart}
+        />
+        in San Francisco.
       </span>
       <br />
       <span className="Footer-text">© Slope Ninja. All rights reserved.</span>
