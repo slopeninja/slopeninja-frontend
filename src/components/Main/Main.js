@@ -26,10 +26,9 @@ const Main = (props) => {
     <main className="Main-wrapper">
       <BackButton />
       <ResortInfoCard resort={resort} />
-      <Map coords={resort.coords}/>
+      <Map coords={resort.coords} zoom={14} />
     </main>
   );
-
 };
 
 const mapStateToProps = (state) => {
@@ -37,7 +36,6 @@ const mapStateToProps = (state) => {
     resorts: state.app.resorts,
   };
 };
-
 
 const ConnectedMain = connect(
   mapStateToProps,

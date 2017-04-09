@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMap from 'google-map-react';
 import { WindowResizeListener } from 'react-window-resize-listener';
+import mapTheme from './mapTheme';
 import './Map.css';
-import logo from '../Footer/logo.svg';
 
 WindowResizeListener.DEBOUNCE_TIME = 500;
 
@@ -19,8 +19,6 @@ WindowResizeListener.DEBOUNCE_TIME = 500;
 //     />
 // );
 
-import mapTheme from './mapTheme';
-
 const GOOGLE_MAP_API_KEY = {
   key: 'AIzaSyCceGlAwHncILM7vq047eJJXQBgZN5JVe8',
 };
@@ -32,10 +30,6 @@ class Map extends Component {
 
     this.googleMap = null;
     this.currentUserCenter = props.coords;
-
-    this.state = {
-      zoom: 14,
-    };
   }
 
   componentWillMount() {
@@ -48,6 +42,7 @@ class Map extends Component {
     this.currentUserCenter = nextProps.coords;
     if (this.googleMap) {
       this.googleMap.setCenter(this.currentUserCenter);
+      this.googleMap.setZoom(nextProps.zoom);
     }
   }
 
@@ -72,20 +67,17 @@ class Map extends Component {
   }
 
   render() {
-    const createMapOptions = (maps) => {
-      return {
-        // mapTypeControl: true,
-        // mapTypeControlOptions: {
-        //   position: maps.ControlPosition.TOP_RIGHT,
-        // },
+    const createMapOptions = maps => (
+      {
         zoomControlOptions: {
           position: maps.ControlPosition.TOP_RIGHT,
           style: maps.ZoomControlStyle.SMALL,
         },
         scrollwheel: true,
         styles: mapTheme,
-      };
-    };
+      }
+    );
+
 
     return (
       <div className="Map">
@@ -95,7 +87,7 @@ class Map extends Component {
           onGoogleApiLoaded={this.handleGoogleApiLoaded}
           onDrag={this.handleMapDrag}
           center={this.props.coords}
-          zoom={this.state.zoom}
+          zoom={this.props.zoom}
           options={createMapOptions}
           bootstrapURLKeys={GOOGLE_MAP_API_KEY}
         />
