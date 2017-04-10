@@ -4,7 +4,7 @@ import { WindowResizeListener } from 'react-window-resize-listener';
 import mapTheme from './mapTheme';
 import './Map.css';
 
-WindowResizeListener.DEBOUNCE_TIME = 500;
+WindowResizeListener.DEBOUNCE_TIME = 50;
 
 // const MapPin = () => (
 //     <img

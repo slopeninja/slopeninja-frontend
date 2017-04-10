@@ -1,5 +1,6 @@
 .Map {
   display: none;
+  align-self: stretch;
   margin-top: 5px;
   border: 1px solid;
   border-color: #EDEDED;
@@ -15,12 +16,12 @@
 */
 @media only screen and (min-width: 768px) {
   .Map {
+    display: flex;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .Map {
-    display: flex;
   }
   .Map-content {
     width: 100%;

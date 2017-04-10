@@ -10,6 +10,11 @@ const SQUAW_ALPINE_COORDS = {
   lng: -120.2483866,
 };
 
+export const LAKE_TAHOE_COORDS = {
+  lat: 39.0898559,
+  lng: -120.014292,
+};
+
 const initialState = {
 
   resorts: [

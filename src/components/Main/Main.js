@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import React from 'react';
 import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
+import { LAKE_TAHOE_COORDS } from '../../reducer';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import BackButton from '../BackButton/BackButton';
-import HomeMap from '../HomeMap/HomeMap';
 import './Main.css';
 
 const Main = (props) => {
@@ -15,7 +15,7 @@ const Main = (props) => {
   );
 
   if (!resortId) {
-    return <HomeMap />;
+    return <Map coords={LAKE_TAHOE_COORDS} zoom={11} />;
   }
 
   if (!resort) {
