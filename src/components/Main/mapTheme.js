@@ -4,7 +4,7 @@ const mapTheme = [
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#1ed2ff"
+                "color": "#9B9B9B"
             },
             {
                 "visibility": "on"
@@ -259,7 +259,7 @@ const mapTheme = [
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#736363"
+                "color": "#f93b6f"
             }
         ]
     },
@@ -268,7 +268,7 @@ const mapTheme = [
         "elementType": "labels.icon",
         "stylers": [
             {
-                "color": "#736363"
+                "color": "#f93b6f"
             }
         ]
     },
@@ -316,7 +316,7 @@ const mapTheme = [
                 "lightness": 50
             },
             {
-                "color": "#ffcf61"
+                "color": "#f93b6f"
             }
         ]
     },
@@ -328,7 +328,7 @@ const mapTheme = [
                 "visibility": "on"
             },
             {
-                "color": "#ededed"
+                "color": "#1ed2ff"
             }
         ]
     }

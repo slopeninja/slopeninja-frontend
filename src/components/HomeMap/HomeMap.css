@@ -1,0 +1,17 @@
+.HomeMap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: column;
+  border: 1px solid #EDEDED;
+  margin: 6px;
+  background-color: #ffffff;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+}

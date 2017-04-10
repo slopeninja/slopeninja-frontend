@@ -4,6 +4,7 @@ import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import BackButton from '../BackButton/BackButton';
+import HomeMap from '../HomeMap/HomeMap';
 import './Main.css';
 
 const Main = (props) => {
@@ -14,7 +15,7 @@ const Main = (props) => {
   );
 
   if (!resortId) {
-    return null;
+    return <HomeMap />;
   }
 
   if (!resort) {
