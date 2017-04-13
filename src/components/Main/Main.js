@@ -15,11 +15,23 @@ const Main = (props) => {
   );
 
   if (!resortId) {
-    return <Map coords={LAKE_TAHOE_COORDS} zoom={11} />;
+    return (
+      <main className="Main-wrapper">
+        <Map
+          coords={LAKE_TAHOE_COORDS}
+          zoom={10}
+          resorts={props.resorts}
+        />
+      </main>
+    );
   }
 
   if (!resort) {
-    return <FourOhFour />;
+    return (
+      <main className="Main-wrapper">
+        <FourOhFour />
+      </main>
+    );
   }
 
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="333px" height="476px" viewBox="0 0 333 476" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-154.000000, -70.000000)">
+            <g id="pin" transform="translate(154.000000, 70.000000)">
+                <path d="M166.5,0 C74.449286,0 0,74.494 0,166.6 C0,291.55 166.5,476 166.5,476 C166.5,476 333,291.55 333,166.6 C333,74.494 258.550714,0 166.5,0 L166.5,0 Z" id="Shape-Copy" fill="#4A4A4A" fill-rule="nonzero"></path>
+                <path d="M166.5,226.1 C133.675714,226.1 107.035714,199.444 107.035714,166.6 C107.035714,133.756 133.675714,107.1 166.5,107.1 C199.324286,107.1 225.964286,133.756 225.964286,166.6 C225.964286,199.444 199.324286,226.1 166.5,226.1 L166.5,226.1 Z" id="Shape-Copy-path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

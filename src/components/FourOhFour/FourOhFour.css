@@ -6,7 +6,6 @@
   align-self: stretch;
   flex-direction: column;
   border: 1px solid #EDEDED;
-  margin: 6px;
 
   background-image:
     -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f8f8f8), color-stop(.25, transparent)),

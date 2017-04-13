@@ -6,8 +6,8 @@ const SIERRA_AT_TAHOE_COORDS = {
 };
 
 const SQUAW_ALPINE_COORDS = {
-  lat: 39.1730841,
-  lng: -120.2483866,
+  lat: 39.1909452,
+  lng: -120.248888,
 };
 
 export const LAKE_TAHOE_COORDS = {
@@ -16,7 +16,7 @@ export const LAKE_TAHOE_COORDS = {
 };
 
 const initialState = {
-
+  currentlyHoveredResortId: '81e32949-79e7-43ff-a677-38c1c27c1fe6',
   resorts: [
     {
       id: '81e32949-79e7-43ff-a677-38c1c27c1fe6',
