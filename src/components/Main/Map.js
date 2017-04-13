@@ -1,27 +1,11 @@
 import React, { Component } from 'react';
 import GoogleMap from 'google-map-react';
-import { connect } from 'react-redux';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import mapTheme from './mapTheme';
-import mapPin from './ResortInfoCard/images/pin.svg';
+import MapPin from './MapPin';
 import './Map.css';
 
 WindowResizeListener.DEBOUNCE_TIME = 50;
-
-const MapPin = (props) => (
-    <img
-      src={mapPin}
-      style={{
-        position: 'relative',
-        height: '40px',
-        width: '40px',
-        top: -50,
-        left: -3,
-      }}
-      lat={props.lat}
-      lng={props.lng}
-    />
-);
 
 const GOOGLE_MAP_API_KEY = {
   key: 'AIzaSyCceGlAwHncILM7vq047eJJXQBgZN5JVe8',
@@ -78,23 +62,22 @@ class Map extends Component {
         resort => (
           <MapPin
             key={resort.id}
+            resort={resort}
             lat={resort.coords.lat}
             lng={resort.coords.lng}
           />
         ),
       );
     }
-    const createMapOptions = maps => (
-      {
-        zoomControlOptions: {
-          position: maps.ControlPosition.TOP_RIGHT,
-          style: maps.ZoomControlStyle.SMALL,
-        },
-        scrollwheel: true,
-        styles: mapTheme,
-      }
-    );
-
+    const createMapOptions = maps => ({
+      backgroundColor: '#FFFFFF',
+      zoomControlOptions: {
+        position: maps.ControlPosition.TOP_RIGHT,
+        style: maps.ZoomControlStyle.SMALL,
+      },
+      scrollwheel: true,
+      styles: mapTheme,
+    });
 
     return (
       <div className="Map">

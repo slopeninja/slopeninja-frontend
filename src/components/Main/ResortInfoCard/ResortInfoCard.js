@@ -10,18 +10,6 @@ import thunderstorm from './images/thunderstorm.svg';
 import rain from './images/rain.svg';
 import snow from './images/snow.svg';
 
-import Boreal from './images/Boreal.svg';
-import Sierra from './images/Sierra.svg';
-import Squaw from './images/Squaw.svg';
-import Sugerbowl from './images/Sugarbowl.svg';
-import Kirkwood from './images/Kirkwood.svg';
-import Northstar from './images/Northstar.svg';
-import Hevenly from './images/Hevenly.svg';
-import MtRose from './images/MtRose.svg';
-import Donner from './images/Donner.svg';
-import Diamond from './images/Diamond.svg';
-import Homewood from './images/Homewood.svg';
-
 const WEATHER_ICONS = {
   sunny,
   cloudy,
@@ -29,21 +17,6 @@ const WEATHER_ICONS = {
   rain,
   snow,
 };
-
-export const RESORT_LOGOS = {
-  Boreal,
-  'Sierra-at-Tahoe': Sierra,
-  'Squaw Valley': Squaw,
-  'Suger Bowl': Sugerbowl,
-  'Hevenly Mountain': Hevenly,
-  Northstar,
-  'Diamond Peak': Diamond,
-  'Donner Ski Ranch': Donner,
-  'Mt.Rose': MtRose,
-  'Homewood Mountain': Homewood,
-  'Kirkwood Mountain': Kirkwood,
-};
-
 
 const ResortInfoHeader = ({ resort }) => (
   <header className="ResortInfoHeader-header">
@@ -54,7 +27,7 @@ const ResortInfoHeader = ({ resort }) => (
           <figure className="ResortInfoHeader-logo">
             <img
               alt="logo"
-              src={RESORT_LOGOS[resort.name]}
+              src={resort.logo}
             />
           </figure>
           <div>

@@ -3,7 +3,6 @@ import {
   Link,
 } from 'react-router-dom';
 import ProgressBar from '../Main/ResortInfoCard/ProgressBar';
-import { RESORT_LOGOS } from '../Main/ResortInfoCard/ResortInfoCard';
 
 import './ResortNavCard.css';
 
@@ -29,7 +28,7 @@ const ResortNavCard = ({ resort, selected }) => {
         <figure className="ResortNavCard-logo">
           <img
             alt="logo"
-            src={RESORT_LOGOS[resort.name]}
+            src={resort.logo}
           />
         </figure>
         <div className="ResortNavCard-info">

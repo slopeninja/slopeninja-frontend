@@ -21,6 +21,7 @@ const initialState = {
     {
       id: '81e32949-79e7-43ff-a677-38c1c27c1fe6',
       name: 'Squaw Valley',
+      logo: '/images/resorts/squaw.svg',
       location: 'Olympic Valley, CA 96146',
       status: 'Open',
       coords: SQUAW_ALPINE_COORDS,
@@ -60,6 +61,7 @@ const initialState = {
     {
       id: '81e32949-79e7-43ff-a678-38c1c27c1fe6',
       name: 'Sierra-at-Tahoe',
+      logo: '/images/resorts/sierra.svg',
       location: 'Twin Bridges, CA 96146',
       status: 'Closed',
       coords: SIERRA_AT_TAHOE_COORDS,

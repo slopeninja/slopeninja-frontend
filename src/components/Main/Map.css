@@ -19,15 +19,9 @@
   .Map {
     display: flex;
   }
-  .Map-content {
-    width: 100%;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
   .Map {
-  }
-  .Map-content {
-    width: 100%;
   }
 }
