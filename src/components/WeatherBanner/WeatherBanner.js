@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import snowman from './snowman.svg';
 import './WeatherBanner.css';
 
 const WeatherBanner = (props) => {
@@ -14,7 +15,16 @@ const WeatherBanner = (props) => {
   return (
     <div className="WeatherBanner-wrapper">
       <span className="WeatherBanner-text">
-        ☃️{'Yay! It\'s snowing in Tahoe!'}
+        <img
+          alt="snowman"
+          style={{
+            width: '16px',
+            marginLeft: '5px',
+            marginRight: '5px',
+          }}
+          src={snowman}
+        />
+        {'Yay! It\'s snowing in Tahoe!'}
       </span>
     </div>
   );
