@@ -5,6 +5,7 @@
   display: flex;
   align-self: stretch;
   flex-direction: column;
+  margin-top: 1pc;
 }
 
 .SideNav-hideOnMobile {
@@ -20,7 +21,8 @@
   .SideNav-wrapper {
     display: flex;
     margin-left: 1pc;
-    margin-top: 6px;
+    padding-top: 6px;
+    margin-top: 0;
     padding-right: 6px;
     flex: none;
   }

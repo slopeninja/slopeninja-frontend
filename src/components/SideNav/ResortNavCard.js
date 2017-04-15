@@ -23,7 +23,12 @@ const ResortNavCard = ({ resort, selected }) => {
   }
 
   return (
-    <Link to={`/resorts/${resort.id}`}>
+    <Link
+      to={`/resorts/${resort.id}`}
+      style={{
+        marginBottom: '1pc',
+      }}
+    >
       <div className="ResortNavCard" style={selectedSytle}>
         <figure className="ResortNavCard-logo">
           <img

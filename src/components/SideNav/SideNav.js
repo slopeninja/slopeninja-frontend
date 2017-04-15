@@ -24,6 +24,24 @@ const SideNav = ({ resorts, match }) => {
       {
         resortNavCards
       }
+      {
+        resortNavCards
+      }
+      {
+        resortNavCards
+      }
+      {
+        resortNavCards
+      }
+      {
+        resortNavCards
+      }
+      {
+        resortNavCards
+      }
+      {
+        resortNavCards
+      }
     </nav>
   );
 };

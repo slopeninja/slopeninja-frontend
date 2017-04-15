@@ -27,6 +27,7 @@ import Main from './components/Main/Main';
 import SideNav from './components/SideNav/SideNav';
 import Footer from './components/Footer/Footer';
 import FourOhFour from './components/FourOhFour/FourOhFour';
+import WeatherBanner from './components/WeatherBanner/WeatherBanner';
 
 const history = createHistory();
 
@@ -55,6 +56,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div className="Index-wrapper">
+        <WeatherBanner />
         <div className="Index-content">
           <Switch>
             <Route exact path="/" component={RedirectToResorts} />

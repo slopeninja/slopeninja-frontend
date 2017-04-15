@@ -21,6 +21,7 @@ const Main = (props) => {
           coords={LAKE_TAHOE_COORDS}
           zoom={10}
           resorts={props.resorts}
+          style={{ marginTop: 0 }}
         />
       </main>
     );

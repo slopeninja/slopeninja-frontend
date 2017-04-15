@@ -1,14 +1,9 @@
 .ResortNavCard {
-  margin-bottom: 1pc;
   height: 140px;
   display: flex;
   flex-direction: row;
   border: 1px solid;
   border-color: #EDEDED;
-}
-
-.ResortNavCard:hover {
-  background-color: #EDEDED;
 }
 
 .ResortNavCard-logo {
@@ -80,3 +75,8 @@
 @custom-media --md-viewport only screen and (min-width: 64em); // 1024px
 @custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
 */
+@media only screen and (min-width: 768px) {
+  .ResortNavCard:hover {
+    background-color: #EDEDED;
+  }
+}

@@ -1,20 +1,20 @@
-.BackButton-wrapper {
-  background-color: #4A4A4A;
+.WeatherBanner-wrapper {
+  background-color: #1ed2ff;
   width: 100%;
   min-height: 40px;
   display: flex;
   align-items: center;
+  /*margin-bottom: 0.5pc;*/
 }
-.BackButton-text {
+.WeatherBanner-text {
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 8px;
-}ya
-
-
+}
 
 @media only screen and (min-width: 768px) {
-  .BackButton-wrapper {
+  .WeatherBanner-wrapper {
+    /*margin-bottom: 0;*/
   }
 }
 

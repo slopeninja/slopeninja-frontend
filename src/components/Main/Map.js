@@ -80,7 +80,7 @@ class Map extends Component {
     });
 
     return (
-      <div className="Map">
+      <div className="Map" style={this.props.style}>
         <WindowResizeListener onResize={this.handleWindowChange} />
         <GoogleMap
           yesIWantToUseGoogleMapApiInternals

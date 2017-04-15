@@ -1,11 +1,9 @@
 .Main-wrapper {
   display: flex;
-  flex: 1;
   align-self: stretch;
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;
-  margin: 6px;
 }
 
 /*
@@ -15,8 +13,10 @@
 */
 @media only screen and (min-width: 768px) {
   .Main-wrapper {
-    margin-right: 0;
-    margin-bottom: 0;
+    margin-left: 6px;
+    padding-top: 6px;
+    flex: 1;
+
   }
 }
 
