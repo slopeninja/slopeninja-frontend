@@ -9,7 +9,7 @@
 .WeatherBanner-text {
   color: #ffffff;
   font-weight: 400;
-  margin-left: 8px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
