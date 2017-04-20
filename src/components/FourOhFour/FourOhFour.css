@@ -6,6 +6,8 @@
   align-self: stretch;
   flex-direction: column;
   border: 1px solid #EDEDED;
+  margin-bottom: 0;
+  margin-right: 0;
 
   background-image:
     -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f8f8f8), color-stop(.25, transparent)),
@@ -22,11 +24,12 @@
 }
 
 .FourOhFour-img {
-  width: 90%;
+  max-width: 90%;
+  max-height: 50vh;
 }
 
 .FourOhFour-text {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 300;
   margin-top: 1pc;
   text-align: center;
@@ -34,7 +37,9 @@
 
 @media only screen and (min-width: 768px) {
   .FourOhFour {
-    margin-bottom: 0;
-    margin-right: 0;
+
+  }
+  .FourOhFour-text {
+    font-size: 36px;
   }
 }
