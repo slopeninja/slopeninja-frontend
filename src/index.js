@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import {
@@ -14,11 +14,6 @@ import {
   routerReducer,
   routerMiddleware,
 } from 'react-router-redux';
-import {
-  Route,
-  Redirect,
-  Switch,
-} from 'react-router-dom';
 
 import 'normalize.css';
 /* eslint-disable import/extensions */
@@ -28,11 +23,7 @@ import './index.css';
 
 import reducer from './reducer';
 
-import Main from './components/Main/Main';
-import SideNav from './components/SideNav/SideNav';
-import Footer from './components/Footer/Footer';
-import FourOhFour from './components/FourOhFour/FourOhFour';
-import WeatherBanner from './components/WeatherBanner/WeatherBanner';
+import App from './components/App/App';
 
 const history = createHistory();
 
@@ -58,25 +49,10 @@ const store = createStore(
 //   console.log("store changed", store.getState())
 // })
 
-const RedirectToResorts = () => (
-  <Redirect to="/resorts" />
-);
-
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div className="Index-wrapper">
-        <WeatherBanner />
-        <div className="Index-content">
-          <Switch>
-            <Route exact path="/" component={RedirectToResorts} />
-            <Route exact path="/resorts/:resortId?" component={Main} />
-            <Route component={FourOhFour} />
-          </Switch>
-          <Route exact path="/resorts/:resortId?" component={SideNav} />
-        </div>
-        <Footer />
-      </div>
+      <App />
     </ConnectedRouter>
   </Provider>,
   document.getElementById('🏂'),

@@ -1,0 +1,35 @@
+.App-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/
+@media only screen and (min-width: 768px) {
+  .App-wrapper {
+  }
+
+  .App-content {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .App-wrapper {
+  }
+
+  .App-content {
+  }
+}
