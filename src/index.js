@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-
+import {
+  createStore,
+  combineReducers,
+  applyMiddleware,
+  compose,
+} from 'redux';
+import { createLogger } from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
 import {
   ConnectedRouter,
@@ -43,10 +48,15 @@ const store = createStore(
   composeEnhancers(
     applyMiddleware(
       // middleware for intercepting and dispatching navigation actions
+      createLogger(),
       routerMiddleware(history),
     ),
   ),
 );
+
+// store.subscribe(() => {
+//   console.log("store changed", store.getState())
+// })
 
 const RedirectToResorts = () => (
   <Redirect to="/resorts" />

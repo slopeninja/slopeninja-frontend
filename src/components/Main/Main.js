@@ -2,10 +2,14 @@ import { connect } from 'react-redux';
 import React from 'react';
 import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
-import { LAKE_TAHOE_COORDS } from '../../reducer';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import BackButton from '../BackButton/BackButton';
 import './Main.css';
+
+const LAKE_TAHOE_COORDS = {
+  lat: 39.0898559,
+  lng: -120.014292,
+};
 
 const Main = (props) => {
   const resortId = props.match.params.resortId;
