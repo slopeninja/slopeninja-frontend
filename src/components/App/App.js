@@ -15,20 +15,19 @@ import WeatherBanner from '../WeatherBanner/WeatherBanner';
 
 import './App.css';
 
-const API_URL = 'http://localhost:1234';
+import { fetchResorts } from '../../actions';
 
 const RedirectToResorts = () => (
   <Redirect to="/resorts" />
 );
 
 class App extends Component {
-  async componentDidMount() {
-    try {
-      const response = await fetch(`${API_URL}/resorts`)
-      const resortData = await response.json();
-      this.props.saveResorts(resortData);
-    } catch(error) {
-    }
+  componentDidMount() {
+    this.props.fetchResorts();
+  }
+
+  componentWillReceiveProps() {
+    console.log('componentWillReceiveProps')
   }
 
   render() {
@@ -51,11 +50,8 @@ class App extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    saveResorts: (resortData) => {
-      dispatch({
-        type: 'STORE_RESORTS_IN_RERUCER_FROM_API',
-        resorts: resortData.resorts,
-      });
+    fetchResorts: () => {
+      dispatch(fetchResorts);
     },
   };
 };

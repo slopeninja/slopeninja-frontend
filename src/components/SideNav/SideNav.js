@@ -19,7 +19,20 @@ const LoadingIndicator = () => (
   </div>
 );
 
-const SideNav = ({ resorts, match }) => {
+const ErrorIndicator = () => (
+  <div
+    style={{
+      flex: 1,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    Opps. Something{'\''}s not right.
+  </div>
+);
+
+const SideNav = ({ resorts, resortsStatus, match }) => {
   const resortId = match.params.resortId;
 
   let hideSideNavOnMobileClassName;
@@ -27,13 +40,22 @@ const SideNav = ({ resorts, match }) => {
     hideSideNavOnMobileClassName = 'SideNav-hideOnMobile';
   }
 
-  let sideNavContent = resorts.map(resort => (
-    <ResortNavCard key={resort.id} selected={resortId === resort.id} resort={resort} />
-  ));
+  let sideNavContent;
+  if (resortsStatus === 'success') {
+    sideNavContent = resorts.map(resort => (
+      <ResortNavCard key={resort.id} selected={resortId === resort.id} resort={resort} />
+    ));
+  }
 
-  if (sideNavContent.length === 0) {
+  if (resortsStatus === 'fetching') {
     sideNavContent = (
       <LoadingIndicator />
+    );
+  }
+
+  if (resortsStatus === 'fail') {
+    sideNavContent = (
+      <ErrorIndicator />
     );
   }
 
@@ -51,6 +73,7 @@ const SideNav = ({ resorts, match }) => {
 const mapStateToProps = (state) => {
   return {
     resorts: state.app.resorts,
+    resortsStatus: state.app.resortsStatus,
   };
 };
 

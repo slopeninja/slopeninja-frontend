@@ -18,6 +18,9 @@ const Main = (props) => {
     r => r.id === resortId,
   );
 
+  // debugger;
+
+
   if (!resortId) {
     return (
       <main className="Main-wrapper">
@@ -52,6 +55,7 @@ const Main = (props) => {
 const mapStateToProps = (state) => {
   return {
     resorts: state.app.resorts,
+    resortsStatus: state.app.resortsStatus,
   };
 };
 

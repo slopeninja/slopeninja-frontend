@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Route,
+} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import {
@@ -14,6 +17,7 @@ import {
   routerReducer,
   routerMiddleware,
 } from 'react-router-redux';
+import reduxThunk from 'redux-thunk';
 
 import 'normalize.css';
 /* eslint-disable import/extensions */
@@ -40,19 +44,24 @@ const store = createStore(
     applyMiddleware(
       // middleware for intercepting and dispatching navigation actions
       createLogger(),
+      reduxThunk,
       routerMiddleware(history),
     ),
   ),
 );
 
+
 // store.subscribe(() => {
 //   console.log("store changed", store.getState())
 // })
 
+//
+//
+
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App />
+      <Route component={App} />
     </ConnectedRouter>
   </Provider>,
   document.getElementById('🏂'),
