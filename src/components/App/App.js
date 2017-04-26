@@ -33,7 +33,7 @@ class App extends Component {
 
   render() {
 
-    if (this.props.resortsStatus === 'fetching' || 'success') {
+    if (this.props.resortsStatus === 'fetching') {
       return (
         <div className="App-wrapper">
           <WeatherBanner />
