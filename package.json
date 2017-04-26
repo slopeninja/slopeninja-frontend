@@ -32,6 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-local-backend": "REACT_APP_API_URL='http://localhost:1234' yarn start",
+    "start-remote-backend": "REACT_APP_API_URL='http://api.slope.ninja' yarn start",
     "build": "react-scripts build",
     "lint": "node_modules/eslint/bin/eslint.js src/",
     "test": "react-scripts test --env=jsdom",

@@ -1,4 +1,4 @@
-const API_URL = 'https://slopeninja-api.herokuapp.com';
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const getResorts = async () => {
   const response = await fetch(`${API_URL}/resorts`);
