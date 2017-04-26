@@ -3,7 +3,7 @@ import React from 'react';
 import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
 import FourOhFour from '../FourOhFour/FourOhFour';
-import BackButton from '../BackButton/BackButton';
+import HomeButton from '../HomeButton/HomeButton';
 import './Main.css';
 
 const LAKE_TAHOE_COORDS = {
@@ -45,7 +45,7 @@ const Main = (props) => {
 
   return (
     <main className="Main-wrapper">
-      <BackButton />
+      <HomeButton />
       <ResortInfoCard resort={resort} />
       <Map coords={resort.coords} zoom={14} />
     </main>
