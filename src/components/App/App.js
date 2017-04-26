@@ -6,10 +6,13 @@ import {
 } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-import { LoadingIndicator } from '../SideNav/SideNav';
+
+import
+SideNav,
+{ LoadingIndicator }
+from '../SideNav/SideNav';
 
 import Main from '../Main/Main';
-import SideNav from '../SideNav/SideNav';
 import Footer from '../Footer/Footer';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import WeatherBanner from '../WeatherBanner/WeatherBanner';
@@ -28,11 +31,9 @@ class App extends Component {
   }
 
   componentWillReceiveProps() {
-    console.log('componentWillReceiveProps')
   }
 
   render() {
-
     if (this.props.resortsStatus === 'fetching') {
       return (
         <div className="App-wrapper">
