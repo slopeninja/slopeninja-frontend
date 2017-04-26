@@ -6,7 +6,7 @@ import Spinner from 'react-spinkit';
 import ResortNavCard from './ResortNavCard';
 import './SideNav.css';
 
-const LoadingIndicator = () => (
+export const LoadingIndicator = () => (
   <div
     style={{
       flex: 1,

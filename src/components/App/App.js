@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { connect } from 'react-redux';
+import { LoadingIndicator } from '../SideNav/SideNav';
 
 import Main from '../Main/Main';
 import SideNav from '../SideNav/SideNav';
@@ -31,6 +32,16 @@ class App extends Component {
   }
 
   render() {
+
+    if (this.props.resortsStatus === 'fetching' || 'success') {
+      return (
+        <div className="App-wrapper">
+          <WeatherBanner />
+          <LoadingIndicator />
+          <Footer />
+        </div>
+      );
+    }
     return (
       <div className="App-wrapper">
         <WeatherBanner />
@@ -48,6 +59,12 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    resortsStatus: state.app.resortsStatus,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchResorts: () => {
@@ -56,6 +73,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const ConnectedApp = connect(null, mapDispatchToProps)(App);
+const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default ConnectedApp;
