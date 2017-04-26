@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import Spinner from 'react-spinkit';
+import { ThreeBounce } from 'better-react-spinkit';
 
 import ResortNavCard from './ResortNavCard';
 import './SideNav.css';
@@ -15,7 +15,7 @@ export const LoadingIndicator = () => (
       alignItems: 'center',
     }}
   >
-    <Spinner spinnerName="three-bounce" />
+    <ThreeBounce size={36} color="#4A4A4A" />
   </div>
 );
 
