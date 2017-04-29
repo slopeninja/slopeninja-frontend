@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
+import classNames from 'classnames';
 import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
 import Map from './Map';
 import FourOhFour from '../FourOhFour/FourOhFour';
@@ -19,11 +20,17 @@ const Main = (props) => {
   );
 
   // debugger;
+  let hideMainOnMobileClassName;
+  if (!resortId) {
+    hideMainOnMobileClassName = 'Main-hideOnMobile';
+  }
+
+  const className = classNames(['Main-wrapper', hideMainOnMobileClassName]);
 
 
   if (!resortId) {
     return (
-      <main className="Main-wrapper">
+      <main className={className}>
         <Map
           coords={LAKE_TAHOE_COORDS}
           zoom={10}
@@ -36,7 +43,7 @@ const Main = (props) => {
 
   if (!resort) {
     return (
-      <main className="Main-wrapper">
+      <main className={className}>
         <FourOhFour />
       </main>
     );
@@ -44,7 +51,7 @@ const Main = (props) => {
 
 
   return (
-    <main className="Main-wrapper">
+    <main className={className}>
       <HomeButton />
       <ResortInfoCard resort={resort} />
       <Map coords={resort.coords} zoom={14} />
