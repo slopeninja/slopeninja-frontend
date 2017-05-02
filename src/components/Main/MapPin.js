@@ -20,6 +20,7 @@ class MapPin extends Component{
             width: '40px',
             top: -50,
             left: -3,
+            userSelect: 'none',
           }}
         />
       </Link>
