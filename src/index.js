@@ -28,6 +28,7 @@ import './index.css';
 import reducer from './reducer';
 
 import App from './components/App/App';
+import withTracker from './withTracker';
 
 const history = createHistory();
 
@@ -50,18 +51,10 @@ const store = createStore(
   ),
 );
 
-
-// store.subscribe(() => {
-//   console.log("store changed", store.getState())
-// })
-
-//
-//
-
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route component={App} />
+      <Route component={withTracker(App)} />
     </ConnectedRouter>
   </Provider>,
   document.getElementById('🏂'),

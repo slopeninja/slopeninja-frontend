@@ -8,9 +8,9 @@ import {
 import { connect } from 'react-redux';
 
 import
-SideNav,
-{ LoadingIndicator }
-from '../SideNav/SideNav';
+SideNav, {
+  LoadingIndicator,
+} from '../SideNav/SideNav';
 
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
