@@ -75,7 +75,7 @@ class Map extends Component {
         position: maps.ControlPosition.TOP_RIGHT,
         style: maps.ZoomControlStyle.SMALL,
       },
-      scrollwheel: true,
+      scrollwheel: false,
       styles: mapTheme,
     });
 
