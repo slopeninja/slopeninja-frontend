@@ -6,13 +6,14 @@
 .ResortInfoBox {
   min-height: 100px;
   border: 1px solid #EDEDED;
-  padding: 1pc;
+  background-color: #fff;
+  padding: 6px;
 }
 
 .ResortInfoHeader-header {
   flex: 1;
   margin: 5px;
-  /*display: flex;*/
+  display: flex;
   /*flex-direction: row;*/
   /*justify-content: 'center';*/
   min-height: 120px;
@@ -64,11 +65,6 @@
 
 .ResortInfoHeader-logo img {
   width: 64px;
-}
-
-.ResortInfoBody {
-  display: flex;
-  flex-direction: column;
 }
 
 .ResortInfoBody-title {
@@ -126,13 +122,7 @@
 
   .ResortInfoBox {
     min-height: 150px;
-    padding: 6px;
     border: none;
-  }
-
-  .ResortInfoBody {
-    margin: 6px;
-    padding: 1pc;
   }
 
   .ResortInfoHeader-header {
@@ -167,14 +157,5 @@
 
   .ResortInfoHeader-logo {
     margin: 1pc;
-  }
-
-}
-
-/* This is the only way to remove gutter from flex box grid atm */
-@media only screen and (max-width: 1200px) {
-  .ResortInfoBox-no-gutter {
-    padding-right: 0;
-    padding-left: 0;
   }
 }

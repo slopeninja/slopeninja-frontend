@@ -20,9 +20,8 @@ import {
 import reduxThunk from 'redux-thunk';
 
 import 'normalize.css';
-/* eslint-disable import/extensions */
-import 'flexboxgrid';
-/* eslint-enable */
+import 'bootstrap-grid-only/bootstrap.css';
+
 import './index.css';
 
 import reducer from './reducer';
