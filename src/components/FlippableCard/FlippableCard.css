@@ -1,0 +1,35 @@
+.FlippableCard-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  perspective: 800px;
+  background-color: #4a4a4a;
+}
+
+.FlippableCard-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.FlippableCard-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #47525d;
+  backface-visibility: hidden;
+}
+
+.FlippableCard-back {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.FlippableCard-flipped {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

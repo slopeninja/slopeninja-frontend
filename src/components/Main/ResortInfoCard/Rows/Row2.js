@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ProgressBar from '../ProgressBar';
 import HighwayIcon from '../../../HighwayIcon/HighwayIcon';
+
+import FlippableCard from '../../../FlippableCard/FlippableCard';
 
 import '../ResortInfoCard.css';
 
@@ -29,7 +31,7 @@ const Box5 = ({ routes }) => {
   );
 };
 
-const Box6 = ({ routes }) => {
+const Box6 = ({ routes, onChangeCard }) => {
   const routesKeys = Object.keys(routes);
   const R1Highways = routesKeys.filter(key => routes[key].chains === 'R1');
   const R2Highways = routesKeys.filter(key => routes[key].chains === 'R2');
@@ -53,12 +55,14 @@ const Box6 = ({ routes }) => {
   if (r1HighwayIcons.length > 0) {
     r1Row = (
       <div className="ResortInfoBody-content-chains-row">
-        <span
+        <a
+          href="#"
+          onClick={() => onChangeCard('R1')}
           className="ResortInfoBody-content-chains-text"
           style={{ borderRight: '1px solid #EDEDED' }}
         >
           R1
-        </span>
+        </a>
         { r1HighwayIcons }
       </div>
     );
@@ -131,22 +135,69 @@ const Box8 = ({ trails }) => {
   );
 };
 
-const Row2 = ({ resort }) => (
-  <div className="row">
-    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-      <Box5 routes={resort.routes} />
-    </div>
-    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-      <Box6 routes={resort.routes} />
-    </div>
-    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3">
-      <Box7 lifts={resort.lifts} />
-    </div>
+class Row2 extends Component {
+  constructor(props) {
+    super(props);
 
-    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3">
-      <Box8 trails={resort.trails} />
-    </div>
-  </div>
-);
+    this.renderFrontCard = this.renderFrontCard.bind(this);
+    this.handleFlipCard = this.handleFlipCard.bind(this);
 
+    this.state = {
+      currentCard: undefined,
+    };
+  }
+
+  handleFlipCard(currentCard) {
+    this.setState({
+      currentCard,
+    });
+  }
+
+  renderFrontCard() {
+    const resort = this.props.resort;
+    return (
+      <Box6
+        routes={resort.routes}
+        onChangeCard={this.handleFlipCard}
+      />
+    );
+  }
+
+  render() {
+    const resort = this.props.resort;
+
+    return (
+      <div className="row">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+          <Box5 routes={resort.routes} />
+        </div>
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+          <div
+            style={{
+              width: '100%',
+              height: '160px',
+            }}
+          >
+            <FlippableCard
+              duriation={1}
+              cubicBezier="0.15, 0.90, 0.25, 1.25"
+              currentCard={this.state.currentCard}
+              renderFrontCard={this.renderFrontCard}
+            >
+              <Box5 id="R1" routes={resort.routes} />
+            </FlippableCard>
+          </div>
+        </div>
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+          <Box7 lifts={resort.lifts} />
+        </div>
+
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+          <Box8 trails={resort.trails} />
+        </div>
+      </div>
+    );
+  }
+
+}
 export default Row2;
