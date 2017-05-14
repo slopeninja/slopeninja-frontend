@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import snowflake from './snowflake.svg';
+import snowflake from '../Main/ResortInfoCard/images/snow-white.svg';
 import './WeatherBanner.css';
 
 const WeatherBanner = (props) => {
