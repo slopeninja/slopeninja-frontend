@@ -9,10 +9,25 @@ const FlippableCard = ({
   duriation = 0.8,
   cubicBezier = [0.15, 0.90, 0.25, 1.25],
   renderFrontCard,
+  horizontal,
 }) => {
+  let flippleCardFlippedStyle = '';
+  if (currentCard) {
+    if (horizontal) {
+      flippleCardFlippedStyle = 'FlippableCard-flipped-horizontal';
+    } else {
+      flippleCardFlippedStyle = 'FlippableCard-flipped-vertical';
+    }
+  }
+
   const flippableCardClassNames = classNames([
     'FlippableCard-card',
-    currentCard ? 'FlippableCard-flipped' : '',
+    flippleCardFlippedStyle,
+  ]);
+
+  const backFaceClassNames = classNames([
+    'FlippableCard-face',
+    horizontal ? 'FlippableCard-back-horizontal' : 'FlippableCard-back-vertical',
   ]);
 
   const cubicBezierStr = cubicBezier.join(',');
@@ -46,7 +61,7 @@ const FlippableCard = ({
         <div className="FlippableCard-face">
           {frontCardContent}
         </div>
-        <div className="FlippableCard-face FlippableCard-back">
+        <div className={backFaceClassNames}>
           {backCardContent}
         </div>
       </div>

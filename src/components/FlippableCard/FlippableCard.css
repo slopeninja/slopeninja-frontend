@@ -24,12 +24,22 @@
   backface-visibility: hidden;
 }
 
-.FlippableCard-back {
+.FlippableCard-back-vertical {
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
 
-.FlippableCard-flipped {
+.FlippableCard-flipped-vertical {
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
+}
+
+.FlippableCard-back-horizontal {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.FlippableCard-flipped-horizontal {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
