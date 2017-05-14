@@ -132,7 +132,7 @@ class Row2 extends Component {
           >
             <FlippableCard
               duriation={1}
-              cubicBezier="0.15, 0.90, 0.25, 1.25"
+              cubicBezier={[0.15, 0.90, 0.25, 1.25]}
               currentCard={this.state.currentCard}
               renderFrontCard={this.renderFrontCard}
             >

@@ -7,7 +7,7 @@ const FlippableCard = ({
   currentCard,
   children,
   duriation = 0.8,
-  cubicBezier = '0.15, 0.90, 0.25, 1.25',
+  cubicBezier = [0.15, 0.90, 0.25, 1.25],
   renderFrontCard,
 }) => {
   const flippableCardClassNames = classNames([
@@ -15,11 +15,13 @@ const FlippableCard = ({
     currentCard ? 'FlippableCard-flipped' : '',
   ]);
 
+  const cubicBezierStr = cubicBezier.join(',');
+
   const flippableCardStyles = {
-    transition: `transform ${duriation}s cubic-bezier(${cubicBezier})`,
-    '-o-transition': `transform ${duriation}s cubic-bezier(${cubicBezier})`,
-    '-moz-transition': `transform ${duriation}s cubic-bezier(${cubicBezier})`,
-    '-webkit-transition': `transform ${duriation}s cubic-bezier(${cubicBezier})`,
+    transition: `transform ${duriation}s cubic-bezier(${cubicBezierStr})`,
+    '-o-transition': `transform ${duriation}s cubic-bezier(${cubicBezierStr})`,
+    '-moz-transition': `transform ${duriation}s cubic-bezier(${cubicBezierStr})`,
+    '-webkit-transition': `transform ${duriation}s cubic-bezier(${cubicBezierStr})`,
   };
 
   const frontCardContent = renderFrontCard();
