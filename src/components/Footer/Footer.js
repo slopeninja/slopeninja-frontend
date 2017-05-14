@@ -8,7 +8,7 @@ const Footer = () => (
     <div className="Footer-logo" />
     <div className="Footer-textBox">
       <span className="Footer-text">
-        Made with
+        © Slope Ninja. All rights reserved. Made with
         <img
           alt="heart"
           style={{
@@ -20,13 +20,11 @@ const Footer = () => (
         />
         in San Francisco.
       </span>
-      <br />
-      <span className="Footer-text">© Slope Ninja. All rights reserved.</span>
     </div>
     <div className="Footer-logo">
       <img
         style={{
-          height: '3pc',
+          height: ' 2pc',
           alignSelf: 'flex-end',
         }}
         alt="Slope Ninja"
