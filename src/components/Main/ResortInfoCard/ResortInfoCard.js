@@ -40,20 +40,21 @@ const ResortInfoHeader = ({ resort }) => (
         </div>
 
         <div className="col-xs-12 col-lg-2">
-
-          <div className="row">
-            <div className="col-xs-6 col-lg-12">
-              <div className="ResortInfoHeader-status">
-                <h3>{resort.status}</h3>
+          <div className="ResortInfoHeader-extras">
+            <div className="row">
+              <div className="col-xs-6 col-lg-12">
+                <div className="ResortInfoHeader-status">
+                  <h3>{resort.status}</h3>
+                </div>
               </div>
-            </div>
-            <div className="col-xs-6 col-lg-12">
-              <div className="ResortInfoHeader-condition">
-                <img
-                  style={{ width: '48px' }}
-                  alt="logo"
-                  src={WEATHER_ICONS[resort.weather.condition]}
-                />
+              <div className="col-xs-6 col-lg-12">
+                <div className="ResortInfoHeader-condition">
+                  <img
+                    style={{ width: '48px' }}
+                    alt="logo"
+                    src={WEATHER_ICONS[resort.weather.condition]}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -65,7 +66,7 @@ const ResortInfoHeader = ({ resort }) => (
 );
 
 const ResortInfoBody = ({ resort }) => (
-  <div>
+  <div className="ResortInfoBody-container">
     <Row1 resort={resort} />
     <Row2 resort={resort} />
   </div>

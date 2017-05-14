@@ -4,11 +4,12 @@
 }
 
 .ResortInfoBox {
-  height: calc(160px - 14px);
-  width: calc(100% - 14px);
+  height: 160px;
+  width: 100%;
   border: 1px solid #EDEDED;
-  background-color: #fff;
-  padding: 6px;
+  background-color: #FFFFFF;
+  padding: 1pc;
+  box-sizing: border-box;
 }
 
 .ResortInfoHeader-header {
@@ -64,7 +65,9 @@
 .ResortInfoHeader-logo img {
   width: 64px;
 }
-
+.ResortInfoBody-container {
+  margin: 0;
+}
 .ResortInfoBody-title {
   font-size: 24px;
 }
@@ -104,35 +107,36 @@
   padding-right: 1pc;
   font-size: 24px;
   font-weight: 300;
+  text-decoration: underline;
 }
 .RoadTooltip-content {
   font-weight: 300;
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  margin-top: 0.5pc;
+  margin-top: 1pc;
 }
-.RoadTooltip-labels{
+.RoadTooltip-labels {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 0.5pc;
+  margin-top: 1pc;
 }
-.RoadTooltip-tile:last-child {
+.RoadTooltip-label:last-child {
   margin-right: 0;
 }
-.RoadTooltip-tile {
-  border: 2px solid #4A4A4A;
-  border-radius: 12px;
+.RoadTooltip-label {
+  border: 1px solid #4A4A4A;
+  border-radius: 1px;
   display: inline;
-  padding: 6px;
+  padding: 5px;
   margin-right: 6px;
   margin-bottom: 6px;
   text-align: center;
 }
 .RoadTooltip-text {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /*
@@ -148,8 +152,11 @@
 @media only screen and (min-width: 1200px) {
 
   .ResortInfoBox {
-    height: 150px;
     border: none;
+    padding: 0.5pc;
+  }
+  .ResortInfoBody-container {
+    margin: 20px;
   }
 
   .ResortInfoHeader-header {
@@ -172,6 +179,10 @@
   }
   .ResortInfoBody-content-chains-text{
     font-size: 24px;
+  }
+
+  .ResortInfoHeader-extras {
+    float: right;
   }
 
   .ResortInfoHeader-condition {

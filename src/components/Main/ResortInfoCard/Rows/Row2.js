@@ -60,35 +60,13 @@ const OpenTrails = ({ trails }) => {
   );
 };
 
-const RoadTooltip = ({ onChangeCard, id }) => {
-  let labels;
-  if (id === 'R1') {
-    labels = (
-      <div className="RoadTooltip-labels">
-        <div className="RoadTooltip-tile">
-          <span className="RoadTooltip-text">Chains</span>
-        </div>
-        <div className="RoadTooltip-tile">
-          <span className="RoadTooltip-text">AWD</span>
-        </div>
-        <div className="RoadTooltip-tile">
-          <span className="RoadTooltip-text">Snow tires</span>
-        </div>
-      </div>
-    );
-  }
-  if (id === 'R2') {
-    labels = (
-      <div className="RoadTooltip-labels">
-        <div className="RoadTooltip-tile">
-          <span className="RoadTooltip-text">Chains</span>
-        </div>
-        <div className="RoadTooltip-tile">
-          <span className="RoadTooltip-text">AWD w/Snow tires</span>
-        </div>
-      </div>
-    );
-  }
+const RoadTooltip = ({ onChangeCard, id, labels }) => {
+  const labelElements = labels.map(label => (
+    <div className="RoadTooltip-label">
+      <span className="RoadTooltip-text">{label}</span>
+    </div>
+  ));
+
   return (
     <div className="ResortInfoBox">
       <a
@@ -96,13 +74,15 @@ const RoadTooltip = ({ onChangeCard, id }) => {
         onClick={() => onChangeCard(undefined)}
         className="ResortInfoBody-title"
       >
-        <img alt="back arrow" src={back} style={{ marginRight: '6px' }} />
+        <img alt="Go back" src={back} style={{ marginRight: '6px' }} />
         { id }
       </a>
       <span className="RoadTooltip-content">
         At least one of:
       </span>
-      { labels }
+      <div className="RoadTooltip-labels">
+        { labelElements }
+      </div>
     </div>
   );
 };
@@ -156,8 +136,16 @@ class Row2 extends Component {
               currentCard={this.state.currentCard}
               renderFrontCard={this.renderFrontCard}
             >
-              <RoadTooltip id="R1" RoadControl="R1" onChangeCard={this.handleFlipCard} />
-              <RoadTooltip id="R2" RoadControl="R2" onChangeCard={this.handleFlipCard} />
+              <RoadTooltip
+                id="R1"
+                onChangeCard={this.handleFlipCard}
+                labels={['Chains', 'AWD', 'Snow tires']}
+              />
+              <RoadTooltip
+                id="R2"
+                onChangeCard={this.handleFlipCard}
+                labels={['Chains', 'AWD w/Snow tires']}
+              />
             </FlippableCard>
           </div>
         </div>
