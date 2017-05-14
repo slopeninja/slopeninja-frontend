@@ -105,6 +105,35 @@
   font-size: 24px;
   font-weight: 300;
 }
+.RoadTooltip-content {
+  font-weight: 300;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5pc;
+}
+.RoadTooltip-labels{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.5pc;
+}
+.RoadTooltip-tile:last-child {
+  margin-right: 0;
+}
+.RoadTooltip-tile {
+  border: 2px solid #4A4A4A;
+  border-radius: 12px;
+  display: inline;
+  padding: 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.RoadTooltip-text {
+  font-size: 16px;
+  font-weight: 400;
+}
 
 /*
 @custom-media --sm-viewport only screen and (min-width: 48em); // 768px

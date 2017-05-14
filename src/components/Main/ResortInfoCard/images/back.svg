@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="22px" viewBox="0 0 13 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Back Chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-Bar/Back" transform="translate(-8.000000, -31.000000)" fill="#4A4A4A">
+            <g id="Pin-Left" transform="translate(8.000000, 31.000000)">
+                <polygon id="Back-Chevron" points="0.5 11 11 0.5 13 2.5 4.5 11 13 19.5 11 21.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
