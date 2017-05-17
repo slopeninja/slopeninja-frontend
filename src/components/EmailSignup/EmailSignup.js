@@ -20,14 +20,23 @@ const EmailSignup = () => {
         <div className="col-12 col-md">
           <div className="EmailSignupTitle-content">
             <div
-              style={{ fontSize: '28px', marginBottom: '0.5pc' }}
+              style={{
+                fontSize: '30px',
+                marginBottom: '0.5pc',
+                color: '#4A4A4A',
+              }}
             >
               Want updates via email?
             </div>
             <div
-              style={{ fontSize: '20px', fontWeight: '100' }}
+              style={{
+                fontSize: '16px',
+                marginBottom: '0.5pc',
+                fontWeight: '300',
+                color: '#4A4A4A',
+              }}
             >
-              We promise not to spam.
+              We promise not to spam your inbox.
             </div>
           </div>
         </div>
