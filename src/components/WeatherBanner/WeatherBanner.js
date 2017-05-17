@@ -33,7 +33,7 @@ const WeatherBanner = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    resorts: state.app.resorts,
+    resorts: state.app.resorts.resorts,
   };
 };
 

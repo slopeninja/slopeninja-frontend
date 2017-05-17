@@ -7,7 +7,7 @@ export const FETCH_RESORTS = 'FETCH_RESORTS';
 export const FETCH_RESORTS_SUCCESS = 'FETCH_RESORTS_SUCCESS';
 export const FETCH_RESORTS_FAIL = 'FETCH_RESORTS_FAIL';
 
-function reducer(state = initialState, action) {
+function resorts(state = initialState, action) {
   if (action.type === FETCH_RESORTS_SUCCESS) {
     const newState = {
       ...state,
@@ -38,4 +38,4 @@ function reducer(state = initialState, action) {
 }
 
 
-export default reducer;
+export default resorts;

@@ -20,7 +20,7 @@ import EmailSignup from '../EmailSignup/EmailSignup';
 
 import './App.css';
 
-import { fetchResorts } from '../../actions';
+import { fetchResorts } from '../../actions/resorts';
 
 const RedirectToResorts = () => (
   <Redirect to="/resorts" />
@@ -64,7 +64,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    resortsStatus: state.app.resortsStatus,
+    resortsStatus: state.app.resorts.resortsStatus,
   };
 };
 

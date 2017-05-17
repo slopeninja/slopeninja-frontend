@@ -24,15 +24,21 @@ import 'bootstrap/dist/css/bootstrap-grid.css';
 
 import './index.css';
 
-import reducer from './reducer';
+import resorts from './reducers/resorts';
+import userSession from './reducers/userSession';
 
 import App from './components/App/App';
 import withTracker from './withTracker';
 
 const history = createHistory();
 
+const app = combineReducers({
+  resorts,
+  userSession,
+});
+
 const rootReducer = combineReducers({
-  app: reducer,
+  app,
   router: routerReducer,
 });
 

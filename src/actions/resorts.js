@@ -2,11 +2,11 @@ import {
   FETCH_RESORTS,
   FETCH_RESORTS_SUCCESS,
   FETCH_RESORTS_FAIL,
-} from './reducer';
+} from '../reducers/resorts';
 
 import {
   getResorts,
-} from './api';
+} from '../api';
 
 export const fetchResorts = async (dispatch) => {
   dispatch({

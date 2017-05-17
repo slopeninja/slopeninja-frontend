@@ -72,8 +72,8 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
 
 const mapStateToProps = (state) => {
   return {
-    resorts: state.app.resorts,
-    resortsStatus: state.app.resortsStatus,
+    resorts: state.app.resorts.resorts,
+    resortsStatus: state.app.resorts.resortsStatus,
   };
 };
 
