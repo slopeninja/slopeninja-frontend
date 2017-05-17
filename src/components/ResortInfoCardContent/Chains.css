@@ -1,0 +1,46 @@
+
+.ResortInfoBox {
+  height: 160px;
+  width: 100%;
+  border: 1px solid #EDEDED;
+  background-color: #FFFFFF;
+  padding: 1pc;
+  box-sizing: border-box;
+}
+.ResortInfoBody-content-chains {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ResortInfoBody-content-chains-row {
+  margin-top: 1pc;
+  display: flex;
+  flex-direction: row;
+  min-height: 36px;
+}
+.ResortInfoBody-content-chains-row a {
+  text-decoration: underline;
+
+}
+.ResortInfoBody-content-chains-text {
+  padding-right: 1pc;
+  font-size: 24px;
+  font-weight: 300;
+}
+.ResortInfoBody-title {
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .ResortInfoBox {
+    border: none;
+    padding: 0.5pc;
+  }
+  .ResortInfoBody-content-chains-text{
+    font-size: 24px;
+  }
+  .ResortInfoBody-title {
+    font-size: 24px;
+  }
+}

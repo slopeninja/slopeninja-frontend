@@ -1,7 +1,7 @@
 .Footer-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
   min-height: 60px;
   flex-direction: row;
   border-top: 1px solid;
@@ -9,33 +9,23 @@
   margin-top: 5px;
 }
 
-.Footer-logo {
-  display: none;
-}
-
-.Footer-textBox {
+.Footer-text-container {
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left: 4pc; /* compensate for logo width+margin */
 }
 
 .Footer-text {
   color: #9B9B9B;
   font-size: 16px;
+  text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-  .Footer-logo {
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-}
-
-@media only screen and (min-width: 1200px) {
-
+.Footer-logo {
+  align-self: center;
+  margin-right: 1pc;
+  margin-left: 1pc;
 }

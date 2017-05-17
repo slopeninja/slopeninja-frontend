@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ProgressBar from '../ProgressBar';
-import HighwayIcon from '../../../HighwayIcon/HighwayIcon';
+import ProgressBar from '../ResortInfoCard/ProgressBar';
+import HighwayIcon from '../HighwayIcon/HighwayIcon';
 
-import FlippableCard from '../../../FlippableCard/FlippableCard';
-import back from '../images/back.svg';
+import FlippableCard from '../FlippableCard/FlippableCard';
+import back from '../ResortInfoCard/images/back.svg';
 import Chains from './Chains';
-import '../ResortInfoCard.css';
+import './ResortInfoCardIconInfo.css';
 
 const OpenRoutes = ({ routes }) => {
   const routesKeys = Object.keys(routes);
@@ -87,7 +87,7 @@ const RoadTooltip = ({ onChangeCard, id, labels }) => {
   );
 };
 
-class Row2 extends Component {
+class ResortInfoCardIconInfo extends Component {
   constructor(props) {
     super(props);
 
@@ -119,11 +119,11 @@ class Row2 extends Component {
     const resort = this.props.resort;
 
     return (
-      <div className="row">
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+      <div className="row no-gutters">
+        <div className="col-12 col-sm-12 col-md-12 col-xl-3">
           <OpenRoutes routes={resort.routes} />
         </div>
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+        <div className="col-12 col-sm-12 col-md-12 col-xl-3">
           <div
             style={{
               width: '100%',
@@ -149,11 +149,11 @@ class Row2 extends Component {
             </FlippableCard>
           </div>
         </div>
-        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+        <div className="col-6 col-sm-6 col-md-6 col-xl-3">
           <OpenLifts lifts={resort.lifts} />
         </div>
 
-        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+        <div className="col-6 col-sm-6 col-md-6 col-xl-3">
           <OpenTrails trails={resort.trails} />
         </div>
       </div>
@@ -161,4 +161,4 @@ class Row2 extends Component {
   }
 
 }
-export default Row2;
+export default ResortInfoCardIconInfo;

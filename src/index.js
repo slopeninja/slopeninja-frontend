@@ -20,7 +20,7 @@ import {
 import reduxThunk from 'redux-thunk';
 
 import 'normalize.css';
-import 'bootstrap-grid-only/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-grid.css';
 
 import './index.css';
 

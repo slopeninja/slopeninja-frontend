@@ -16,6 +16,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import WeatherBanner from '../WeatherBanner/WeatherBanner';
+import EmailSignup from '../EmailSignup/EmailSignup';
 
 import './App.css';
 
@@ -45,6 +46,7 @@ class App extends Component {
     }
     return (
       <div className="App-wrapper">
+        <EmailSignup />
         <WeatherBanner />
         <div className="App-content">
           <Switch>

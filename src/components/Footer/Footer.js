@@ -5,8 +5,7 @@ import heart from './heart.svg';
 
 const Footer = () => (
   <div className="Footer-wrapper">
-    <div className="Footer-logo" />
-    <div className="Footer-textBox">
+    <div className="Footer-text-container">
       <span className="Footer-text">
         © Slope Ninja. All rights reserved. Made with
         <img
@@ -24,7 +23,7 @@ const Footer = () => (
     <div className="Footer-logo">
       <img
         style={{
-          height: ' 2pc',
+          width: ' 2pc',
           alignSelf: 'flex-end',
         }}
         alt="Slope Ninja"

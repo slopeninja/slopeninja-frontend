@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "better-react-spinkit": "^2.0.0-6",
-    "bootstrap-grid-only": "^1.0.0",
+    "bootstrap": "next",
     "classnames": "^2.2.5",
     "google-map-react": "^0.23.0",
     "history": "^4.6.1",

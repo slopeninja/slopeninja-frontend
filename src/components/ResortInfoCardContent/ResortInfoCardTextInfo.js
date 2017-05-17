@@ -1,5 +1,5 @@
 import React from 'react';
-import '../ResortInfoCard.css';
+import './ResortInfoCardTextInfo.css';
 
 const Temprature = ({ temprature }) => (
   <div className="ResortInfoBox">
@@ -29,29 +29,29 @@ const SnowDepth = ({ snowDepth }) => (
   </div>
 );
 
-const Row1 = ({ resort }) => (
-  <div className="row">
+const ResortInfoCardTextInfo = ({ resort }) => (
+  <div className="row no-gutters">
     <div
-      className="col-xs-6 col-sm-6 col-md-6 col-lg-3"
+      className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3"
     >
       <Temprature temprature={resort.weather.temprature} />
     </div>
     <div
-      className="col-xs-6 col-sm-6 col-md-6 col-lg-3"
+      className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3"
     >
       <BaseCondition base={resort.weather.base} />
     </div>
     <div
-      className="col-xs-6 col-sm-6 col-md-6 col-lg-3"
+      className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3"
     >
       <NewSnow newSnow={resort.weather.newSnow} />
     </div>
     <div
-      className="col-xs-6 col-sm-6 col-md-6 col-lg-3"
+      className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3"
     >
       <SnowDepth snowDepth={resort.weather.snowDepth} />
     </div>
   </div>
 );
 
-export default Row1;
+export default ResortInfoCardTextInfo;

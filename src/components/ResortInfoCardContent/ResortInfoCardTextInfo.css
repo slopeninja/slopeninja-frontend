@@ -1,0 +1,31 @@
+.ResortInfoBox {
+  height: 160px;
+  width: 100%;
+  border: 1px solid #EDEDED;
+  background-color: #FFFFFF;
+  padding: 1pc;
+  box-sizing: border-box;
+}
+.ResortInfoBody-title {
+  font-size: 24px;
+}
+
+.ResortInfoBody-content {
+  font-weight: 300;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1pc;
+}
+@media only screen and (min-width: 1200px) {
+
+  .ResortInfoBox {
+    border: none;
+    padding: 0.5pc;
+  }
+  .ResortInfoBody-title {
+    font-size: 24px;
+  }
+  .ResortInfoBody-content {
+  }
+}

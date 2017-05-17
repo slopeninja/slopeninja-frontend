@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import classNames from 'classnames';
-import ResortInfoCard from './ResortInfoCard/ResortInfoCard';
+import ResortInfoCard from '../ResortInfoCard/ResortInfoCard';
 import Map from './Map';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import HomeButton from '../HomeButton/HomeButton';

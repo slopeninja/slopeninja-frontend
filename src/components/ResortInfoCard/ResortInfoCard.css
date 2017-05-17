@@ -3,19 +3,8 @@
   border: 1px solid #EDEDED;
 }
 
-.ResortInfoBox {
-  height: 160px;
-  width: 100%;
-  border: 1px solid #EDEDED;
-  background-color: #FFFFFF;
-  padding: 1pc;
-  box-sizing: border-box;
-}
-
 .ResortInfoHeader-header {
-  flex: 1;
   margin: 5px;
-  display: flex;
   min-height: 120px;
 }
 
@@ -68,93 +57,20 @@
 .ResortInfoBody-container {
   margin: 0;
 }
-.ResortInfoBody-title {
-  font-size: 24px;
-}
 
-.ResortInfoBody-content {
-  font-weight: 300;
-  font-size: 24px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1pc;
-}
-
-.ResortInfoBody-content-openroutes {
-  display: flex;
-  flex-direction: row;
-}
-
-.ResortInfoBox-content-openroute-icon {
-  margin-right: 1pc;
-  margin-top: 1pc;
-}
-
-.ResortInfoBody-content-chains {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.ResortInfoBody-content-chains-row {
-  margin-top: 1pc;
-  display: flex;
-  flex-direction: row;
-  min-height: 36px;
-}
-
-.ResortInfoBody-content-chains-text {
-  padding-right: 1pc;
-  font-size: 24px;
-  font-weight: 300;
-  text-decoration: underline;
-}
-.RoadTooltip-content {
-  font-weight: 300;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1pc;
-}
-.RoadTooltip-labels {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 1pc;
-}
-.RoadTooltip-label:last-child {
-  margin-right: 0;
-}
-.RoadTooltip-label {
-  border: 1px solid #4A4A4A;
-  border-radius: 1px;
-  display: inline;
-  padding: 5px;
-  margin-right: 6px;
-  margin-bottom: 6px;
-  text-align: center;
-}
-.RoadTooltip-text {
-  font-size: 16px;
-  font-weight: 300;
-}
 
 /*
 @custom-media --sm-viewport only screen and (min-width: 48em); // 768px
 @custom-media --md-viewport only screen and (min-width: 64em); // 1024px
 @custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
 
 
 }
 
 @media only screen and (min-width: 1200px) {
 
-  .ResortInfoBox {
-    border: none;
-    padding: 0.5pc;
-  }
   .ResortInfoBody-container {
     margin: 20px;
   }
@@ -168,16 +84,6 @@
   }
 
   .ResortInfoHeader-header-subtitle {
-    font-size: 24px;
-  }
-
-  .ResortInfoBody-title {
-    font-size: 24px;
-  }
-
-  .ResortInfoBody-content {
-  }
-  .ResortInfoBody-content-chains-text{
     font-size: 24px;
   }
 

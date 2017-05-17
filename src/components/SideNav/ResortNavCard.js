@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Link,
 } from 'react-router-dom';
-import ProgressBar from '../Main/ResortInfoCard/ProgressBar';
+import ProgressBar from '../ResortInfoCard/ProgressBar';
 
 import './ResortNavCard.css';
 

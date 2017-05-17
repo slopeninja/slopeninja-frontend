@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Link,
 } from 'react-router-dom';
-import mapPin from './ResortInfoCard/images/pin.svg';
+import mapPin from '../ResortInfoCard/images/pin.svg';
 
 class MapPin extends Component{
 

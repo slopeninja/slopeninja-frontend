@@ -1,0 +1,134 @@
+.EmailSignup-wrapper {
+  border: 1px solid #ededed;
+  margin: 6px;
+}
+
+.EmailSignupTitle-container {
+  flex: 1;
+  padding-right: 0.5pc;
+  padding-left: 0.5pc;
+}
+
+.EmailSignupTitle-img {
+  display: flex;
+  justify-content: center;
+}
+
+.EmailSignupTitle-img img {
+  height: 6pc;
+  margin-bottom: 0.5pc;
+  margin-top: 0.5pc;
+  margin-right: 1pc;
+  margin-left: 1pc;
+}
+
+.EmailSignupTitle-content {
+  height: 100%;
+  padding-top: 0.5pc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.EmailSignupTitle-content > div {
+  text-align: center;
+}
+
+/* ---- */
+
+.EmailSignupForm-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0.5pc;
+  padding-top: 1pc;
+  padding-bottom: 1pc;
+}
+
+.EmailSignupForm-input {
+  height: 40px;
+  min-width: 0;
+  flex: 1;
+  font-size: 16px;
+  text-align: center;
+  color: #4A4A4A;
+  border: 1px solid #9B9B9B;
+}
+
+::-webkit-input-placeholder {
+  color: #9B9B9B;
+}
+
+.EmailSignupForm-submit {
+  height: 40px;
+  width: 120px;
+  font-size: 16px;
+  border: 1px solid #DF5B91;
+  color: #DF5B91;
+  background-color: #FFFFFF;
+  margin-left: 0.5pc;
+  flex-shrink: 0;
+}
+
+.EmailSignupForm-cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #9B9B9B;
+  background-color: #FFFFFF;
+  margin-left: 0.5pc;
+  flex-shrink: 0;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 576px);
+@custom-media --md-viewport only screen and (min-width: 768px);
+@custom-media --lg-viewport only screen and (min-width: 992px);
+*/
+@media only screen and (min-width: 768px) {
+  .EmailSignupTitle-content > div {
+    text-align: left;
+  }
+
+  .EmailSignup-wrapper {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1200px) {
+
+  .EmailSignupForm-input {
+    /*flex: none;
+    width: 18pc;*/
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .EmailSignupForm-submit {
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .EmailSignupForm-cross {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .EmailSignupTitle-container {
+    padding-right: 1pc;
+    padding-left: 1pc;
+  }
+
+  .EmailSignupForm-container {
+    padding: 1pc;
+  }
+
+}

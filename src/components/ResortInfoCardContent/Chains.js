@@ -1,6 +1,6 @@
 import React from 'react';
-import HighwayIcon from '../../../HighwayIcon/HighwayIcon';
-import '../ResortInfoCard.css';
+import HighwayIcon from '../HighwayIcon/HighwayIcon';
+import './Chains.css';
 
 
 const Chains = ({ routes, onChangeCard }) => {
