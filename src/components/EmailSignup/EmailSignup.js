@@ -22,12 +22,12 @@ const EmailSignup = () => {
             <div
               style={{ fontSize: '28px', marginBottom: '0.5pc' }}
             >
-              Want to receive updates to your email?
+              Want updates via email?
             </div>
             <div
               style={{ fontSize: '20px', fontWeight: '100' }}
             >
-              We do not spam or sell your email to 3rd parties.
+              We promise not to spam.
             </div>
           </div>
         </div>
@@ -62,10 +62,10 @@ const EmailSignup = () => {
   return (
     <div className="EmailSignup-wrapper">
       <div className="row no-gutters">
-        <div className="col-12 col-xl-7">
+        <div className="col-12 col-lg-6">
           <EmailSignupTitle />
         </div>
-        <div className="col-12 col-xl-5">
+        <div className="col-12 col-lg-6">
           <EmailSignupForm />
         </div>
       </div>
