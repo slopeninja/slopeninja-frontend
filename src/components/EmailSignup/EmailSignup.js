@@ -71,10 +71,10 @@ const EmailSignup = () => {
   return (
     <div className="EmailSignup-wrapper">
       <div className="row no-gutters">
-        <div className="col-12 col-lg-6">
+        <div className="col-12 col-lg-6 col-xl-7">
           <EmailSignupTitle />
         </div>
-        <div className="col-12 col-lg-6">
+        <div className="col-12 col-lg-6 col-xl-5">
           <EmailSignupForm />
         </div>
       </div>
