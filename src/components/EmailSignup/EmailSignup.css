@@ -3,7 +3,7 @@
   display: inline-block;
   text-align: center;
 
-  height: 50px;
+  height: 40px;
   width: 120px;
   font-size: 16px;
   color: #9b9b9b;
@@ -25,7 +25,7 @@
   padding: 0.7em 1em;
   text-decoration: none;
   text-align: center;
-  height: 50px;
+  height: 40px;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -42,8 +42,8 @@
   color: #DF5B91;
 }
 .pb-container .pb-button svg {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -69,7 +69,7 @@
   cursor: not-allowed;
 }
 .pb-container.loading .pb-button {
-  width: 50px;
+  width: 40px;
   border-width: 2px;
   border-color: #DF5B91;
   cursor: wait;
@@ -86,8 +86,8 @@
   opacity: 1;
 }
 .pb-container.success .pb-button {
-  border-color: #A0D468;
-  background-color: #A0D468;
+  border-color: #4CB950;
+  background-color: #4CB950;
 }
 .pb-container.success .pb-button span {
   transition: all 0.15s;
@@ -98,8 +98,8 @@
   opacity: 1;
 }
 .pb-container.error .pb-button {
-  border-color: #ED5565;
-  background-color: #ED5565;
+  border-color: #FF4891;
+  background-color: #FF4891;
 }
 .pb-container.error .pb-button span {
   transition: all 0.15s;
@@ -225,6 +225,27 @@
 @media only screen and (min-width: 768px) {
 }
 @media only screen and (min-width: 768px) {
+  .pb-container {
+    height: 50px;
+
+  }
+  .pb-container .pb-button {
+    height: 50px;
+  }
+  .pb-container.loading .pb-button {
+    border-radius: 25px;
+  }
+  .pb-container .pb-button span {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .pb-container .pb-button svg {
+    height: 50px;
+    width: 50px;
+  }
+  .pb-container.loading .pb-button {
+    width: 50px;
+  }
 
   .EmailSignupForm-input {
     /*flex: none;

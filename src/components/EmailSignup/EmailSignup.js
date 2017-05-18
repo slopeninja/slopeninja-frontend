@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ProgressButton from 'react-progress-button'
+import ProgressButton from 'react-progress-button';
 
 import cross from './cross.svg';
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';
 
 class EmailSignup extends Component {
-  getInitialState() {
-    return {
+  constructor() {
+    super();
+    this.state = {
       buttonState: '',
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({ buttonState: 'loading' });
+    // make asynchronous call
+    setTimeout(() => {
+      this.setState({ buttonState: 'error' });
+    }, 3000);
   }
 
   render() {
@@ -63,16 +72,19 @@ class EmailSignup extends Component {
             placeholder="email"
             className="EmailSignupForm-input"
           />
-            <ProgressButton >
-              Submit
-            </ProgressButton>
-            <button
-              name="cancle"
-              className="EmailSignupForm-cross"
-              onClick={this.props.disableEmailSignup}
-            >
-              <img alt="cancel" src={cross} />
-            </button>
+          <ProgressButton
+            onClick={this.handleClick}
+            state={this.state.buttonState}
+          >
+            Submit
+          </ProgressButton>
+          <button
+            name="cancle"
+            className="EmailSignupForm-cross"
+            onClick={this.props.disableEmailSignup}
+          >
+            <img alt="cancel" src={cross} />
+          </button>
         </div>
       );
 
