@@ -943,10 +943,6 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap-grid-only@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/bootstrap-grid-only/-/bootstrap-grid-only-1.0.0.tgz#fe83a10c3444073771a84d1e41819b258ff0372f"
-
 bootstrap@next:
   version "4.0.0-alpha.6"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-alpha.6.tgz#4f54dd33ac0deac3b28407bc2df7ec608869c9c8"
@@ -4338,7 +4334,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.0.0, prop-types@^15.5.4, prop-types@^15.5.6:
+prop-types@^15.0.0, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8:
   version "15.5.8"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
   dependencies:
@@ -4444,6 +4440,13 @@ react-ga@^2.2.0:
     create-react-class "^15.5.2"
     object-assign "^4.0.1"
     prop-types "^15.5.6"
+
+react-progress-button@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-progress-button/-/react-progress-button-5.0.4.tgz#77bb42992c13bf1735fdb26a8ae76093b020b734"
+  dependencies:
+    create-react-class "^15.5.2"
+    prop-types "^15.5.8"
 
 react-redux@^5.0.4:
   version "5.0.4"
