@@ -6,9 +6,33 @@ import cross from './cross.svg';
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';
 
+const EmailSignupForm = ({ onSubmitClick, onDismissClick, submitButtonStatus }) => (
+  <div className="EmailSignupForm-container">
+    <input
+      type="email"
+      name="email"
+      placeholder="email"
+      className="EmailSignupForm-input"
+    />
+    <ProgressButton
+      onClick={onSubmitClick}
+      state={submitButtonStatus}
+    >
+      Submit
+    </ProgressButton>
+    <button
+      name="cancle"
+      className="EmailSignupForm-cross"
+      onClick={onDismissClick}
+    >
+      <img alt="cancel" src={cross} />
+    </button>
+  </div>
+);
+
 class EmailSignup extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       buttonState: '',
     };
@@ -23,105 +47,64 @@ class EmailSignup extends Component {
   }
 
   render() {
-    if (this.props.showEmailSignup) {
-      const EmailSignupTitle = () => (
-        <div className="EmailSignupTitle-container">
-          <div className="row no-gutters">
-            <div className="col-12 col-md-auto">
+    const EmailSignupTitle = () => (
+      <div className="EmailSignupTitle-container">
+        <div className="row no-gutters">
+          <div className="col-12 col-md-auto">
+            <div
+              className="EmailSignupTitle-img"
+            >
+              <img
+                alt="snowboarders"
+                src={snowboarders}
+              />
+            </div>
+          </div>
+          <div className="col-12 col-md">
+            <div className="EmailSignupTitle-content">
               <div
-                className="EmailSignupTitle-img"
+                style={{
+                  fontSize: '30px',
+                  marginBottom: '0.5pc',
+                  color: '#4A4A4A',
+                }}
               >
-                <img
-                  alt="snowboarders"
-                  src={snowboarders}
-                />
+                Want updates via email?
               </div>
-            </div>
-            <div className="col-12 col-md">
-              <div className="EmailSignupTitle-content">
-                <div
-                  style={{
-                    fontSize: '30px',
-                    marginBottom: '0.5pc',
-                    color: '#4A4A4A',
-                  }}
-                >
-                  Want updates via email?
-                </div>
-                <div
-                  style={{
-                    fontSize: '16px',
-                    marginBottom: '0.5pc',
-                    fontWeight: '300',
-                    color: '#4A4A4A',
-                  }}
-                >
-                  We promise not to spam your inbox.
-                </div>
+              <div
+                style={{
+                  fontSize: '16px',
+                  marginBottom: '0.5pc',
+                  fontWeight: '300',
+                  color: '#4A4A4A',
+                }}
+              >
+                We promise not to spam your inbox.
               </div>
             </div>
           </div>
         </div>
-      );
+      </div>
+    );
 
-      const EmailSignupForm = () => (
-        <div className="EmailSignupForm-container">
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            className="EmailSignupForm-input"
-          />
-          <ProgressButton
-            onClick={this.handleClick}
-            state={this.state.buttonState}
-          >
-            Submit
-          </ProgressButton>
-          <button
-            name="cancle"
-            className="EmailSignupForm-cross"
-            onClick={this.props.disableEmailSignup}
-          >
-            <img alt="cancel" src={cross} />
-          </button>
-        </div>
-      );
-
-      return (
-        <div className="EmailSignup-wrapper">
-          <div className="row no-gutters">
-            <div className="col-12 col-lg-6 col-xl-7">
-              <EmailSignupTitle />
-            </div>
-            <div className="col-12 col-lg-6 col-xl-5">
-              <EmailSignupForm />
-            </div>
+    return (
+      <div className="EmailSignup-wrapper">
+        <div className="row no-gutters">
+          <div className="col-12 col-lg-6 col-xl-7">
+            <EmailSignupTitle />
+          </div>
+          <div className="col-12 col-lg-6 col-xl-5">
+            <EmailSignupForm
+              onSubmitClick={this.handleClick}
+              submitButtonStatus={this.state.buttonState}
+              onDismissClick={this.props.onDismissClick}
+            />
           </div>
         </div>
-      );
-    }
-    return null;
+      </div>
+    );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    showEmailSignup: state.app.userSession.showEmailSignup,
-  };
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    disableEmailSignup: () => {
-      dispatch({
-        type: 'DISABLE_EMAILSIGNUP',
-      });
-    },
-
-  };
-};
-
-const ConnectedEmailSignup = connect(mapStateToProps, mapDispatchToProps)(EmailSignup);
-
-export default ConnectedEmailSignup;
+export default EmailSignup;
