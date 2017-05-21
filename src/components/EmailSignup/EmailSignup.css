@@ -19,6 +19,7 @@
 .pb-container .pb-button {
   background: transparent;
   border: 1px solid #DF5B91;
+  overflow: hidden;
   border-radius: 0px;
   color: currentColor;
   cursor: pointer;
@@ -193,6 +194,7 @@
 }*/
 
 .EmailSignupForm-cross {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
