@@ -1,49 +1,100 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ProgressButton from 'react-progress-button';
+import { Control, Form, actions } from 'react-redux-form';
+import ProgressButton, { STATE as BUTTON_STATE } from 'react-progress-button';
 
 import cross from './cross.svg';
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';
 
-const EmailSignupForm = ({ onSubmitClick, onDismissClick, submitButtonStatus }) => (
-  <div className="EmailSignupForm-container">
-    <input
+import { setShowNewsletterSubscription } from '../../actions/userSession';
+
+import { isValidEmail, isNotEmpty } from '../../util/validators';
+
+const BUTTON_ERROR_DISMISS_DURATION = 1200;
+const BUTTON_SUCCESS_DISMISS_DURATION = 1200;
+
+// FIXME: This is here until the following bug is fixed:
+// https://github.com/davidkpiano/react-redux-form/issues/777
+const preventFormSubmissionOnEnter = (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+  }
+};
+
+const EmailSignupForm = ({ onFormSubmit, onFormSubmitFailed, onDismissClick, submitButtonStatus }) => (
+  <Form className="EmailSignupForm-container" model="forms.newsletterSubscription" onSubmitFailed={onFormSubmitFailed} onSubmit={onFormSubmit}>
+    <Control.text
       type="email"
-      name="email"
-      placeholder="email"
       className="EmailSignupForm-input"
+      placeholder="email"
+      model="forms.newsletterSubscription.email"
+      validators={{
+        required: isNotEmpty,
+        email: isValidEmail,
+      }}
+      onKeyPress={preventFormSubmissionOnEnter}
     />
     <ProgressButton
-      onClick={onSubmitClick}
+      controlled
       state={submitButtonStatus}
+      type="submit"
+      shouldAllowClickOnLoading={false}
+      durationError={BUTTON_ERROR_DISMISS_DURATION}
+      durationSuccess={BUTTON_SUCCESS_DISMISS_DURATION}
     >
       Submit
     </ProgressButton>
     <button
-      name="cancle"
       className="EmailSignupForm-cross"
       onClick={onDismissClick}
     >
       <img alt="cancel" src={cross} />
     </button>
-  </div>
+  </Form>
 );
 
 class EmailSignup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonState: '',
+      buttonState: BUTTON_STATE.NOTHING,
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleFormSubmitFailed = this.handleFormSubmitFailed.bind(this);
+
+    this.buttonResetTimeout = null;
   }
-  handleClick() {
-    this.setState({ buttonState: 'loading' });
+
+  componentWillUnmount () {
+    clearTimeout(this.buttonResetTimeout);
+  }
+
+  handleFormSubmitFailed(newsletterSubscription) {
+    this.setState({ buttonState: BUTTON_STATE.ERROR });
+
+    // react-progress-button isn't a fully controlled component,
+    // so we need to sync states
+    this.buttonResetTimeout = setTimeout(() => {
+      this.setState({ buttonState: BUTTON_STATE.NOTHING });
+    }, BUTTON_ERROR_DISMISS_DURATION);
+
+  }
+
+  handleFormSubmit(newsletterSubscription) {
+    debugger;
+    this.setState({ buttonState: BUTTON_STATE.LOADING });
     // make asynchronous call
     setTimeout(() => {
-      this.setState({ buttonState: 'error' });
-    }, 3000);
+      console.log(newsletterSubscription);
+      this.setState({ buttonState: BUTTON_STATE.SUCCESS });
+
+      setTimeout(() => {
+        this.props.disableEmailSignup();
+      }, 1000);
+
+    }, 500);
+
   }
 
   render() {
@@ -95,7 +146,8 @@ class EmailSignup extends Component {
           </div>
           <div className="col-12 col-lg-6 col-xl-5">
             <EmailSignupForm
-              onSubmitClick={this.handleClick}
+              onFormSubmit={this.handleFormSubmit}
+              onFormSubmitFailed={this.handleFormSubmitFailed}
               submitButtonStatus={this.state.buttonState}
               onDismissClick={this.props.onDismissClick}
             />
@@ -106,5 +158,12 @@ class EmailSignup extends Component {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    disableEmailSignup: () => {
+      dispatch(setShowNewsletterSubscription);
+    },
+  };
+};
 
-export default EmailSignup;
+export default connect(null, mapDispatchToProps)(EmailSignup);

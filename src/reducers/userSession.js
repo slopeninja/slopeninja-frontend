@@ -2,15 +2,17 @@ const initialState = {
   showEmailSignup: true,
 };
 
+export const SET_SHOW_NEWSLETTER_SUBSCRIPTION = 'SET_SHOW_NEWSLETTER_SUBSCRIPTION';
+
 const userSession = (state = initialState, action) => {
-  if (action.type === "DISABLE_EMAILSIGNUP" ){
+  if (action.type === SET_SHOW_NEWSLETTER_SUBSCRIPTION) {
     const newState = {
       ...state,
-      showEmailSignup: false
-    }
+      showEmailSignup: false,
+    };
     return newState;
   }
   return state;
-}
+};
 
 export default userSession;

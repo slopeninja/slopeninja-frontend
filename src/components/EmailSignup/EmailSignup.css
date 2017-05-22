@@ -28,8 +28,6 @@
   text-align: center;
   height: 40px;
   width: 100%;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
   transition: background-color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s, border-radius 0.3s;
 }
 .pb-container .pb-button span {
@@ -74,6 +72,8 @@
   cursor: wait;
   background-color: transparent;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 .pb-container.loading .pb-button span {
   transition: all 0.15s;
@@ -87,6 +87,8 @@
 .pb-container.success .pb-button {
   border-color: #4CB950;
   background-color: #4CB950;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 .pb-container.success .pb-button span {
   transition: all 0.15s;

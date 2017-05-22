@@ -21,6 +21,7 @@ import EmailSignup from '../EmailSignup/EmailSignup';
 import './App.css';
 
 import { fetchResorts } from '../../actions/resorts';
+import { setShowNewsletterSubscription } from '../../actions/userSession';
 
 const RedirectToResorts = () => (
   <Redirect to="/resorts" />
@@ -83,9 +84,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(fetchResorts);
     },
     disableEmailSignup: () => {
-      dispatch({
-        type: 'DISABLE_EMAILSIGNUP',
-      });
+      dispatch(setShowNewsletterSubscription);
     },
   };
 };
