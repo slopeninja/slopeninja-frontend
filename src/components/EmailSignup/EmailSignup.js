@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Control, Form, actions } from 'react-redux-form';
 import ProgressButton, { STATE as BUTTON_STATE } from 'react-progress-button';
 
-import cross from './cross.svg';
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';
 
@@ -49,7 +48,12 @@ const EmailSignupForm = ({ onFormSubmit, onFormSubmitFailed, onDismissClick, sub
       className="EmailSignupForm-cross"
       onClick={onDismissClick}
     >
-      <img alt="cancel" src={cross} />
+      <svg className='pb-cancel-cross' viewBox='0 0 70 70'>
+          <path d='m35,35l-9.3,-9.3' />
+          <path d='m35,35l9.3,9.3' />
+          <path d='m35,35l-9.3,9.3' />
+          <path d='m35,35l9.3,-9.3' />
+      </svg>
     </button>
   </Form>
 );

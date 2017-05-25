@@ -110,6 +110,23 @@
 .pb-container.error .pb-button .pb-cross > path {
   opacity: 1;
 }
+.pb-container .pb-button svg.pb-checkmark path,
+.pb-container .pb-button svg.pb-cross path {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+svg.pb-cancel-cross {
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+}
+svg.pb-cancel-cross path {
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke: #9b9b9b;
+}
+
 @keyframes spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -207,6 +224,7 @@
   background-color: #FFFFFF;
   margin-left: 0.5pc;
   flex-shrink: 0;
+   padding: 0;
 }
 
 /*
