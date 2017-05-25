@@ -6,7 +6,7 @@ import ProgressButton, { STATE as BUTTON_STATE } from 'react-progress-button';
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';
 
-import { setShowNewsletterSubscription } from '../../actions/userSession';
+import { setShowNewsletterSubscription, createNewsletterSubscription } from '../../actions/userSession';
 
 import { isValidEmail, isNotEmpty } from '../../util/validators';
 
@@ -21,8 +21,18 @@ const preventFormSubmissionOnEnter = (event) => {
   }
 };
 
-const EmailSignupForm = ({ onFormSubmit, onFormSubmitFailed, onDismissClick, submitButtonStatus }) => (
-  <Form className="EmailSignupForm-container" model="forms.newsletterSubscription" onSubmitFailed={onFormSubmitFailed} onSubmit={onFormSubmit}>
+const EmailSignupForm = ({
+  onFormSubmit,
+  onFormSubmitFailed,
+  onDismissClick,
+  submitButtonStatus,
+}) => (
+  <Form
+    className="EmailSignupForm-container"
+    model="forms.newsletterSubscription"
+    onSubmitFailed={onFormSubmitFailed}
+    onSubmit={onFormSubmit}
+  >
     <Control.text
       type="email"
       className="EmailSignupForm-input"
@@ -48,11 +58,11 @@ const EmailSignupForm = ({ onFormSubmit, onFormSubmitFailed, onDismissClick, sub
       className="EmailSignupForm-cross"
       onClick={onDismissClick}
     >
-      <svg className='pb-cancel-cross' viewBox='0 0 70 70'>
-          <path d='m35,35l-9.3,-9.3' />
-          <path d='m35,35l9.3,9.3' />
-          <path d='m35,35l-9.3,9.3' />
-          <path d='m35,35l9.3,-9.3' />
+      <svg className="pb-cancel-cross" viewBox="0 0 70 70">
+        <path d="m35,35l-9.3,-9.3" />
+        <path d="m35,35l9.3,9.3" />
+        <path d="m35,35l-9.3,9.3" />
+        <path d="m35,35l9.3,-9.3" />
       </svg>
     </button>
   </Form>
@@ -70,7 +80,7 @@ class EmailSignup extends Component {
     this.buttonResetTimeout = null;
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     clearTimeout(this.buttonResetTimeout);
   }
 
@@ -82,23 +92,22 @@ class EmailSignup extends Component {
     this.buttonResetTimeout = setTimeout(() => {
       this.setState({ buttonState: BUTTON_STATE.NOTHING });
     }, BUTTON_ERROR_DISMISS_DURATION);
-
   }
 
   handleFormSubmit(newsletterSubscription) {
-    debugger;
-    this.setState({ buttonState: BUTTON_STATE.LOADING });
+    const email = newsletterSubscription.email;
+    this.setState({
+      buttonState: BUTTON_STATE.LOADING,
+    });
+    this.props.sendEmailInput(email);
     // make asynchronous call
-    setTimeout(() => {
-      console.log(newsletterSubscription);
-      this.setState({ buttonState: BUTTON_STATE.SUCCESS });
 
+    setTimeout(() => {
+      this.setState({ buttonState: BUTTON_STATE.SUCCESS });
       setTimeout(() => {
         this.props.disableEmailSignup();
       }, 1000);
-
     }, 500);
-
   }
 
   render() {
@@ -166,6 +175,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     disableEmailSignup: () => {
       dispatch(setShowNewsletterSubscription);
+    },
+    sendEmailInput: (email) => {
+      dispatch(createNewsletterSubscription(email));
     },
   };
 };
