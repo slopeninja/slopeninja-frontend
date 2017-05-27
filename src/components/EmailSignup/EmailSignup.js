@@ -6,7 +6,12 @@ import ProgressButton, { STATE as BUTTON_STATE } from 'react-progress-button';
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';
 
-import { setShowNewsletterSubscription, createNewsletterSubscription } from '../../actions/userSession';
+import { setShowNewsletterSubscription } from '../../actions/userSession';
+import {
+  createNewsletterSubscription,
+  newsletterSubscriptionFail,
+  newsletterSubscriptionReset,
+} from '../../actions/newsletterSubscription';
 
 import { isValidEmail, isNotEmpty } from '../../util/validators';
 
@@ -71,9 +76,6 @@ const EmailSignupForm = ({
 class EmailSignup extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      buttonState: BUTTON_STATE.NOTHING,
-    };
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleFormSubmitFailed = this.handleFormSubmitFailed.bind(this);
 
@@ -84,30 +86,19 @@ class EmailSignup extends Component {
     clearTimeout(this.buttonResetTimeout);
   }
 
-  handleFormSubmitFailed(newsletterSubscription) {
-    this.setState({ buttonState: BUTTON_STATE.ERROR });
+  handleFormSubmitFailed() {
+    this.props.failNewsletterSubscription('Invalid Email');
 
     // react-progress-button isn't a fully controlled component,
     // so we need to sync states
     this.buttonResetTimeout = setTimeout(() => {
-      this.setState({ buttonState: BUTTON_STATE.NOTHING });
+      this.props.resetNewsletterSubscription();
     }, BUTTON_ERROR_DISMISS_DURATION);
   }
 
   handleFormSubmit(newsletterSubscription) {
     const email = newsletterSubscription.email;
-    this.setState({
-      buttonState: BUTTON_STATE.LOADING,
-    });
-    this.props.sendEmailInput(email);
-    // make asynchronous call
-
-    setTimeout(() => {
-      this.setState({ buttonState: BUTTON_STATE.SUCCESS });
-      setTimeout(() => {
-        this.props.disableEmailSignup();
-      }, 1000);
-    }, 500);
+    this.props.createNewsletterSubscription(email);
   }
 
   render() {
@@ -161,7 +152,7 @@ class EmailSignup extends Component {
             <EmailSignupForm
               onFormSubmit={this.handleFormSubmit}
               onFormSubmitFailed={this.handleFormSubmitFailed}
-              submitButtonStatus={this.state.buttonState}
+              submitButtonStatus={this.props.buttonState}
               onDismissClick={this.props.onDismissClick}
             />
           </div>
@@ -171,15 +162,27 @@ class EmailSignup extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    buttonState: state.app.createNewsletterSubscription.buttonState,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     disableEmailSignup: () => {
       dispatch(setShowNewsletterSubscription);
     },
-    sendEmailInput: (email) => {
+    createNewsletterSubscription: (email) => {
       dispatch(createNewsletterSubscription(email));
+    },
+    failNewsletterSubscription: (errorMessage) => {
+      dispatch(newsletterSubscriptionFail(errorMessage));
+    },
+    resetNewsletterSubscription: () => {
+      dispatch(newsletterSubscriptionReset());
     },
   };
 };
 
-export default connect(null, mapDispatchToProps)(EmailSignup);
+export default connect(mapStateToProps, mapDispatchToProps)(EmailSignup);

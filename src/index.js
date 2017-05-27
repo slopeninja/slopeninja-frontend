@@ -28,6 +28,8 @@ import './index.css';
 /* reducers */
 import resorts from './reducers/resorts';
 import userSession from './reducers/userSession';
+import createNewsletterSubscription from './reducers/newsletterSubscription';
+
 
 /* forms */
 import newsletterSubscription from './forms/newsletterSubscription';
@@ -40,6 +42,7 @@ const history = createHistory();
 const app = combineReducers({
   resorts,
   userSession,
+  createNewsletterSubscription,
 });
 
 const formReducers = combineForms({

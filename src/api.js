@@ -5,3 +5,23 @@ export const getResorts = async () => {
   const data = await response.json();
   return data.resorts;
 };
+
+export const sendNewsletterSubscription = async (email) => {
+  const response = await fetch(`${API_URL}/subscribers`, {
+    method: 'POST',
+    headers:
+    new Headers({
+      'content-type': 'application/json',
+    }),
+    body: JSON.stringify({
+      email,
+    }),
+  });
+  const data = await response.json();
+
+  if (response.status !== 200) {
+    throw new Error(data.error);
+  }
+
+  return data;
+};
