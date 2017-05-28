@@ -5,6 +5,7 @@
   background-color: #FFFFFF;
   padding: 1pc;
   box-sizing: border-box;
+  z-index: 100;
 }
 .ResortInfoBody-title {
   font-size: 24px;

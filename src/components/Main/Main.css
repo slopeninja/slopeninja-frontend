@@ -5,6 +5,10 @@
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1;
+  /* resetting z-index here fixes a bug where
+   * scrollbar renders behind content
+   */
+  z-index: 0;
 }
 
 .Main-hideOnMobile {
