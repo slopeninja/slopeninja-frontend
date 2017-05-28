@@ -1,3 +1,4 @@
+import 'wicg-focus-ring';
 import React from 'react';
 import {
   Route,

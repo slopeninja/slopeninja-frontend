@@ -15,11 +15,8 @@ class MapPin extends Component{
           alt="Map Pin"
           src={this.props.resort.logo}
           style={{
-            position: 'relative',
             height: '40px',
             width: '40px',
-            top: -50,
-            left: -3,
             userSelect: 'none',
           }}
         />

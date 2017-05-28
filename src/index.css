@@ -1,3 +1,10 @@
+:focus:not(.focus-ring) {
+  outline: none;
+}
+
+.focus-ring {
+  outline: 2px solid #1ed2ff;
+}
 
 body {
   font-family: 'Lato', sans-serif;
