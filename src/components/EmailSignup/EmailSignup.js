@@ -60,6 +60,7 @@ const EmailSignupForm = ({
       Submit
     </ProgressButton>
     <button
+      type="button"
       className="EmailSignupForm-cross"
       onClick={onDismissClick}
     >

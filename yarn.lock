@@ -4434,6 +4434,10 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-bouncefix@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-bouncefix/-/react-bouncefix-1.0.5.tgz#f40473dc44e42cbc93aaade7a49653aefcca2596"
+
 react-dev-utils@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-0.5.2.tgz#50d0b962d3a94b6c2e8f2011ed6468e4124bc410"

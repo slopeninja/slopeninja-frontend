@@ -9,6 +9,9 @@
   margin-bottom: 0;
   margin-right: 0;
 
+  padding-top: 4pc;
+  padding-bottom: 4pc;
+
   background-image:
     -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f8f8f8), color-stop(.25, transparent)),
     -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #f8f8f8), color-stop(.25, transparent)),
@@ -37,7 +40,8 @@
 
 @media only screen and (min-width: 768px) {
   .FourOhFour {
-
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .FourOhFour-text {
     font-size: 36px;

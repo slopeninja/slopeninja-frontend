@@ -195,6 +195,8 @@ svg.pb-cancel-cross path {
   text-align: center;
   color: #4A4A4A;
   border: 1px solid #9B9B9B;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 ::-webkit-input-placeholder {
