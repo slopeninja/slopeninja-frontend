@@ -19,15 +19,25 @@
   flex-direction: row;
   min-height: 36px;
 }
-.ResortInfoBody-content-chains-row a {
-  text-decoration: underline;
 
-}
 .ResortInfoBody-content-chains-text {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  /* Additional styles to look like a link */
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-appearance: none;
   padding-right: 1pc;
+  font: inherit;
   font-size: 24px;
   font-weight: 300;
+  height: 100%;
 }
+
 .ResortInfoBody-title {
   font-size: 24px;
 }

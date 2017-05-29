@@ -56,6 +56,21 @@
   font-size: 16px;
   font-weight: 300;
 }
+.RoadTooltip-title {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  /* Additional styles to look like a link */
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-appearance: none;
+  font: inherit;
+  font-size: 24px;
+  color: #4A4A4A;
+}
 
 @media only screen and (min-width: 1200px) {
 

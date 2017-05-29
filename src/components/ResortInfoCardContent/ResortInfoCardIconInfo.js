@@ -69,14 +69,13 @@ const RoadTooltip = ({ onChangeCard, id, labels }) => {
 
   return (
     <div className="ResortInfoBox">
-      <a
-        href="#"
+      <button
         onClick={() => onChangeCard(undefined)}
-        className="ResortInfoBody-title"
+        className="RoadTooltip-title"
       >
         <img alt="Go back" src={back} style={{ marginRight: '6px' }} />
         { id }
-      </a>
+      </button>
       <span className="RoadTooltip-content">
         At least one of:
       </span>

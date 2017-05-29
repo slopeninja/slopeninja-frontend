@@ -36,6 +36,7 @@ import createNewsletterSubscription from './reducers/newsletterSubscription';
 import newsletterSubscription from './forms/newsletterSubscription';
 
 import App from './components/App/App';
+import ScrollToTop from './ScrollToTop';
 import withTracker from './withTracker';
 
 const history = createHistory();
@@ -73,7 +74,9 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route component={withTracker(App)} />
+      <ScrollToTop>
+        <Route component={withTracker(App)} />
+      </ScrollToTop>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('🏂'),

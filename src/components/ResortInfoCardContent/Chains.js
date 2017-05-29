@@ -27,14 +27,13 @@ const Chains = ({ routes, onChangeCard }) => {
   if (r1HighwayIcons.length > 0) {
     r1Row = (
       <div className="ResortInfoBody-content-chains-row">
-        <a
-          href="#"
+        <button
           onClick={() => onChangeCard('R1')}
           className="ResortInfoBody-content-chains-text"
           style={{ borderRight: '1px solid #EDEDED' }}
         >
-          R1
-        </a>
+          <span>R1</span>
+        </button>
         { r1HighwayIcons }
       </div>
     );
@@ -44,14 +43,13 @@ const Chains = ({ routes, onChangeCard }) => {
   if (r2HighwayIcons.length > 0) {
     r2Row = (
       <div className="ResortInfoBody-content-chains-row">
-        <a
-          href="#"
+        <button
           onClick={() => onChangeCard('R2')}
           className="ResortInfoBody-content-chains-text"
           style={{ borderRight: '1px solid #EDEDED' }}
         >
-          R2
-        </a>
+          <span>R2</span>
+        </button>
         { r2HighwayIcons }
       </div>
     );
