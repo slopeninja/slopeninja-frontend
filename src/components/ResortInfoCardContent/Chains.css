@@ -20,7 +20,7 @@
   min-height: 36px;
 }
 
-.ResortInfoBody-content-chains-text {
+.ResortInfoBody-content-chains-link {
   background: none;
   border: none;
   margin: 0;
@@ -36,6 +36,10 @@
   font-size: 24px;
   font-weight: 300;
   height: 100%;
+}
+.ResortInfoBody-content-chains-text {
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .ResortInfoBody-title {

@@ -29,7 +29,7 @@ const Chains = ({ routes, onChangeCard }) => {
       <div className="ResortInfoBody-content-chains-row">
         <button
           onClick={() => onChangeCard('R1')}
-          className="ResortInfoBody-content-chains-text"
+          className="ResortInfoBody-content-chains-link"
           style={{ borderRight: '1px solid #EDEDED' }}
         >
           <span>R1</span>
@@ -45,7 +45,7 @@ const Chains = ({ routes, onChangeCard }) => {
       <div className="ResortInfoBody-content-chains-row">
         <button
           onClick={() => onChangeCard('R2')}
-          className="ResortInfoBody-content-chains-text"
+          className="ResortInfoBody-content-chains-link"
           style={{ borderRight: '1px solid #EDEDED' }}
         >
           <span>R2</span>
