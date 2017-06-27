@@ -60,10 +60,10 @@ class App extends Component {
         <div className="App-content">
           <Switch>
             <Route exact path="/" component={RedirectToResorts} />
-            <Route exact path="/resorts/:resortId?" component={Main} />
+            <Route exact path="/resorts/:shortName?" component={Main} />
             <Route component={FourOhFour} />
           </Switch>
-          <Route exact path="/resorts/:resortId?" component={SideNav} />
+          <Route exact path="/resorts/:shortName?" component={SideNav} />
         </div>
         <Footer />
       </div>

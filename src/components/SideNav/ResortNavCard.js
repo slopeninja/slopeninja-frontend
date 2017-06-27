@@ -24,7 +24,7 @@ const ResortNavCard = ({ resort, selected }) => {
 
   return (
     <Link
-      to={`/resorts/${resort.id}`}
+      to={`/resorts/${resort.shortName}`}
       style={{
         marginBottom: '1pc',
       }}

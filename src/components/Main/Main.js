@@ -13,22 +13,22 @@ const LAKE_TAHOE_COORDS = {
 };
 
 const Main = (props) => {
-  const resortId = props.match.params.resortId;
+  const shortName = props.match.params.shortName;
 
   const resort = props.resorts.find(
-    r => r.id === resortId,
+    r => r.shortName === shortName,
   );
 
   // debugger;
   let hideMainOnMobileClassName;
-  if (!resortId) {
+  if (!shortName) {
     hideMainOnMobileClassName = 'Main-hideOnMobile';
   }
 
   const className = classNames(['Main-wrapper', hideMainOnMobileClassName]);
 
 
-  if (!resortId) {
+  if (!shortName) {
     return (
       <main className={className}>
         <Map

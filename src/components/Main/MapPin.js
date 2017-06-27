@@ -9,7 +9,7 @@ class MapPin extends Component{
   render() {
     return (
       <Link
-        to={`/resorts/${this.props.resort.id}`}
+        to={`/resorts/${this.props.resort.shortName}`}
       >
         <img
           alt="Map Pin"

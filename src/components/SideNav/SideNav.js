@@ -33,18 +33,18 @@ const ErrorIndicator = () => (
 );
 
 const SideNav = ({ resorts, resortsStatus, match }) => {
-  const resortId = match.params.resortId;
-
+  const shortName = match.params.shortName;
   let hideSideNavOnMobileClassName;
-  if (resortId) {
+  if (shortName) {
     hideSideNavOnMobileClassName = 'SideNav-hideOnMobile';
   }
 
   let sideNavContent;
   if (resortsStatus === 'success') {
     sideNavContent = resorts.map(resort => (
-      <ResortNavCard key={resort.id} selected={resortId === resort.id} resort={resort} />
+      <ResortNavCard key={resort.shortName} selected={shortName === resort.shortName} resort={resort} />
     ));
+
   }
 
   if (resortsStatus === 'fetching') {
