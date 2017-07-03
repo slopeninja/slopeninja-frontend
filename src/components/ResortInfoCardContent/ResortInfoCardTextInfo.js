@@ -1,40 +1,56 @@
 import React from 'react';
 import './ResortInfoCardTextInfo.css';
 
-const Temprature = ({ temprature }) => (
-  <div className="ResortInfoBox">
-    <span className="ResortInfoBody-title">Temprature</span>
-    <span className="ResortInfoBody-content">{`${temprature}°` }</span>
-  </div>
-);
+const Temperature = ({ temperature }) => {
+  const temp = temperature !== null ? `${temperature}°` : '-';
 
-const BaseCondition = ({ base }) => (
-  <div className="ResortInfoBox">
-    <span className="ResortInfoBody-title">Base Condition</span>
-    <span className="ResortInfoBody-content">{ base }</span>
-  </div>
-);
+  return (
+    <div className="ResortInfoBox">
+      <span className="ResortInfoBody-title">Temperature</span>
+      <span className="ResortInfoBody-content">{temp}</span>
+    </div>
+  );
+};
 
-const NewSnow = ({ newSnow }) => (
-  <div className="ResortInfoBox">
-    <span className="ResortInfoBody-title">New Snow</span>
-    <span className="ResortInfoBody-content">{`${newSnow}"` }</span>
-  </div>
-);
+const BaseCondition = ({ base }) => {
+  const condition = base || '-';
 
-const SnowDepth = ({ snowDepth }) => (
-  <div className="ResortInfoBox">
-    <span className="ResortInfoBody-title">Snow Depth</span>
-    <span className="ResortInfoBody-content">{`${snowDepth}"` }</span>
-  </div>
-);
+  return (
+    <div className="ResortInfoBox">
+      <span className="ResortInfoBody-title">Base Condition</span>
+      <span className="ResortInfoBody-content">{ condition }</span>
+    </div>
+  );
+};
+
+const NewSnow = ({ newSnow }) => {
+  const snow = newSnow !== null ? `${newSnow}"` : '-';
+
+  return (
+    <div className="ResortInfoBox">
+      <span className="ResortInfoBody-title">New Snow</span>
+      <span className="ResortInfoBody-content">{snow}</span>
+    </div>
+  );
+};
+
+const SnowDepth = ({ snowDepth }) => {
+  const depth = snowDepth ? `${snowDepth}"` : '-';
+
+  return (
+    <div className="ResortInfoBox">
+      <span className="ResortInfoBody-title">Snow Depth</span>
+      <span className="ResortInfoBody-content">{depth}</span>
+    </div>
+  );
+};
 
 const ResortInfoCardTextInfo = ({ resort }) => (
   <div className="row no-gutters">
     <div
       className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3"
     >
-      <Temprature temprature={resort.weather.temprature} />
+      <Temperature temperature={resort.weather.temperature} />
     </div>
     <div
       className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3"

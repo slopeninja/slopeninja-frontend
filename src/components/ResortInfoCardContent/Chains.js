@@ -3,22 +3,22 @@ import HighwayIcon from '../HighwayIcon/HighwayIcon';
 import './Chains.css';
 
 
-const Chains = ({ routes, onChangeCard }) => {
-  const routesKeys = Object.keys(routes);
-  const R1Highways = routesKeys.filter(key => routes[key].chains === 'R1');
-  const R2Highways = routesKeys.filter(key => routes[key].chains === 'R2');
+const Chains = ({ roads, onChangeCard }) => {
+  const routesKeys = Object.keys(roads);
+  const R1Highways = routesKeys.filter(key => roads[key].chains === 'R1');
+  const R2Highways = routesKeys.filter(key => roads[key].chains === 'R2');
 
   const r1HighwayIcons = R1Highways.map(
     key => (
       <span key={key} style={{ marginLeft: '1pc' }}>
-        <HighwayIcon width={36} height={36} highwayNumber={routes[key].label} />
+        <HighwayIcon width={36} height={36} highwayNumber={roads[key].label} />
       </span>
     ),
   );
   const r2HighwayIcons = R2Highways.map(
     key => (
       <span key={key} style={{ marginLeft: '1pc' }}>
-        <HighwayIcon width={36} height={36} highwayNumber={routes[key].label} />
+        <HighwayIcon width={36} height={36} highwayNumber={roads[key].label} />
       </span>
     ),
   );

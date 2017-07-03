@@ -66,18 +66,6 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
       {
         sideNavContent
       }
-      {
-        sideNavContent
-      }
-      {
-        sideNavContent
-      }
-      {
-        sideNavContent
-      }
-      {
-        sideNavContent
-      }
     </nav>
   );
 };

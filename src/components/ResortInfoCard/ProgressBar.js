@@ -12,12 +12,14 @@ const ProgressBar = ({ small, progress }) => {
     };
   }
 
+  let width = progress >= 0 ? progress : 0;
+
   return (
     <span className="ProgressBar-box" style={progressBarStyle}>
       <span
         className="ProgressBar-progress"
         style={{
-          width: `${progress}%`,
+          width: `${width}%`,
         }}
       />
     </span>

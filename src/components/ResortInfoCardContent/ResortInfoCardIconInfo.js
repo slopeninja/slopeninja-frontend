@@ -7,17 +7,15 @@ import back from '../ResortInfoCard/images/back.svg';
 import Chains from './Chains';
 import './ResortInfoCardIconInfo.css';
 
-const OpenRoutes = ({ routes }) => {
-  const routesKeys = Object.keys(routes);
-
-  const highwayIcons = routesKeys.map((key) => {
+const OpenRoutes = ({ roads }) => {
+  const highwayIcons = roads.map((road) => {
     const iconStyle = {
-      opacity: routes[key].status === 'Open' ? 1 : 0.1,
+      opacity: (road.status === 'open' || road.status === 'incident') ? 1 : 0.1,
     };
 
     return (
-      <span key={key} className="ResortInfoBox-content-openroute-icon" style={iconStyle}>
-        <HighwayIcon width={48} height={48} highwayNumber={routes[key].label} />
+      <span key={`${road.prefix}${road.number}`} className="ResortInfoBox-content-openroute-icon" style={iconStyle}>
+        <HighwayIcon width={48} height={48} highwayNumber={road.number} />
       </span>
     );
   });
@@ -32,28 +30,28 @@ const OpenRoutes = ({ routes }) => {
   );
 };
 
-const OpenLifts = ({ lifts }) => {
-  const percent = Math.ceil((lifts.open / lifts.total) * 100);
+const OpenLifts = ({ liftCounts }) => {
+  const percent = Math.ceil((liftCounts.open / liftCounts.total) * 100);
 
   return (
     <div className="ResortInfoBox">
       <span className="ResortInfoBody-title">Open Lifts</span>
       <div className="ResortInfoBody-content">
-        <span style={{ marginBottom: '1pc' }}>{lifts.open}</span>
+        <span style={{ marginBottom: '1pc' }}>{liftCounts.open}</span>
         <ProgressBar progress={percent} />
       </div>
     </div>
   );
 };
 
-const OpenTrails = ({ trails }) => {
-  const percent = Math.ceil((trails.open / trails.total) * 100);
+const OpenTrails = ({ trailCounts }) => {
+  const percent = Math.ceil((trailCounts.open / trailCounts.total) * 100);
 
   return (
     <div className="ResortInfoBox">
       <span className="ResortInfoBody-title">Open Trails</span>
       <div className="ResortInfoBody-content">
-        <span style={{ marginBottom: '1pc' }}>{trails.open}</span>
+        <span style={{ marginBottom: '1pc' }}>{trailCounts.open}</span>
         <ProgressBar progress={percent} />
       </div>
     </div>
@@ -108,7 +106,7 @@ class ResortInfoCardIconInfo extends Component {
     const resort = this.props.resort;
     return (
       <Chains
-        routes={resort.routes}
+        roads={resort.roads}
         onChangeCard={this.handleFlipCard}
       />
     );
@@ -120,7 +118,7 @@ class ResortInfoCardIconInfo extends Component {
     return (
       <div className="row no-gutters">
         <div className="col-12 col-sm-12 col-md-12 col-xl-3">
-          <OpenRoutes routes={resort.routes} />
+          <OpenRoutes roads={resort.roads} />
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-xl-3">
           <div
@@ -149,11 +147,11 @@ class ResortInfoCardIconInfo extends Component {
           </div>
         </div>
         <div className="col-6 col-sm-6 col-md-6 col-xl-3">
-          <OpenLifts lifts={resort.lifts} />
+          <OpenLifts liftCounts={resort.liftCounts} />
         </div>
 
         <div className="col-6 col-sm-6 col-md-6 col-xl-3">
-          <OpenTrails trails={resort.trails} />
+          <OpenTrails trailCounts={resort.trailCounts} />
         </div>
       </div>
     );

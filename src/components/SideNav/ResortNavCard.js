@@ -8,11 +8,11 @@ import './ResortNavCard.css';
 
 const ResortNavCard = ({ resort, selected }) => {
   const liftsProgress = Math.ceil(
-    (resort.lifts.open / resort.lifts.total) * 100,
+    (resort.liftCounts.open / resort.liftCounts.total) * 100,
   );
 
   const trailsProgress = Math.ceil(
-    (resort.trails.open / resort.trails.total) * 100,
+    (resort.trailCounts.open / resort.trailCounts.total) * 100,
   );
 
   let selectedSytle;
