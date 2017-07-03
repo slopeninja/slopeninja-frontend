@@ -6,6 +6,7 @@ import ResortInfoCardIconInfo from '../ResortInfoCardContent/ResortInfoCardIconI
 import './ResortInfoCard.css';
 
 import sunny from './images/sunny.svg';
+import clear from './images/clear.svg';
 import cloudy from './images/cloudy.svg';
 import thunderstorm from './images/thunderstorm.svg';
 import rain from './images/rain.svg';
@@ -13,6 +14,7 @@ import snow from './images/snow.svg';
 
 const WEATHER_ICONS = {
   sunny,
+  clear,
   cloudy,
   thunderstorm,
   rain,
