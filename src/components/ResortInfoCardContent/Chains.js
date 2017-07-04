@@ -5,20 +5,20 @@ import './Chains.css';
 
 const Chains = ({ roads, onChangeCard }) => {
   const routesKeys = Object.keys(roads);
-  const R1Highways = routesKeys.filter(key => roads[key].chains === 'R1');
-  const R2Highways = routesKeys.filter(key => roads[key].chains === 'R2');
+  const R1Highways = routesKeys.filter(key => roads[key].chainStatus === 'R1');
+  const R2Highways = routesKeys.filter(key => roads[key].chainStatus === 'R2');
 
   const r1HighwayIcons = R1Highways.map(
     key => (
       <span key={key} style={{ marginLeft: '1pc' }}>
-        <HighwayIcon width={36} height={36} highwayNumber={roads[key].label} />
+        <HighwayIcon width={36} height={36} highwayNumber={roads[key].number} />
       </span>
     ),
   );
   const r2HighwayIcons = R2Highways.map(
     key => (
       <span key={key} style={{ marginLeft: '1pc' }}>
-        <HighwayIcon width={36} height={36} highwayNumber={roads[key].label} />
+        <HighwayIcon width={36} height={36} highwayNumber={roads[key].number} />
       </span>
     ),
   );
