@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ProgressBar from '../ResortInfoCard/ProgressBar';
 import HighwayIcon from '../HighwayIcon/HighwayIcon';
+import IncidentIcon from '../HighwayIcon/IncidentIcon';
+import AmbiguousIcon from '../HighwayIcon/AmbiguousIcon';
+
 
 import FlippableCard from '../FlippableCard/FlippableCard';
 import back from '../ResortInfoCard/images/back.svg';
@@ -10,15 +13,39 @@ import './ResortInfoCardIconInfo.css';
 const OpenRoutes = ({ roads }) => {
   const highwayIcons = roads.map((road) => {
     const iconStyle = {
-      opacity: (road.status === 'open' || road.status === 'incident') ? 1 : 0.1,
+      opacity: (road.status === 'closed') ? 0.1 : 1,
+      position: 'relative',
     };
 
+    let incidentIcon;
+    if (road.status === 'incident') {
+      incidentIcon = (
+        <div className="special-icon-styles">
+          <IncidentIcon />
+        </div>
+      );
+    }
+
+    let ambiguousIcon;
+    if (road.status === 'ambiguous') {
+      ambiguousIcon = (
+        <div className="special-icon-styles">
+          <AmbiguousIcon />
+        </div>
+      );
+    }
+
     return (
-      <span key={`${road.prefix}${road.number}`} className="ResortInfoBox-content-openroute-icon" style={iconStyle}>
-        <HighwayIcon width={48} height={48} highwayNumber={road.number} />
-      </span>
+      <div className="ResortInfoBox-content-openroute-icon">
+        <span key={`${road.prefix}${road.number}`}  style={iconStyle}>
+          <HighwayIcon width={48} height={48} highwayNumber={road.number} />
+        </span>
+        {incidentIcon}
+        {ambiguousIcon}
+      </div>
     );
   });
+
 
   return (
     <div className="ResortInfoBox">

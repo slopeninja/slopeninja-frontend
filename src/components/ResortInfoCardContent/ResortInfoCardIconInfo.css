@@ -71,6 +71,15 @@
   font-size: 24px;
   color: #4A4A4A;
 }
+.special-icon-styles {
+  width: 20px;
+  position: absolute;
+  top: 4px;
+  margin-left: 30px;
+}
+.special-icon-styles svg {
+  width: 100%;
+}
 
 @media only screen and (min-width: 1200px) {
 
