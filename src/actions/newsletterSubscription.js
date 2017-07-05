@@ -47,7 +47,7 @@ export const createNewsletterSubscription = email => async (dispatch) => {
     dispatch(newsletterSubscriptionSuccess(data.email));
 
     setTimeout(() => {
-      dispatch(setShowNewsletterSubscription);
+      dispatch(setShowNewsletterSubscription(email));
     }, EMAIL_SIGNUP_DISMISS_DURATION);
   } catch (error) {
     dispatch(newsletterSubscriptionFail(error.message));

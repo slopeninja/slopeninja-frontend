@@ -48,9 +48,7 @@ class App extends Component {
     let emailSignup;
     if (this.props.showEmailSignup) {
       emailSignup = (
-        <EmailSignup
-          onDismissClick={this.props.disableEmailSignup}
-        />
+        <EmailSignup />
       );
     }
     return (
@@ -74,7 +72,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     resortsStatus: state.app.resorts.resortsStatus,
-    showEmailSignup: state.app.userSession.showEmailSignup,
+    showEmailSignup: state.userSession.showEmailSignup,
   };
 };
 
@@ -82,9 +80,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchResorts: () => {
       dispatch(fetchResorts);
-    },
-    disableEmailSignup: () => {
-      dispatch(setShowNewsletterSubscription);
     },
   };
 };

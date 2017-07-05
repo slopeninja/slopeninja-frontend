@@ -77,8 +77,10 @@ const EmailSignupForm = ({
 class EmailSignup extends Component {
   constructor(props) {
     super(props);
+
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleFormSubmitFailed = this.handleFormSubmitFailed.bind(this);
+    this.handleDismissClick = this.handleDismissClick.bind(this);
 
     this.buttonResetTimeout = null;
   }
@@ -100,6 +102,10 @@ class EmailSignup extends Component {
   handleFormSubmit(newsletterSubscription) {
     const email = newsletterSubscription.email;
     this.props.createNewsletterSubscription(email);
+  }
+
+  handleDismissClick() {
+    this.props.disableEmailSignup();
   }
 
   render() {
@@ -154,7 +160,7 @@ class EmailSignup extends Component {
               onFormSubmit={this.handleFormSubmit}
               onFormSubmitFailed={this.handleFormSubmitFailed}
               submitButtonStatus={this.props.buttonState}
-              onDismissClick={this.props.onDismissClick}
+              onDismissClick={this.handleDismissClick}
             />
           </div>
         </div>
@@ -172,7 +178,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     disableEmailSignup: () => {
-      dispatch(setShowNewsletterSubscription);
+      dispatch(setShowNewsletterSubscription(null));
     },
     createNewsletterSubscription: (email) => {
       dispatch(createNewsletterSubscription(email));

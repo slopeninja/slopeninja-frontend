@@ -11,6 +11,7 @@ import {
   applyMiddleware,
   compose,
 } from 'redux';
+import { persistStore, autoRehydrate } from 'redux-persist';
 import { combineForms } from 'react-redux-form';
 import { createLogger } from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
@@ -43,7 +44,6 @@ const history = createHistory();
 
 const app = combineReducers({
   resorts,
-  userSession,
   createNewsletterSubscription,
 });
 
@@ -53,14 +53,18 @@ const formReducers = combineForms({
 
 const rootReducer = combineReducers({
   app,
+  userSession,
   router: routerReducer,
   forms: formReducers,
 });
 
+/* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+/* eslint-enable */
 
 const store = createStore(
   rootReducer,
+  undefined,
   composeEnhancers(
     applyMiddleware(
       // middleware for intercepting and dispatching navigation actions
@@ -68,7 +72,15 @@ const store = createStore(
       reduxThunk,
       routerMiddleware(history),
     ),
+    autoRehydrate(),
   ),
+);
+// begin periodically persisting the store
+persistStore(
+  store,
+  {
+    whitelist: ['userSession'],
+  },
 );
 
 ReactDOM.render(
