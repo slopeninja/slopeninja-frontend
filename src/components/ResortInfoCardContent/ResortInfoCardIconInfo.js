@@ -4,7 +4,6 @@ import HighwayIcon from '../HighwayIcon/HighwayIcon';
 import IncidentIcon from '../HighwayIcon/IncidentIcon';
 import AmbiguousIcon from '../HighwayIcon/AmbiguousIcon';
 
-
 import FlippableCard from '../FlippableCard/FlippableCard';
 import back from '../ResortInfoCard/images/back.svg';
 import Chains from './Chains';
@@ -20,24 +19,34 @@ const OpenRoutes = ({ roads }) => {
     let incidentIcon;
     if (road.status === 'incident') {
       incidentIcon = (
-        <div className="special-icon-styles">
+        <a
+          className="OpenRoutes-exception-indicator"
+          href={road.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <IncidentIcon />
-        </div>
+        </a>
       );
     }
 
     let ambiguousIcon;
     if (road.status === 'ambiguous') {
       ambiguousIcon = (
-        <div className="special-icon-styles">
+        <a
+          className="OpenRoutes-exception-indicator"
+          href={road.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AmbiguousIcon />
-        </div>
+        </a>
       );
     }
 
     return (
       <div className="ResortInfoBox-content-openroute-icon">
-        <span key={`${road.prefix}${road.number}`}  style={iconStyle}>
+        <span key={`${road.prefix}${road.number}`} style={iconStyle}>
           <HighwayIcon width={48} height={48} highwayNumber={road.number} />
         </span>
         {incidentIcon}

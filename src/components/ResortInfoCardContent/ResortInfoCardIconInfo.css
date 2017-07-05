@@ -6,6 +6,7 @@
   padding: 1pc;
   box-sizing: border-box;
 }
+
 .ResortInfoBody-title {
   font-size: 24px;
 }
@@ -17,6 +18,7 @@
   flex-direction: column;
   margin-top: 1pc;
 }
+
 .ResortInfoBody-content-openroutes {
   display: flex;
   flex-direction: row;
@@ -34,15 +36,18 @@
   flex-direction: column;
   margin-top: 1pc;
 }
+
 .RoadTooltip-labels {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 1pc;
 }
+
 .RoadTooltip-label:last-child {
   margin-right: 0;
 }
+
 .RoadTooltip-label {
   border: 1px solid #4A4A4A;
   border-radius: 1px;
@@ -52,10 +57,12 @@
   margin-bottom: 6px;
   text-align: center;
 }
+
 .RoadTooltip-text {
   font-size: 16px;
   font-weight: 300;
 }
+
 .RoadTooltip-title {
   background: none;
   border: none;
@@ -71,13 +78,16 @@
   font-size: 24px;
   color: #4A4A4A;
 }
-.special-icon-styles {
+
+.OpenRoutes-exception-indicator {
   width: 20px;
   position: absolute;
   top: 4px;
   margin-left: 30px;
+  display: block;
 }
-.special-icon-styles svg {
+
+.OpenRoutes-exception-indicator svg {
   width: 100%;
 }
 
@@ -89,7 +99,5 @@
   }
   .ResortInfoBody-title {
     font-size: 24px;
-  }
-  .ResortInfoBody-content {
   }
 }
