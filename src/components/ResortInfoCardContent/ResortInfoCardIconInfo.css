@@ -27,6 +27,20 @@
 .ResortInfoBox-content-openroute-icon {
   margin-right: 1pc;
   margin-top: 1pc;
+  position: relative;
+}
+
+.OpenRoutes-exception-indicator {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -8px;
+  left: 32px;
+}
+
+.OpenRoutes-exception-indicator svg {
+  height: 100%;
+  width: 100%;
 }
 
 .RoadTooltip-content {
@@ -79,17 +93,6 @@
   color: #4A4A4A;
 }
 
-.OpenRoutes-exception-indicator {
-  width: 20px;
-  position: absolute;
-  top: 4px;
-  margin-left: 30px;
-  display: block;
-}
-
-.OpenRoutes-exception-indicator svg {
-  width: 100%;
-}
 
 @media only screen and (min-width: 1200px) {
 

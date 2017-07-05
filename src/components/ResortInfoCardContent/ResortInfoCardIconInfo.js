@@ -13,7 +13,6 @@ const OpenRoutes = ({ roads }) => {
   const highwayIcons = roads.map((road) => {
     const iconStyle = {
       opacity: (road.status === 'closed') ? 0.1 : 1,
-      position: 'relative',
     };
 
     let incidentIcon;
@@ -45,13 +44,15 @@ const OpenRoutes = ({ roads }) => {
     }
 
     return (
-      <div className="ResortInfoBox-content-openroute-icon">
-        <span key={`${road.prefix}${road.number}`} style={iconStyle}>
-          <HighwayIcon width={48} height={48} highwayNumber={road.number} />
-        </span>
+      <span
+        key={`${road.prefix}${road.number}`}
+        style={iconStyle}
+        className="ResortInfoBox-content-openroute-icon"
+      >
+        <HighwayIcon width={48} height={48} highwayNumber={road.number} />
         {incidentIcon}
         {ambiguousIcon}
-      </div>
+      </span>
     );
   });
 
