@@ -68,7 +68,7 @@ const store = createStore(
   composeEnhancers(
     applyMiddleware(
       // middleware for intercepting and dispatching navigation actions
-      createLogger(),
+      // createLogger(),
       reduxThunk,
       routerMiddleware(history),
     ),
