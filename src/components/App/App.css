@@ -15,7 +15,7 @@
 
 /*
 @custom-media --sm-viewport only screen and (min-width: 48em); // 768px
-@custom-media --md-viewport only screen and (min-width: 64em); // 1024px
+@custom-media --md-viewport only screen and (min-width: 64em); // 994px
 @custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
 */
 @media only screen and (min-width: 768px) {
