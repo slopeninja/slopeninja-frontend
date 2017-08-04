@@ -1,0 +1,28 @@
+.AppDownloadCard {
+  height: 140px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed;
+  border-color: #9B9B9B;
+  margin-bottom: 1pc;
+  background-color: #FAFAFA;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppDownloadCard-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppDownloadCard-links img {
+  margin: 0.5pc;
+  margin-top: 1pc;
+}
+
+.AppDownloadCard-title {
+  font-size: 18px;
+  font-weight: 300;
+}

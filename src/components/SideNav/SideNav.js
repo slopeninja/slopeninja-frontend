@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { ThreeBounce } from 'better-react-spinkit';
 
 import ResortNavCard from './ResortNavCard';
+import AppDownloadCard from '../AppDownloadCard/AppDownloadCard';
 import './SideNav.css';
 
 export const LoadingIndicator = () => (
@@ -77,6 +78,7 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
 
   return (
     <nav className={className}>
+      <AppDownloadCard />
       {
         sideNavContent
       }
