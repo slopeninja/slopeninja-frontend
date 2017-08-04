@@ -52,6 +52,7 @@ const ResortInfoHeader = ({ resort }) => (
             <div className="col-6 col-xl-12">
               <div className="ResortInfoHeader-condition">
                 <img
+                  className="ResortInfoHeader-weatherIcon"
                   style={{ width: '48px' }}
                   alt="logo"
                   src={WEATHER_ICONS[resort.weather.condition]}
