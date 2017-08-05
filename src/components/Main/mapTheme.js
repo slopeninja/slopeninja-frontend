@@ -241,7 +241,22 @@ const mapTheme = [
         "elementType": "geometry",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
+            },
+            {
+                "color": "#9b9b9b"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#fff"
             }
         ]
     },
