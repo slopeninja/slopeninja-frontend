@@ -3,8 +3,6 @@
   flex: none;
   display: flex;
   flex-direction: column;
-  border: 1px dashed;
-  border-color: #9B9B9B;
   margin-bottom: 1pc;
   background-color: #FAFAFA;
   justify-content: center;
@@ -25,4 +23,11 @@
 .AppDownloadCard-title {
   font-size: 18px;
   font-weight: 300;
+}
+
+.dashed-gradient {
+  background-image: linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to bottom, #9B9B9B 50%, transparent 50%), linear-gradient(to bottom, #9B9B9B 50%, transparent 50%);
+  background-position: left top, left bottom, left top, right top;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 20px 1px, 20px 1px, 1px 20px, 1px 20px;
 }

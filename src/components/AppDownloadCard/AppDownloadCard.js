@@ -5,7 +5,7 @@ import googlePlay from '../../../public/images/googlePlay.svg';
 import './AppDownloadCard.css';
 
 const AppDownloadCard = () => (
-  <div className="AppDownloadCard">
+  <div className="AppDownloadCard dashed-gradient">
     <span className="AppDownloadCard-title">
       Download the Slope Ninja app.
     </span>
