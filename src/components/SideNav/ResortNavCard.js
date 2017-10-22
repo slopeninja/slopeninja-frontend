@@ -3,6 +3,7 @@ import {
   Link,
 } from 'react-router-dom';
 import ProgressBar from '../ResortInfoCard/ProgressBar';
+import Snow from './Snow';
 
 import './ResortNavCard.css';
 
@@ -21,7 +22,11 @@ const ResortNavCard = ({ resort, selected }) => {
       backgroundColor: '#EDEDED',
     };
   }
-
+  let snow;
+  if (resort.weather.condition === 'snow') {
+    snow = (<Snow />);
+  }
+  
   return (
     <Link
       to={`/resorts/${resort.shortName}`}
@@ -30,6 +35,7 @@ const ResortNavCard = ({ resort, selected }) => {
       }}
     >
       <div className="ResortNavCard" style={selectedSytle}>
+        {snow}
         <figure className="ResortNavCard-logo">
           <img
             alt="logo"
