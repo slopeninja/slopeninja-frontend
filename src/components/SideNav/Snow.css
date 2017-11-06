@@ -1,5 +1,5 @@
 .snow {
-  width: 360px;
+  width: 100%;
   height: 140px;
   position: absolute;
   z-index: 999;
@@ -9,8 +9,8 @@
 .snow:before {
   content: '';
   background-image:
-  url(./snowflake.png),
-  url(./snowflake-lg.png);
+  url(./snowflake.svg),
+  url(./snowflake-lg.svg);
   position: absolute;
   left: 0;
   top: 0;
