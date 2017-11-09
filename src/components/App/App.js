@@ -17,6 +17,7 @@ import Footer from '../Footer/Footer';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import WeatherBanner from '../WeatherBanner/WeatherBanner';
 import EmailSignup from '../EmailSignup/EmailSignup';
+import Privacy from '../Privacy/Privacy';
 
 import './App.css';
 
@@ -52,18 +53,28 @@ class App extends Component {
       );
     }
     return (
-      <div className="App-wrapper">
-        {emailSignup}
-        <WeatherBanner />
-        <div className="App-content">
-          <Switch>
-            <Route exact path="/" component={RedirectToResorts} />
-            <Route exact path="/resorts/:shortName?" component={Main} />
-            <Route component={FourOhFour} />
-          </Switch>
-          <Route exact path="/resorts/:shortName?" component={SideNav} />
-        </div>
-        <Footer />
+      <div>
+        <Switch>
+          <Route exact path="/privacy" component={Privacy} />
+          <Route
+            path="/"
+            render={() => (
+              <div className="App-wrapper">
+                {emailSignup}
+                <WeatherBanner />
+                <div className="App-content">
+                  <Switch>
+                    <Route exact path="/" component={RedirectToResorts} />
+                    <Route exact path="/resorts/:shortName?" component={Main} />
+                    <Route component={FourOhFour} />
+                  </Switch>
+                  <Route exact path="/resorts/:shortName?" component={SideNav} />
+                </div>
+                <Footer />
+              </div>
+            )}
+          />
+        </Switch>
       </div>
     );
   }

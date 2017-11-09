@@ -1,0 +1,50 @@
+.Privacy-container {
+  flex: 1;
+}
+
+.Privacy-content h1 {
+  font-size: 36px;
+  margin-top: 2pc;
+  margin-bottom: 2pc;
+  font-weight: 400;
+}
+
+.Privacy-content h2 {
+  font-size: 30px;
+  margin-top: 2pc;
+  margin-bottom: 2pc;
+  font-weight: 300;
+}
+
+.Privacy-content h3 {
+  font-size: 24px;
+  margin-top: 2pc;
+  margin-bottom: 2pc;
+  font-weight: 300;
+}
+
+.Privacy-content p {
+  font-size: 18px;
+  margin-top: 1pc;
+  margin-bottom: 1pc;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+.Privacy-content a {
+  color: #1ed2ff;
+}
+
+.Privacy-content-subtitle {
+  display: block;
+  padding-bottom: 1pc;
+  font-weight: 400;
+}
+
+.Privacy-content ul {
+  margin: 0;
+}
+
+.Privacy-content ul li {
+  padding-bottom: 1pc;
+}
