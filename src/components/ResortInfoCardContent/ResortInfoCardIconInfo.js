@@ -68,13 +68,20 @@ const OpenRoutes = ({ roads }) => {
 };
 
 const OpenLifts = ({ liftCounts }) => {
-  const percent = Math.ceil((liftCounts.open / liftCounts.total) * 100);
+  let percent;
+  let liftData = '-';
+  if (liftCounts.open !== null && liftCounts.total !== null) {
+    liftData = `${liftCounts.open} / ${liftCounts.total}`;
+    percent = Math.ceil(
+      (liftCounts.open / liftCounts.total) * 100,
+    );
+  }
 
   return (
     <div className="ResortInfoBox">
       <span className="ResortInfoBody-title">Open Lifts</span>
       <div className="ResortInfoBody-content">
-        <span style={{ marginBottom: '1pc' }}>{liftCounts.open}</span>
+        <span style={{ marginBottom: '1pc' }}>{liftData}</span>
         <ProgressBar progress={percent} />
       </div>
     </div>
@@ -82,13 +89,20 @@ const OpenLifts = ({ liftCounts }) => {
 };
 
 const OpenTrails = ({ trailCounts }) => {
-  const percent = Math.ceil((trailCounts.open / trailCounts.total) * 100);
+  let percent;
+  let trailData = '-';
+  if (trailCounts.open !== null && trailCounts.total !== null) {
+    trailData = `${trailCounts.open} / ${trailCounts.total}`;
+    percent = Math.ceil(
+      (trailCounts.open / trailCounts.total) * 100,
+    );
+  }
 
   return (
     <div className="ResortInfoBox">
       <span className="ResortInfoBody-title">Open Trails</span>
       <div className="ResortInfoBody-content">
-        <span style={{ marginBottom: '1pc' }}>{trailCounts.open}</span>
+        <span style={{ marginBottom: '1pc' }}>{trailData}</span>
         <ProgressBar progress={percent} />
       </div>
     </div>

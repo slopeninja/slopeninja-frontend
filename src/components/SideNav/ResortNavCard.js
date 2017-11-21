@@ -8,13 +8,22 @@ import Snow from './Snow';
 import './ResortNavCard.css';
 
 const ResortNavCard = ({ resort, selected }) => {
-  const liftsProgress = Math.ceil(
-    (resort.liftCounts.open / resort.liftCounts.total) * 100,
-  );
 
-  const trailsProgress = Math.ceil(
-    (resort.trailCounts.open / resort.trailCounts.total) * 100,
-  );
+  let liftsProgress;
+  let trailsProgress;
+
+  if (resort.liftCounts.open !== null && resort.liftCounts.total !== null) {
+    liftsProgress = Math.ceil(
+      (resort.liftCounts.open / resort.liftCounts.total) * 100,
+    );
+  }
+
+  let trailData = '-';
+  if (resort.trailCounts.open !== null && resort.trailCounts.total !== null) {
+    trailsProgress = Math.ceil(
+      (resort.trailCounts.open / resort.trailCounts.total) * 100,
+    );
+  }
 
   let selectedSytle;
   if (selected) {
@@ -26,7 +35,7 @@ const ResortNavCard = ({ resort, selected }) => {
   if (resort.weather.condition === 'snow') {
     snow = (<Snow />);
   }
-  
+
   return (
     <Link
       to={`/resorts/${resort.shortName}`}
