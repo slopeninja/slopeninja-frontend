@@ -44,15 +44,18 @@ const OpenRoutes = ({ roads }) => {
     }
 
     return (
-      <span
+      <a
         key={`${road.prefix}${road.number}`}
+        href={road.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         style={iconStyle}
         className="ResortInfoBox-content-openroute-icon"
       >
         <HighwayIcon width={48} height={48} highwayNumber={road.number} />
         {incidentIcon}
         {ambiguousIcon}
-      </span>
+      </a>
     );
   });
 
