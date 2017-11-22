@@ -1,0 +1,19 @@
+.OpenSourceBanner-wrapper {
+  display: none;
+}
+
+@media only screen and (min-width: 575px) {
+  .OpenSourceBanner-wrapper {
+    background-color: #4CB950;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    /*margin-bottom: 0.5pc;*/
+  }
+  .OpenSourceBanner-text {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+  }
+}

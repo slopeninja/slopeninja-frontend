@@ -16,6 +16,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import FourOhFour from '../FourOhFour/FourOhFour';
 import WeatherBanner from '../WeatherBanner/WeatherBanner';
+import OpenSourceBanner from '../OpenSourceBanner/OpenSourceBanner';
 import EmailSignup from '../EmailSignup/EmailSignup';
 import Privacy from '../Privacy/Privacy';
 
@@ -40,7 +41,6 @@ class App extends Component {
     if (this.props.resortsStatus === 'fetching') {
       return (
         <div className="App-wrapper">
-          <WeatherBanner />
           <LoadingIndicator />
           <Footer />
         </div>
@@ -62,6 +62,7 @@ class App extends Component {
               <div className="App-wrapper">
                 {emailSignup}
                 <WeatherBanner />
+                <OpenSourceBanner />
                 <div className="App-content">
                   <Switch>
                     <Route exact path="/" component={RedirectToResorts} />
