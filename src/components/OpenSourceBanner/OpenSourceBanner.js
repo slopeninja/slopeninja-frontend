@@ -17,6 +17,8 @@ const OpenSourceBanner = (props) => {
     <a
       className="OpenSourceBanner-wrapper"
       href="https://github.com/juliaqiuxy/slopeninja-frontend"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <img
         alt=""
