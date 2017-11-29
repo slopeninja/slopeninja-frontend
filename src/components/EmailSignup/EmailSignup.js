@@ -141,7 +141,18 @@ class EmailSignup extends Component {
                   color: '#4A4A4A',
                 }}
               >
-                We promise not to spam your inbox.
+                {"Don't worry, we hate spam! Here’s a "}
+                <a
+                  href="http://api.slope.ninja/newsletters/latest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: 'underline',
+                  }}
+                >
+                  sample
+                </a>
+                .
               </div>
             </div>
           </div>
