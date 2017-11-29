@@ -35,7 +35,7 @@ const NewSnow = ({ newSnow }) => {
 };
 
 const SnowDepth = ({ snowDepth }) => {
-  const depth = snowDepth ? `${snowDepth}"` : '-';
+  const depth = snowDepth !== null ? `${snowDepth}"` : '-';
 
   return (
     <div className="ResortInfoBox">
