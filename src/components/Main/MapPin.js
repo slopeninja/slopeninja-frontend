@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import {
   Link,
 } from 'react-router-dom';
-import mapPin from '../ResortInfoCard/images/pin.svg';
+import Snow from './Snow';
 
 class MapPin extends Component{
 
   render() {
+    let snow;
+    if (this.props.resort.weather.condition === 'snow') {
+      snow = (<Snow />);
+    }
     return (
       <Link
         to={`/resorts/${this.props.resort.shortName}`}
+        style={{ position: 'relative' }}
       >
+        {snow}
         <img
           alt="Map Pin"
           src={this.props.resort.logo}

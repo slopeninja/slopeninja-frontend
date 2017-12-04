@@ -1,0 +1,33 @@
+.icon-snow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.icon-snow:before {
+  content: '';
+  background-image:
+  url(./snowflake.svg),
+  url(./snowflake-sm.svg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  animation: snow 20s linear 1s infinite;
+}
+
+@keyframes snow{
+    0%{
+      background-position: 0 0, -0 50px;
+    }
+    50%{
+      background-position: 0 200px, -0 150px;
+    }
+    100%{
+      background-position: 0 600px, -0 300px;
+    }
+}
