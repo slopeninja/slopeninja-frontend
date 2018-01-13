@@ -33,12 +33,15 @@
     "redux-logger": "^3.0.1",
     "redux-persist": "^4.8.2",
     "redux-thunk": "^2.2.0",
+    "serve": "^6.4.8",
     "uuid": "^3.0.1",
     "wicg-focus-ring": "^1.0.1"
   },
   "scripts": {
     "start-with-local-backend": "REACT_APP_API_URL='http://localhost:1234' react-scripts start",
     "start-with-remote-backend": "REACT_APP_API_URL='http://api.slope.ninja' react-scripts start",
+    "now-start": "serve -s build/",
+    "deploy": "now -e REACT_APP_API_URL='https://api.slope.ninja'",
     "build": "react-scripts build",
     "lint": "node_modules/eslint/bin/eslint.js src/",
     "test": "react-scripts test --env=jsdom",
