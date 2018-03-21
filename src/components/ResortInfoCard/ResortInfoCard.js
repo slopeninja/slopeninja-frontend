@@ -11,6 +11,7 @@ import cloudy from './images/cloudy.svg';
 import thunderstorm from './images/thunderstorm.svg';
 import rain from './images/rain.svg';
 import snow from './images/snow.svg';
+import sleet from './images/sleet.svg';
 
 const WEATHER_ICONS = {
   sunny,
@@ -19,6 +20,7 @@ const WEATHER_ICONS = {
   thunderstorm,
   rain,
   snow,
+  sleet,
 };
 
 const ResortInfoHeader = ({ resort }) => (
