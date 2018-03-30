@@ -15,7 +15,7 @@ const ProgressBar = ({ small, progress }) => {
     return <span>-</span>
   }
 
-  let width = progress >= 0 ? progress : 0;
+  let width = progress >= 0 ? Math.min(progress, 100) : 0;
 
   if (progress !== undefined) {
     progressBar = (
