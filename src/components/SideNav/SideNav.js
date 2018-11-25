@@ -5,6 +5,7 @@ import { ThreeBounce } from 'better-react-spinkit';
 
 import ResortNavCard from './ResortNavCard';
 import AppDownloadCard from '../AppDownloadCard/AppDownloadCard';
+import TwitterCard from '../TwitterCard/TwitterCard';
 import './SideNav.css';
 
 export const LoadingIndicator = () => (
@@ -60,6 +61,16 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
         resort={resort}
       />
     ));
+
+    const [first, second, third, ...rest] = sideNavContent;
+    sideNavContent = [
+      <AppDownloadCard />,
+      first,
+      second,
+      third,
+      <TwitterCard />,
+      ...rest,
+    ];
   }
 
   if (resortsStatus === 'fetching') {
@@ -78,7 +89,6 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
 
   return (
     <nav className={className}>
-      <AppDownloadCard />
       {
         sideNavContent
       }
