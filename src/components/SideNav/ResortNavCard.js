@@ -18,7 +18,6 @@ const ResortNavCard = ({ resort, selected }) => {
     );
   }
 
-  let trailData = '-';
   if (resort.trailCounts.open !== null && resort.trailCounts.total !== null) {
     trailsProgress = Math.ceil(
       (resort.trailCounts.open / resort.trailCounts.total) * 100,

@@ -20,7 +20,7 @@ const Footer = () => (
         in San Francisco.
       </span>
     </div>
-    <div className="Footer-logo">
+    <a href='/' className="Footer-logo">
       <img
         style={{
           width: ' 2pc',
@@ -29,7 +29,7 @@ const Footer = () => (
         alt="Slope Ninja"
         src={logo}
       />
-    </div>
+    </a>
   </div>
 );
 export default Footer;

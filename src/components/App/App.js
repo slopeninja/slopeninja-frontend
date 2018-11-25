@@ -23,7 +23,7 @@ import Privacy from '../Privacy/Privacy';
 import './App.css';
 
 import { fetchResorts } from '../../actions/resorts';
-import { setShowNewsletterSubscription } from '../../actions/userSession';
+// import { setShowNewsletterSubscription } from '../../actions/userSession';
 
 const RedirectToResorts = () => (
   <Redirect to="/resorts" />

@@ -13,7 +13,7 @@ import {
 } from 'redux';
 import { persistStore, autoRehydrate } from 'redux-persist';
 import { combineForms } from 'react-redux-form';
-import { createLogger } from 'redux-logger';
+// import { createLogger } from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
 import {
   ConnectedRouter,

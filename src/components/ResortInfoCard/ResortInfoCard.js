@@ -48,7 +48,7 @@ const ResortInfoHeader = ({ resort }) => (
           <div className="row">
             <div className="col-6 col-xl-12">
               <div className="ResortInfoHeader-status">
-                <h3>{resort.status ===  'open' ? 'Open' : 'Closed'}</h3>
+                <h3>{resort.status === 'open' ? 'Open' : 'Closed'}</h3>
               </div>
             </div>
             <div className="col-6 col-xl-12">

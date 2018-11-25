@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Control, Form, actions } from 'react-redux-form';
-import ProgressButton, { STATE as BUTTON_STATE } from 'react-progress-button';
+import { Control, Form } from 'react-redux-form';
+import ProgressButton from 'react-progress-button';
 
 import snowboarders from '../FourOhFour/snowboarders.svg';
 import './EmailSignup.css';

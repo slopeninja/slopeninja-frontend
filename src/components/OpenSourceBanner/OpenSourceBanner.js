@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import snowflake from '../ResortInfoCard/images/snow-white.svg';
 import github from './githubLogo.svg';
 import './OpenSourceBanner.css';
 
