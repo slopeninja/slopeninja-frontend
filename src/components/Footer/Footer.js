@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo from './logo.svg';
+import getSmartLogo from './getSmartLogo';
 import heart from './heart.svg';
 
 const Footer = () => (
@@ -20,14 +20,14 @@ const Footer = () => (
         in San Francisco.
       </span>
     </div>
-    <a href='/' className="Footer-logo">
+    <a href="/" className="Footer-logo">
       <img
         style={{
           width: ' 2pc',
           alignSelf: 'flex-end',
         }}
         alt="Slope Ninja"
-        src={logo}
+        src={getSmartLogo()}
       />
     </a>
   </div>
