@@ -28,14 +28,26 @@ const ResortInfoHeader = ({ resort }) => (
     <div className="row">
       <div className="col-sm-12 col-xl-10">
         <div className="ResortInfoHeader-branding">
-          <figure className="ResortInfoHeader-logo">
-            <img
-              alt="logo"
-              src={resort.logo}
-            />
-          </figure>
+          <a
+            href={resort.resortUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <figure className="ResortInfoHeader-logo">
+              <img
+                alt="logo"
+                src={resort.logo}
+              />
+            </figure>
+          </a>
           <div>
-            <h1 className="ResortInfoHeader-header-title">{resort.name}</h1>
+            <a
+              href={resort.resortUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className="ResortInfoHeader-header-title">{resort.name}</h2>
+            </a>
             <h3 className="ResortInfoHeader-header-subtitle">
               {'Today\'s Forcast'}
             </h3>
