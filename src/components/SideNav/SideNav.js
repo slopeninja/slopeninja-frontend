@@ -64,11 +64,11 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
 
     const [first, second, third, ...rest] = sideNavContent;
     sideNavContent = [
-      <AppDownloadCard />,
+      <AppDownloadCard key="sn-download-card" />,
       first,
       second,
       third,
-      <TwitterCard />,
+      <TwitterCard key="sn-twitter-card" />,
       ...rest,
     ];
   }
