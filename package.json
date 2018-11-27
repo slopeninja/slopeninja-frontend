@@ -38,7 +38,7 @@
     "wicg-focus-ring": "^1.0.1"
   },
   "scripts": {
-    "start-with-local-backend": "REACT_APP_API_URL='http://localhost:1234' react-scripts start",
+    "start-with-local-backend": "REACT_APP_API_URL='http://localhost:8080' react-scripts start",
     "start-with-remote-backend": "REACT_APP_API_URL='https://api.slope.ninja' react-scripts start",
     "now-start": "serve -s build/",
     "deploy": "now -e REACT_APP_API_URL='https://api.slope.ninja'",
