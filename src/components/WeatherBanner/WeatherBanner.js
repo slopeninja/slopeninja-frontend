@@ -46,7 +46,7 @@ const generateBannerText = (resorts) => {
   return (
     <span className="WeatherBanner-text">
       Wowza! Everyone’s abuzz with reports of snow. It’s now dumping at{' '}
-      <strong>{r1.name}</strong>, <strong>{r2.name}</strong> and {len} other
+      <strong>{r1.name}</strong>, <strong>{r2.name}</strong> and {len - 2} other
       resorts.
     </span>
   );
