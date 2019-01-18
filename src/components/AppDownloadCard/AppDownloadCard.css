@@ -1,5 +1,5 @@
 .AppDownloadCard {
-  height: 140px;
+  height: 178px;
   flex: none;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,14 @@
 
 .AppDownloadCard-links {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1.5pc;
 }
 
 .AppDownloadCard-links img {
-  margin: 0.5pc;
-  margin-top: 1pc;
+  margin: 0 0.5pc 0.5pc 0.5pc;
 }
 
 .AppDownloadCard-title {
