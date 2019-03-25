@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>sunny</title>
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>clear-day</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="100" height="100"></rect>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="sunny" transform="translate(-16.000000, -16.000000)">
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="clear-day" transform="translate(-16.000000, -16.000000)">
             <g id="Rectangle-1" opacity="0.0229127799">
                 <g id="path-1-Clipped">
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <g id="path-1"></g>
-                    <rect id="path-1" mask="url(#mask-2)" x="0" y="0" width="100" height="100"></rect>
+                    <g>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="path-1"></g>
+                        <rect id="path-1" mask="url(#mask-2)" x="0" y="0" width="100" height="100"></rect>
+                    </g>
                 </g>
             </g>
-            <g id="Page-1" transform="translate(15.000000, 16.000000)" fill-rule="nonzero" fill="#F9C900">
+            <g id="Page-1" transform="translate(15.000000, 16.000000)" fill="#F9C900" fill-rule="nonzero">
                 <path d="M35.5776806,19.0601557 C44.2093581,19.0668314 51.2006161,26.0673594 51.1939387,34.6967452 C51.1872613,43.3261309 44.1848742,50.3155329 35.5531968,50.3088572 C26.9215194,50.3021816 19.9302613,43.3016536 19.9369387,34.6722678 C19.9436161,26.042882 26.9460032,19.0534801 35.5776806,19.0601557" id="Fill-1"></path>
                 <path d="M31.8510129,55.5247624 C31.8510129,55.7116805 31.826529,55.903049 31.7753355,56.0921923 L29.182271,65.7385016 C28.8684323,66.9067398 27.6664968,67.601007 26.4979484,67.2872516 C25.3294,66.9734962 24.6349484,65.7718798 24.9510129,64.6014165 L27.5440774,54.9551072 C27.8579161,53.7868691 29.0598516,53.094827 30.2284,53.4085824 C31.2077548,53.6711579 31.8510129,54.5567936 31.8510129,55.5247624" id="Fill-3"></path>
                 <path d="M20.9944194,51.5643238 C20.9944194,52.1540059 20.7562581,52.743688 20.2888387,53.1753798 L12.9414516,59.9422602 C12.051129,60.7633648 10.6644516,60.7055092 9.84535484,59.815423 C9.02403226,58.927562 9.07967742,57.5412527 9.97,56.7201482 L17.3173871,49.9510426 C18.2077097,49.1321633 19.5943871,49.1900189 20.4134839,50.0778798 C20.803,50.5006708 20.9944194,51.0324973 20.9944194,51.5643238" id="Fill-5"></path>

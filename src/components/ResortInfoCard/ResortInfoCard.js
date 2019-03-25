@@ -5,22 +5,34 @@ import ResortInfoCardIconInfo from '../ResortInfoCardContent/ResortInfoCardIconI
 
 import './ResortInfoCard.css';
 
-import sunny from './images/sunny.svg';
-import clear from './images/clear.svg';
-import cloudy from './images/cloudy.svg';
-import thunderstorm from './images/thunderstorm.svg';
+import clearDay from './images/clear-day.svg';
+import clearNight from './images/clear-night.svg';
 import rain from './images/rain.svg';
 import snow from './images/snow.svg';
 import sleet from './images/sleet.svg';
+import wind from './images/wind.svg';
+import fog from './images/fog.svg';
+import cloudy from './images/cloudy.svg';
+import partlyCloudyDay from './images/partly-cloudy-day.svg';
+import partlyCloudyNight from './images/partly-cloudy-night.svg';
+import hail from './images/hail.svg';
+import thunderstorm from './images/thunderstorm.svg';
+import tornado from './images/tornado.svg';
 
 const WEATHER_ICONS = {
-  sunny,
-  clear,
-  cloudy,
-  thunderstorm,
+  'clear-day': clearDay,
+  'clear-night': clearNight,
   rain,
   snow,
   sleet,
+  wind,
+  fog,
+  cloudy,
+  'partly-cloudy-day': partlyCloudyDay,
+  'partly-cloudy-night': partlyCloudyNight,
+  hail,
+  thunderstorm,
+  tornado,
 };
 
 const ResortInfoHeader = ({ resort }) => (
