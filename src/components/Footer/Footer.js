@@ -17,7 +17,7 @@ const Footer = () => (
           }}
           src={heart}
         />
-      in San Francisco. Powered by Dark Sky API.
+      in San Francisco. Powered by Dark Sky.
       </span>
     </div>
     <a href="/" className="Footer-logo">
