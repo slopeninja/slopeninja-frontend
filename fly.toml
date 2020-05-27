@@ -1,0 +1,33 @@
+app = "slope-ninja-web"
+
+[[services]]
+  internal_port = 3001
+  protocol = "tcp"
+
+  [services.concurrency]
+    hard_limit = 1000
+    soft_limit = 500
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = "80"
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
+
+  [[services.tcp_checks]]
+    interval = 10000
+    timeout = 2000
+
+  # Roughly translated, this section says every ten seconds, 
+  # perform a HTTP GET on /health looking for it to return a 
+  # HTTP 200 status within one second. The parameters of a 
+  # http_check are listed below.
+  [[services.http_checks]]
+    interval = 10000
+    method = "get"
+    path = "/health"
+    protocol = "http"
+    timeout = 1000
+    tls_skip_verify = false

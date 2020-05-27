@@ -39,11 +39,10 @@
     "wicg-focus-ring": "^1.0.1"
   },
   "scripts": {
-    "start-with-local-backend": "REACT_APP_API_URL='http://localhost:8080' react-scripts start",
-    "start-with-remote-backend": "REACT_APP_API_URL='https://api.slope.ninja' react-scripts start",
-    "now-start": "serve -s build/",
-    "deploy": "now -e REACT_APP_API_URL='https://api.slope.ninja'",
-    "build": "react-scripts build",
+    "dev-with-local-backend": "REACT_APP_API_URL='http://localhost:8080' react-scripts start",
+    "dev-with-remote-backend": "REACT_APP_API_URL='https://api.slope.ninja' react-scripts start",
+    "build": "REACT_APP_API_URL='https://api.slope.ninja' react-scripts build",
+    "start": "serve -s build/ -l 3001",
     "lint": "node_modules/eslint/bin/eslint.js src/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
