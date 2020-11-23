@@ -22,6 +22,7 @@ import tornado from './images/tornado.svg';
 const WEATHER_ICONS = {
   'clear-day': clearDay,
   'clear-night': clearNight,
+  clear: clearDay,
   rain,
   snow,
   sleet,
