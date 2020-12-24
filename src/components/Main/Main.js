@@ -59,12 +59,10 @@ const Main = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    resorts: state.app.resorts.resorts,
-    resortsStatus: state.app.resorts.resortsStatus,
-  };
-};
+const mapStateToProps = state => ({
+  resorts: state.app.resorts.resorts,
+  resortsStatus: state.app.resorts.resortsStatus,
+});
 
 const ConnectedMain = connect(
   mapStateToProps,

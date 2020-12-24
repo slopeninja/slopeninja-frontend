@@ -210,6 +210,5 @@ class ResortInfoCardIconInfo extends Component {
       </div>
     );
   }
-
 }
 export default ResortInfoCardIconInfo;

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { ThreeBounce } from 'better-react-spinkit';
 
 import ResortNavCard from './ResortNavCard';
-import AppDownloadCard from '../AppDownloadCard/AppDownloadCard';
+// import AppDownloadCard from '../AppDownloadCard/AppDownloadCard';
 import TwitterCard from '../TwitterCard/TwitterCard';
 import './SideNav.css';
 
@@ -96,12 +96,10 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    resorts: state.app.resorts.resorts,
-    resortsStatus: state.app.resorts.resortsStatus,
-  };
-};
+const mapStateToProps = state => ({
+  resorts: state.app.resorts.resorts,
+  resortsStatus: state.app.resorts.resortsStatus,
+});
 
 const ConnectedSideNav = connect(
   mapStateToProps,

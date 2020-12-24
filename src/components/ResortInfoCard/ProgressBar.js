@@ -12,10 +12,10 @@ const ProgressBar = ({ small, progress }) => {
     };
   }
   if (small && progress === undefined) {
-    return <span>-</span>
+    return <span>-</span>;
   }
 
-  let width = progress >= 0 ? Math.min(progress, 100) : 0;
+  const width = progress >= 0 ? Math.min(progress, 100) : 0;
 
   if (progress !== undefined) {
     progressBar = (

@@ -4,8 +4,7 @@ import {
 } from 'react-router-dom';
 import Snow from './Snow';
 
-class MapPin extends Component{
-
+class MapPin extends Component {
   render() {
     let snow;
     if (this.props.resort.weather.condition === 'snow') {

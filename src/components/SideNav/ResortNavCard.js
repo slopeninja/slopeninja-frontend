@@ -8,7 +8,6 @@ import Snow from './Snow';
 import './ResortNavCard.css';
 
 const ResortNavCard = ({ resort, selected }) => {
-
   let liftsProgress;
   let trailsProgress;
 
@@ -75,6 +74,6 @@ const ResortNavCard = ({ resort, selected }) => {
       </div>
     </Link>
   );
-}
+};
 
 export default ResortNavCard;

@@ -1,12 +1,13 @@
 .ResortInfoBox {
-  height: 160px;
+  min-height: 160px;
+  height: 100%;
   width: 100%;
   border: 1px solid #EDEDED;
   background-color: #FFFFFF;
   padding: 1pc;
   box-sizing: border-box;
-
 }
+
 .ResortInfoBody-content-chains {
   display: flex;
   flex-direction: column;

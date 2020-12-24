@@ -81,20 +81,16 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    resortsStatus: state.app.resorts.resortsStatus,
-    showEmailSignup: state.userSession.showEmailSignup,
-  };
-};
+const mapStateToProps = state => ({
+  resortsStatus: state.app.resorts.resortsStatus,
+  showEmailSignup: state.userSession.showEmailSignup,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchResorts: () => {
-      dispatch(fetchResorts);
-    },
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  fetchResorts: () => {
+    dispatch(fetchResorts);
+  },
+});
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
 

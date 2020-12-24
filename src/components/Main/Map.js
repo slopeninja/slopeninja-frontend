@@ -12,7 +12,6 @@ const GOOGLE_MAP_API_KEY = {
 };
 
 class Map extends Component {
-
   constructor(props) {
     super(props);
 

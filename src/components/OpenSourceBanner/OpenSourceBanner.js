@@ -36,11 +36,9 @@ const OpenSourceBanner = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    resorts: state.app.resorts.resorts,
-  };
-};
+const mapStateToProps = state => ({
+  resorts: state.app.resorts.resorts,
+});
 
 const ConnectedWeatherBanner = connect(
   mapStateToProps,

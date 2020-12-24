@@ -180,27 +180,23 @@ class EmailSignup extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    buttonState: state.app.createNewsletterSubscription.buttonState,
-  };
-};
+const mapStateToProps = state => ({
+  buttonState: state.app.createNewsletterSubscription.buttonState,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    disableEmailSignup: () => {
-      dispatch(setShowNewsletterSubscription(null));
-    },
-    createNewsletterSubscription: (email) => {
-      dispatch(createNewsletterSubscription(email));
-    },
-    failNewsletterSubscription: (errorMessage) => {
-      dispatch(newsletterSubscriptionFail(errorMessage));
-    },
-    resetNewsletterSubscription: () => {
-      dispatch(newsletterSubscriptionReset());
-    },
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  disableEmailSignup: () => {
+    dispatch(setShowNewsletterSubscription(null));
+  },
+  createNewsletterSubscription: (email) => {
+    dispatch(createNewsletterSubscription(email));
+  },
+  failNewsletterSubscription: (errorMessage) => {
+    dispatch(newsletterSubscriptionFail(errorMessage));
+  },
+  resetNewsletterSubscription: () => {
+    dispatch(newsletterSubscriptionReset());
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(EmailSignup);
