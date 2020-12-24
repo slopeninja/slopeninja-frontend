@@ -81,12 +81,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   resortsStatus: state.app.resorts.resortsStatus,
   showEmailSignup: state.userSession.showEmailSignup,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   fetchResorts: () => {
     dispatch(fetchResorts);
   },

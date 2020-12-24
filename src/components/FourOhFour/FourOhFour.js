@@ -1,7 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import snowboarders from './snowboarders.svg';
 import './FourOhFour.css';
-
 
 const FourOhFour = () => (
   <div className="FourOhFour">

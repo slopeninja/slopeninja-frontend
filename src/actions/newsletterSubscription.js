@@ -17,7 +17,7 @@ const newsletterSubscription = () => ({
 });
 
 // aciton creator
-const newsletterSubscriptionSuccess = email => ({
+const newsletterSubscriptionSuccess = (email) => ({
   type: SEND_NEWSLETTER_SUBSCRIPTION_SUCCESS,
   payload: {
     email,
@@ -25,7 +25,7 @@ const newsletterSubscriptionSuccess = email => ({
 });
 
 // aciton creator
-export const newsletterSubscriptionFail = error => ({
+export const newsletterSubscriptionFail = (error) => ({
   type: SEND_NEWSLETTER_SUBSCRIPTION_FAIL,
   payload: {
     error,
@@ -40,7 +40,7 @@ export const newsletterSubscriptionReset = () => ({
 const EMAIL_SIGNUP_DISMISS_DURATION = 800;
 
 // thunk
-export const createNewsletterSubscription = email => async (dispatch) => {
+export const createNewsletterSubscription = (email) => async (dispatch) => {
   dispatch(newsletterSubscription());
   try {
     const data = await sendNewsletterSubscription(email);

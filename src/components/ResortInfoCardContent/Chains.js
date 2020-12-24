@@ -2,21 +2,20 @@ import React from 'react';
 import HighwayIcon from '../HighwayIcon/HighwayIcon';
 import './Chains.css';
 
-
 const Chains = ({ roads, onChangeCard }) => {
   const routesKeys = Object.keys(roads);
-  const R1Highways = routesKeys.filter(key => roads[key].chainStatus === 'R1');
-  const R2Highways = routesKeys.filter(key => roads[key].chainStatus === 'R2');
+  const R1Highways = routesKeys.filter((key) => roads[key].chainStatus === 'R1');
+  const R2Highways = routesKeys.filter((key) => roads[key].chainStatus === 'R2');
 
   const r1HighwayIcons = R1Highways.map(
-    key => (
+    (key) => (
       <span key={key} style={{ marginLeft: '1pc' }}>
         <HighwayIcon width={36} height={36} highwayNumber={roads[key].number} />
       </span>
     ),
   );
   const r2HighwayIcons = R2Highways.map(
-    key => (
+    (key) => (
       <span key={key} style={{ marginLeft: '1pc' }}>
         <HighwayIcon width={36} height={36} highwayNumber={roads[key].number} />
       </span>
@@ -28,6 +27,7 @@ const Chains = ({ roads, onChangeCard }) => {
     r1Row = (
       <div className="ResortInfoBody-content-chains-row">
         <button
+          type="button"
           onClick={() => onChangeCard('R1')}
           className="ResortInfoBody-content-chains-link"
           style={{ borderRight: '1px solid #EDEDED' }}
@@ -44,6 +44,7 @@ const Chains = ({ roads, onChangeCard }) => {
     r2Row = (
       <div className="ResortInfoBody-content-chains-row">
         <button
+          type="button"
           onClick={() => onChangeCard('R2')}
           className="ResortInfoBody-content-chains-link"
           style={{ borderRight: '1px solid #EDEDED' }}

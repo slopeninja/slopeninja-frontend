@@ -13,10 +13,10 @@ const LAKE_TAHOE_COORDS = {
 };
 
 const Main = (props) => {
-  const shortName = props.match.params.shortName;
+  const { shortName } = props.match.params;
 
   const resort = props.resorts.find(
-    r => r.shortName === shortName,
+    (r) => r.shortName === shortName,
   );
 
   // debugger;
@@ -26,7 +26,6 @@ const Main = (props) => {
   }
 
   const className = classNames(['Main-wrapper', hideMainOnMobileClassName]);
-
 
   if (!shortName) {
     return (
@@ -49,7 +48,6 @@ const Main = (props) => {
     );
   }
 
-
   return (
     <main className={className}>
       <HomeButton />
@@ -59,7 +57,7 @@ const Main = (props) => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   resorts: state.app.resorts.resorts,
   resortsStatus: state.app.resorts.resortsStatus,
 });

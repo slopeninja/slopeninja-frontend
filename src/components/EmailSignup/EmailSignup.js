@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Control, Form } from 'react-redux-form';
@@ -100,7 +101,7 @@ class EmailSignup extends Component {
   }
 
   handleFormSubmit(newsletterSubscription) {
-    const email = newsletterSubscription.email;
+    const { email } = newsletterSubscription;
     this.props.createNewsletterSubscription(email);
   }
 
@@ -180,11 +181,11 @@ class EmailSignup extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   buttonState: state.app.createNewsletterSubscription.buttonState,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   disableEmailSignup: () => {
     dispatch(setShowNewsletterSubscription(null));
   },
@@ -200,3 +201,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EmailSignup);
+/* eslint-enable */

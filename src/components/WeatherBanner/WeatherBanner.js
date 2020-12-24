@@ -15,7 +15,10 @@ const generateBannerText = (resorts) => {
     const [r1] = resorts;
     return (
       <span className="WeatherBanner-text">
-        Snowing at <strong>{r1.name}</strong>! Keep up the snow dance until it
+        Snowing at
+        {' '}
+        <strong>{r1.name}</strong>
+        ! Keep up the snow dance until it
         spreads to the rest of the mountains around.
       </span>
     );
@@ -25,8 +28,15 @@ const generateBannerText = (resorts) => {
     const [r1, r2] = resorts;
     return (
       <span className="WeatherBanner-text">
-        That snow dance of yours! <strong>{r1.name}</strong> just joined{' '}
-        <strong>{r2.name}</strong> with reports of pow and more to come.
+        That snow dance of yours!
+        {' '}
+        <strong>{r1.name}</strong>
+        {' '}
+        just joined
+        {' '}
+        <strong>{r2.name}</strong>
+        {' '}
+        with reports of pow and more to come.
       </span>
     );
   }
@@ -35,9 +45,16 @@ const generateBannerText = (resorts) => {
     const [r1, r2, r3] = resorts;
     return (
       <span className="WeatherBanner-text">
-        Powder vibes! It’s getting white all over{' '}
-        <strong>{r1.name}</strong>, <strong>{r2.name}</strong> and{' '}
-        <strong>{r3.name}</strong>.
+        Powder vibes! It’s getting white all over
+        {' '}
+        <strong>{r1.name}</strong>
+        ,
+        <strong>{r2.name}</strong>
+        {' '}
+        and
+        {' '}
+        <strong>{r3.name}</strong>
+        .
       </span>
     );
   }
@@ -45,8 +62,16 @@ const generateBannerText = (resorts) => {
   const [r1, r2] = sampleSize(resorts, 2);
   return (
     <span className="WeatherBanner-text">
-      Wowza! Everyone’s abuzz with reports of snow. It’s now dumping at{' '}
-      <strong>{r1.name}</strong>, <strong>{r2.name}</strong> and {len - 2} other
+      Wowza! Everyone’s abuzz with reports of snow. It’s now dumping at
+      {' '}
+      <strong>{r1.name}</strong>
+      ,
+      <strong>{r2.name}</strong>
+      {' '}
+      and
+      {len - 2}
+      {' '}
+      other
       resorts.
     </span>
   );
@@ -54,7 +79,7 @@ const generateBannerText = (resorts) => {
 
 const WeatherBanner = (props) => {
   const snowingResorts = props.resorts.filter(
-    resort => resort.weather.condition === 'snow',
+    (resort) => resort.weather.condition === 'snow',
   );
 
   if (snowingResorts.length === 0) {
@@ -79,7 +104,7 @@ const WeatherBanner = (props) => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   resorts: state.app.resorts.resorts,
 });
 

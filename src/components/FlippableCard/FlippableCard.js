@@ -48,7 +48,7 @@ const FlippableCard = ({
   }
 
   const backCardContent = cards.find(
-    element => element.props.id === currentCard,
+    (element) => element.props.id === currentCard,
   );
 
   if (currentCard && !backCardContent) {

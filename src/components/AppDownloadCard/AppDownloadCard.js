@@ -1,7 +1,7 @@
 import React from 'react';
 import appleStore from '../../../public/images/appleStore.svg';
 import googlePlay from '../../../public/images/googlePlay.svg';
-import alexaStore from '../../../public/images/alexaStore.svg';
+// import alexaStore from '../../../public/images/alexaStore.svg';
 
 import './AppDownloadCard.css';
 
@@ -20,9 +20,9 @@ const AppDownloadCard = () => (
         </a>
       </div>
       <div>
-        <a href="" target="_blank" rel="noopener noreferrer">
+        {/* <a href="" target="_blank" rel="noopener noreferrer">
           <img src={alexaStore} alt="download from Alexa Skills Store" />
-        </a>
+        </a> */}
       </div>
     </div>
   </div>

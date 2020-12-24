@@ -1,4 +1,3 @@
-
 import logoHoliday from './holidayLogo.svg';
 import logo from './logo.svg';
 

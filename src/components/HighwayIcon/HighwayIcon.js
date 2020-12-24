@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 const HighwayIcon = ({ highwayNumber = '00', width = 54, height = 54 }) => {

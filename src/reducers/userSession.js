@@ -6,7 +6,7 @@ export const SET_SHOW_NEWSLETTER_SUBSCRIPTION = 'SET_SHOW_NEWSLETTER_SUBSCRIPTIO
 
 const userSession = (state = initialState, action) => {
   if (action.type === SET_SHOW_NEWSLETTER_SUBSCRIPTION) {
-    const subscriberEmail = action.payload.subscriberEmail;
+    const { subscriberEmail } = action.payload;
 
     const newState = {
       ...state,

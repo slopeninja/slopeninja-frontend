@@ -30,12 +30,14 @@ const ErrorIndicator = () => (
       alignItems: 'center',
     }}
   >
-    Opps. Something{'\''}s not right.
+    Opps. Something
+    {'\''}
+    s not right.
   </div>
 );
 
 const SideNav = ({ resorts, resortsStatus, match }) => {
-  const shortName = match.params.shortName;
+  const { shortName } = match.params;
   let hideSideNavOnMobileClassName;
   if (shortName) {
     hideSideNavOnMobileClassName = 'SideNav-hideOnMobile';
@@ -54,7 +56,7 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
       }
       return 0;
     });
-    sideNavContent = resorts.map(resort => (
+    sideNavContent = resorts.map((resort) => (
       <ResortNavCard
         key={resort.shortName}
         selected={shortName === resort.shortName}
@@ -96,7 +98,7 @@ const SideNav = ({ resorts, resortsStatus, match }) => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   resorts: state.app.resorts.resorts,
   resortsStatus: state.app.resorts.resortsStatus,
 });

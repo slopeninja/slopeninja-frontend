@@ -59,7 +59,6 @@ const OpenRoutes = ({ roads }) => {
     );
   });
 
-
   return (
     <div className="ResortInfoBox">
       <span className="ResortInfoBody-title">Open Routes</span>
@@ -113,7 +112,7 @@ const OpenTrails = ({ trailCounts }) => {
 };
 
 const RoadTooltip = ({ onChangeCard, id, labels }) => {
-  const labelElements = labels.map(label => (
+  const labelElements = labels.map((label) => (
     <div className="RoadTooltip-label">
       <span className="RoadTooltip-text">{label}</span>
     </div>
@@ -122,6 +121,7 @@ const RoadTooltip = ({ onChangeCard, id, labels }) => {
   return (
     <div className="ResortInfoBox">
       <button
+        type="button"
         onClick={() => onChangeCard(undefined)}
         className="RoadTooltip-title"
       >
@@ -157,7 +157,7 @@ class ResortInfoCardIconInfo extends Component {
   }
 
   renderFrontCard() {
-    const resort = this.props.resort;
+    const { resort } = this.props;
     return (
       <Chains
         roads={resort.roads}
@@ -167,7 +167,7 @@ class ResortInfoCardIconInfo extends Component {
   }
 
   render() {
-    const resort = this.props.resort;
+    const { resort } = this.props;
 
     return (
       <div className="row no-gutters">

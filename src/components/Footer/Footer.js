@@ -17,7 +17,7 @@ const Footer = () => (
           }}
           src={heart}
         />
-      in San Francisco. Powered by Dark Sky.
+        in San Francisco. Powered by Dark Sky.
       </span>
     </div>
     <a href="/" className="Footer-logo">
@@ -33,7 +33,6 @@ const Footer = () => (
   </div>
 );
 export default Footer;
-
 
 // <br />
 // <img style={{ height: '2pc' }} alt="Slope Ninja" src={logo} />

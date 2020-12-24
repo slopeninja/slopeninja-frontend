@@ -37,5 +37,4 @@ function resorts(state = initialState, action) {
   return state;
 }
 
-
 export default resorts;

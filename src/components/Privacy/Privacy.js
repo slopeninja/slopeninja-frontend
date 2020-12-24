@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import './Privacy.css';
 
@@ -179,3 +180,4 @@ const Privacy = () => (
 );
 
 export default Privacy;
+/* eslint-enable */

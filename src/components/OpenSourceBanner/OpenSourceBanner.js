@@ -5,7 +5,7 @@ import './OpenSourceBanner.css';
 
 const OpenSourceBanner = (props) => {
   const snowingResort = props.resorts.find(
-    resort => resort.weather.condition === 'snow',
+    (resort) => resort.weather.condition === 'snow',
   );
 
   if (snowingResort) {
@@ -30,13 +30,13 @@ const OpenSourceBanner = (props) => {
         src={github}
       />
       <span className="OpenSourceBanner-text">
-        {'Slope Ninja is open source. Send a pull request on GitHub.'}
+        Slope Ninja is open source. Send a pull request on GitHub.
       </span>
     </a>
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   resorts: state.app.resorts.resorts,
 });
 

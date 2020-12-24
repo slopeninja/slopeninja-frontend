@@ -53,12 +53,11 @@ class Map extends Component {
     }
   }
 
-
   render() {
     let mapPins;
     if (this.props.resorts) {
       mapPins = this.props.resorts.map(
-        resort => (
+        (resort) => (
           <MapPin
             key={resort.id}
             resort={resort}
@@ -68,7 +67,7 @@ class Map extends Component {
         ),
       );
     }
-    const createMapOptions = maps => ({
+    const createMapOptions = (maps) => ({
       backgroundColor: '#FFFFFF',
       zoomControlOptions: {
         position: maps.ControlPosition.TOP_RIGHT,
