@@ -66,9 +66,11 @@ const generateBannerText = (resorts) => {
       {' '}
       <strong>{r1.name}</strong>
       ,
+      {' '}
       <strong>{r2.name}</strong>
       {' '}
       and
+      {' '}
       {len - 2}
       {' '}
       other
