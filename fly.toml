@@ -1,33 +1,40 @@
+# fly.toml file generated for slope-ninja-web on 2021-10-16T13:07:17-07:00
+
 app = "slope-ninja-web"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[env]
+
+[experimental]
+  allowed_public_ports = []
+  cmd = []
+  entrypoint = []
+  exec = []
 
 [[services]]
   internal_port = 3001
+  processes = []
   protocol = "tcp"
+  script_checks = []
 
   [services.concurrency]
     hard_limit = 1000
     soft_limit = 500
+    type = "connections"
 
   [[services.ports]]
     handlers = ["http"]
-    port = "80"
+    port = 80
 
   [[services.ports]]
     handlers = ["tls", "http"]
-    port = "443"
+    port = 443
 
   [[services.tcp_checks]]
-    interval = 10000
-    timeout = 2000
-
-  # Roughly translated, this section says every ten seconds, 
-  # perform a HTTP GET on /health looking for it to return a 
-  # HTTP 200 status within one second. The parameters of a 
-  # http_check are listed below.
-  [[services.http_checks]]
-    interval = 10000
-    method = "get"
-    path = "/health"
-    protocol = "http"
-    timeout = 1000
-    tls_skip_verify = false
+    grace_period = "1s"
+    interval = "10s"
+    restart_limit = 0
+    timeout = "2s"
