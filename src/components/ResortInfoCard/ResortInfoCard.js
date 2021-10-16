@@ -62,7 +62,7 @@ const ResortInfoHeader = ({ resort }) => (
               <h2 className="ResortInfoHeader-header-title">{resort.name}</h2>
             </a>
             <h3 className="ResortInfoHeader-header-subtitle">
-              {'Today\'s Forcast'}
+              {'Today\'s Forecast'}
             </h3>
           </div>
         </div>
