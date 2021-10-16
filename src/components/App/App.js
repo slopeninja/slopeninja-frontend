@@ -25,10 +25,6 @@ import './App.css';
 import { fetchResorts } from '../../actions/resorts';
 // import { setShowNewsletterSubscription } from '../../actions/userSession';
 
-const RedirectToResorts = () => (
-  <Redirect to="/resorts" />
-);
-
 class App extends Component {
   componentDidMount() {
     this.props.fetchResorts();
@@ -65,7 +61,16 @@ class App extends Component {
                 <OpenSourceBanner />
                 <div className="App-content">
                   <Switch>
-                    <Route exact path="/" component={RedirectToResorts} />
+                    <Route
+                      exact
+                      path="/"
+                      component={() => (
+                        <Redirect to="/resorts" />
+                      )}
+                    />
+                    <Redirect exact from="/" to="/resorts" />
+                    <Redirect exact from="/resorts/squaw-valley" to="/resorts/palisades-tahoe" />
+
                     <Route exact path="/resorts/:shortName?" component={Main} />
                     <Route component={FourOhFour} />
                   </Switch>
