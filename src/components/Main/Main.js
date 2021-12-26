@@ -8,8 +8,8 @@ import HomeButton from '../HomeButton/HomeButton';
 import './Main.css';
 
 const LAKE_TAHOE_COORDS = {
-  lat: 39.0898559,
-  lng: -120.014292,
+  lat: 38.9967267,
+  lng: -119.976311,
 };
 
 const Main = (props) => {
